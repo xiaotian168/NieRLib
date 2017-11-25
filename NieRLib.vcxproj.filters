@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\FileEnumerator">
+      <UniqueIdentifier>{6f4cf5c6-e391-4ddf-98c3-5b2607bd0772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\MemoryAllocator">
+      <UniqueIdentifier>{8531d39a-61ae-4835-85f4-93e8daacfdac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Process">
+      <UniqueIdentifier>{ebc9de61-faff-4f4a-bb8a-a610ef5b27d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Shortcut">
+      <UniqueIdentifier>{751d3a1a-c433-4e9a-9c75-99fe2b25fdd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\StringConverter">
+      <UniqueIdentifier>{00a38579-8446-418d-984a-e7274844fb0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Base">
+      <UniqueIdentifier>{b0750c6e-1d15-4e95-a0a3-3493ca0ea351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\FileEnumerator">
+      <UniqueIdentifier>{e3912eb7-2c3c-46be-8d8a-0e055bb2e391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\MemoryAllocator">
+      <UniqueIdentifier>{4e8d70aa-14db-4da7-8885-756786129819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Process">
+      <UniqueIdentifier>{9fa75aa7-925f-4ad5-95f1-7aae0907b229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Shortcut">
+      <UniqueIdentifier>{17dcb7f4-0cde-4df2-9e22-0fc5b0909d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\StringConverter">
+      <UniqueIdentifier>{5b2a6a9b-7723-47ef-af87-45fdca96abe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Thread">
+      <UniqueIdentifier>{531498ed-8240-44eb-bf2b-28496efc9c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Thread">
+      <UniqueIdentifier>{2dedf335-9fc4-4324-9044-b424684c01fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Lock">
+      <UniqueIdentifier>{edb45019-2382-4ad4-8948-4accd29f3768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Lock">
+      <UniqueIdentifier>{ae07d13a-4230-4d2f-ba9b-00acd5d5b5de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Workflow">
+      <UniqueIdentifier>{544480a6-a6d7-4017-99a2-51e1832a29f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Archiver">
+      <UniqueIdentifier>{eff34ae3-108d-4928-9c35-83c1f6df289e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Archiver\zip">
+      <UniqueIdentifier>{9e1aa676-984e-4e70-9e86-9ad3298d7d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Archiver">
+      <UniqueIdentifier>{5b170fe2-d57d-4887-9bfc-b40c602d0545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Archiver\zip">
+      <UniqueIdentifier>{2e048191-07a3-40f2-a5c0-3e0784f3ae4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\NetAdapter">
+      <UniqueIdentifier>{7b14140d-3c52-4916-908c-d0e7322bb7f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\NetAdapter">
+      <UniqueIdentifier>{536618ac-ef90-4963-8a71-e6bd8f8eef0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Base">
+      <UniqueIdentifier>{e72acae5-83a3-4325-a0f9-aee13e6a74fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEnumerator\CWin32FileEnumResult.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEnumerator\FileEnumeratorFactory.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEnumerator\FileEnumTool.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEnumerator\IFileEnumerator.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEnumerator\IFileEnumResult.h">
+      <Filter>头文件\FileEnumerator</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryAllocator\CDefaultMemoryAllocator.h">
+      <Filter>头文件\MemoryAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryAllocator\IMemoryAllocator.h">
+      <Filter>头文件\MemoryAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryAllocator\MemoryAllocatorFactory.h">
+      <Filter>头文件\MemoryAllocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\CWin32Process.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\CWin32ProcessManager.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\IProcess.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\IProcessManager.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\ProcessManagerFactory.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\ProcessTool.h">
+      <Filter>头文件\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\CWin32Shortcut.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\CWin32ShortcutManager.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\IShortcut.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\IShortcutManager.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\ShortcutManagerFactory.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="Shortcut\ShortcutTool.h">
+      <Filter>头文件\Shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConverter\CWin32StringConverter.h">
+      <Filter>头文件\StringConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConverter\IStringConverter.h">
+      <Filter>头文件\StringConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConverter\StringConverterFactory.h">
+      <Filter>头文件\StringConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConverter\StringConverterTool.h">
+      <Filter>头文件\StringConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="NieRLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NieRLibConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\IRefCount.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\CThread.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock\CSimpleWin32Lock.h">
+      <Filter>头文件\Lock</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock\ILock.h">
+      <Filter>头文件\Lock</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock\LockFactory.h">
+      <Filter>头文件\Lock</Filter>
+    </ClInclude>
+    <ClInclude Include="Workflow\IWorkflowDesigner.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="Workflow\ITask.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="Workflow\IWorkflow.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\IArchiver.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\IWorkProgress.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\IArchiverUnpacker.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\IArchiverItemEnumerator.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\IArchiverItem.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\zip\unzip.h">
+      <Filter>头文件\Archiver\zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\zip\zip.h">
+      <Filter>头文件\Archiver\zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\CZipArchiverUnpacker.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\ArchiverFactory.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\CZipArchiverItem.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\CZipArchiverItemEnumerator.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\COMTool.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\NetAdapterTool.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\CWin32NetAapterManager.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\CWin32NetAdapter.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\INetAdapter.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\INetAdapterManager.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="NetAdapter\NetAdapterManagerFactory.h">
+      <Filter>头文件\NetAdapter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
+      <Filter>源文件\FileEnumerator</Filter>
+    </ClCompile>
+    <ClCompile Include="FileEnumerator\CWin32FileEnumResult.cpp">
+      <Filter>源文件\FileEnumerator</Filter>
+    </ClCompile>
+    <ClCompile Include="FileEnumerator\FileEnumeratorFactory.cpp">
+      <Filter>源文件\FileEnumerator</Filter>
+    </ClCompile>
+    <ClCompile Include="FileEnumerator\FileEnumTool.cpp">
+      <Filter>源文件\FileEnumerator</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryAllocator\CDefaultMemoryAllocator.cpp">
+      <Filter>源文件\MemoryAllocator</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryAllocator\MemoryAllocatorFactory.cpp">
+      <Filter>源文件\MemoryAllocator</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\CWin32Process.cpp">
+      <Filter>源文件\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\CWin32ProcessManager.cpp">
+      <Filter>源文件\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\ProcessManagerFactory.cpp">
+      <Filter>源文件\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\ProcessTool.cpp">
+      <Filter>源文件\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Shortcut\CWin32Shortcut.cpp">
+      <Filter>源文件\Shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="Shortcut\CWin32ShortcutManager.cpp">
+      <Filter>源文件\Shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="Shortcut\ShortcutManagerFactory.cpp">
+      <Filter>源文件\Shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="Shortcut\ShortcutTool.cpp">
+      <Filter>源文件\Shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="StringConverter\CWin32StringConverter.cpp">
+      <Filter>源文件\StringConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="StringConverter\StringConverterFactory.cpp">
+      <Filter>源文件\StringConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="StringConverter\StringConverterTool.cpp">
+      <Filter>源文件\StringConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\CThread_Linux.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\CThread_Win32.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Lock\CSimpleWin32Lock.cpp">
+      <Filter>源文件\Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="Lock\LockFactory.cpp">
+      <Filter>源文件\Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\zip\zip.cpp">
+      <Filter>源文件\Archiver\zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\zip\unzip.cpp">
+      <Filter>源文件\Archiver\zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\CZipArchiverUnpacker.cpp">
+      <Filter>源文件\Archiver</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\ArchiverFactory.cpp">
+      <Filter>源文件\Archiver</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\CZipArchiverItem.cpp">
+      <Filter>源文件\Archiver</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\CZipArchiverItemEnumerator.cpp">
+      <Filter>源文件\Archiver</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\COMTool.cpp">
+      <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NetAdapter\NetAdapterTool.cpp">
+      <Filter>源文件\NetAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="NetAdapter\CWin32NetAapterManager.cpp">
+      <Filter>源文件\NetAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="NetAdapter\CWin32NetAdapter.cpp">
+      <Filter>源文件\NetAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="NetAdapter\NetAdapterManagerFactory.cpp">
+      <Filter>源文件\NetAdapter</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
