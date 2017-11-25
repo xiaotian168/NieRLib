@@ -1,4 +1,6 @@
 
+#define _NIER_API
+
 #include "ArchiverFactory.h"
 #include "CZipArchiverUnpacker.h"
 

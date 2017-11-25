@@ -31,6 +31,7 @@
     <ClInclude Include="Archiver\zip\zip.h" />
     <ClInclude Include="Base\COMTool.h" />
     <ClInclude Include="Base\IRefCount.h" />
+    <ClInclude Include="Base\ITask.h" />
     <ClInclude Include="Base\IWorkProgress.h" />
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h" />
     <ClInclude Include="FileEnumerator\CWin32FileEnumResult.h" />
@@ -75,7 +76,6 @@
     <ClInclude Include="StringConverter\StringConverterFactory.h" />
     <ClInclude Include="StringConverter\StringConverterTool.h" />
     <ClInclude Include="Thread\CThread.h" />
-    <ClInclude Include="Workflow\ITask.h" />
     <ClInclude Include="Workflow\IWorkflow.h" />
     <ClInclude Include="Workflow\IWorkflowDesigner.h" />
   </ItemGroup>

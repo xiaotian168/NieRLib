@@ -1,4 +1,6 @@
 
+#define _NIER_API
+
 #include "LockFactory.h"
 #include "CSimpleWin32Lock.h"
 

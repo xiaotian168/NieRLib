@@ -1,4 +1,6 @@
 
+#define _NIER_API
+
 #include "FileSystemTool.h"
 #include "IFileSystem.h"
 #include "IFile.h"
@@ -12,37 +14,35 @@ public:
 
 	inline CFileSystemHelper()
 	{
+		pFileSystem = MakeFileSystemByOSPlatform();
 		pMemAllocator = MakeMemoryAllocatorByOSPlatform();
 	}
 
 	inline ~CFileSystemHelper()
 	{
+		SAFE_RELEASE(pFileSystem);
 		SAFE_RELEASE(pMemAllocator);
 	}
 
 public:
 
+	static IFileSystem * pFileSystem;
 	static IMemoryAllocator * pMemAllocator;
 };
 
+IFileSystem * CFileSystemHelper::pFileSystem = 0;
 IMemoryAllocator * CFileSystemHelper::pMemAllocator = 0;
 CFileSystemHelper FileSystemHelper;
 
 bool IsFileExistW(const wchar_t * pszFilePath)
 {
 	bool bRet = false;
-
-	if (pszFilePath)
+	
+	if (CFileSystemHelper::pFileSystem && pszFilePath)
 	{
-		auto pFileSystem = MakeFileSystemByOSPlatform();
-		if (pFileSystem)
+		if (CFileSystemHelper::pFileSystem->IsFileExistW(pszFilePath))
 		{
-			if (pFileSystem->IsFileExistW(pszFilePath))
-			{
-				bRet = true;
-			}
-
-			SAFE_RELEASE(pFileSystem);
+			bRet = true;
 		}
 	}
 
@@ -53,37 +53,32 @@ bool ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned int
 {
 	bool bRet = false;
 
-	if (CFileSystemHelper::pMemAllocator && pszFilePath && ppFileData)
+	if (CFileSystemHelper::pFileSystem && CFileSystemHelper::pMemAllocator && pszFilePath && ppFileData)
 	{
-		auto pFileSystem = MakeFileSystemByOSPlatform();
-		if (pFileSystem)
+		auto pFile = CFileSystemHelper::pFileSystem->GetFileForReadW(pszFilePath);
+		if (pFile)
 		{
-			auto pFile = pFileSystem->GetFileForReadW(pszFilePath);
-			if (pFile)
+			if (pFile->SeekToEnd())
 			{
-				if (pFile->SeekToEnd())
+				uFileSize = static_cast<unsigned int>(pFile->Tell());
+				if (uFileSize)
 				{
-					uFileSize = static_cast<unsigned int>(pFile->Tell());
-					if (uFileSize)
+					if (pFile->SeekToBegin())
 					{
-						if (pFile->SeekToBegin())
+						*ppFileData = CFileSystemHelper::pMemAllocator->Alloc(uFileSize);
+						if (*ppFileData)
 						{
-							*ppFileData = CFileSystemHelper::pMemAllocator->Alloc(uFileSize);
-							if (*ppFileData)
+							if (pFile->Read(*ppFileData, uFileSize))
 							{
-								if (pFile->Read(*ppFileData, uFileSize))
-								{
-									bRet = true;
-								}
+								bRet = true;
 							}
 						}
 					}
 				}
-
-				SAFE_RELEASE(pFile);
 			}
 
-			SAFE_RELEASE(pFileSystem);
+			pFile->Close();
+			SAFE_RELEASE(pFile);
 		}
 	}
 
@@ -99,6 +94,31 @@ bool FreeFileData(void * pFileData)
 		CFileSystemHelper::pMemAllocator->Free(pFileData);
 
 		bRet = true;
+	}
+
+	return bRet;
+}
+
+bool WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const unsigned int uDataSize)
+{
+	bool bRet = false;
+
+	if (CFileSystemHelper::pFileSystem && pszFilePath && pData && uDataSize)
+	{
+		auto pFile = CFileSystemHelper::pFileSystem->GetFileForWriteW(pszFilePath);
+		if (pFile)
+		{
+			if (pFile->SeekToBegin())
+			{
+				if (pFile->Write(pData, uDataSize))
+				{
+					bRet = true;
+				}
+			}
+
+			pFile->Close();
+			SAFE_RELEASE(pFile);
+		}
 	}
 
 	return bRet;

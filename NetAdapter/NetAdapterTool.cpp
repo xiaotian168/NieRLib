@@ -1,4 +1,6 @@
 
+#define _NIER_API
+
 #include "NetAdapterTool.h"
 #include "NetAdapterManagerFactory.h"
 #include "INetAdapterManager.h"

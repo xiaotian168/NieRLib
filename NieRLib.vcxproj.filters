@@ -189,9 +189,6 @@
     <ClInclude Include="Workflow\IWorkflowDesigner.h">
       <Filter>头文件\Workflow</Filter>
     </ClInclude>
-    <ClInclude Include="Workflow\ITask.h">
-      <Filter>头文件\Workflow</Filter>
-    </ClInclude>
     <ClInclude Include="Workflow\IWorkflow.h">
       <Filter>头文件\Workflow</Filter>
     </ClInclude>
@@ -266,6 +263,9 @@
     </ClInclude>
     <ClInclude Include="FileSystem\CWin32File.h">
       <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\ITask.h">
+      <Filter>头文件\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

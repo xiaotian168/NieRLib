@@ -25,3 +25,12 @@ NIER_CAPI bool ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, un
 ** @return true 成功，false 表示失败
 */
 NIER_CAPI bool FreeFileData(void * pFileData);
+
+/**
+** @brief 将数据写入到指定文件
+** @param pszFilePath 要写入的文件路径
+** @param pData 要写入的数据
+** @param uDataSize 要写入的数据大小（单位：字节）
+** @return true 成功，false 表示失败
+*/
+NIER_CAPI bool WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const unsigned int uDataSize);

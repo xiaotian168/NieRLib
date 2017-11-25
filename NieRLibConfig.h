@@ -9,9 +9,6 @@
 #	error not support os platform
 #endif
 
-/**
-** @brief 下面两个宏决定编译成静态库还是动态库
-*/
 #define NIER_STATIC_BUILD
 //#define NIER_DYNAMIC_BUILD
 

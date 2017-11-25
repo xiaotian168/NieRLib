@@ -1,4 +1,6 @@
 
+#define _NIER_API
+
 #include "COMTool.h"
 #include <stdio.h>
 
