@@ -3,7 +3,8 @@
 
 #include "CWin32StringConverter.h"
 #include "../MemoryAllocator/IMemoryAllocator.h"
-#include <Windows.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 CWin32StringConverter * CWin32StringConverter::Make(void)
 {
@@ -102,3 +103,5 @@ void CWin32StringConverter::FreeMultiByteString(const char * pszMultiByteString)
 		m_pMemAllocator->Free((void *)pszMultiByteString);
 	}
 }
+
+#endif

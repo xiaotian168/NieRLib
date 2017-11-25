@@ -2,8 +2,8 @@
 
 #include "CWin32NetAdapter.h"
 #include "../Base/COMTool.h"
-#include <ObjBase.h>
-#pragma comment(lib, "Ole32.lib")
+
+#if defined NIER_PLATFORM_WIN32
 
 CWin32NetAdapter * CWin32NetAdapter::Make(INetConnection * pNetConnection)
 {
@@ -190,3 +190,5 @@ bool CWin32NetAdapter::IsDisconnecting(void)
 
 	return bRet;
 }
+
+#endif

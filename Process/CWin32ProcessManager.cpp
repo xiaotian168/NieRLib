@@ -3,7 +3,8 @@
 
 #include "CWin32ProcessManager.h"
 #include "CWin32Process.h"
-#include <Tlhelp32.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 CWin32ProcessManager * CWin32ProcessManager::Make(void)
 {
@@ -50,3 +51,5 @@ bool CWin32ProcessManager::QueryProcessList(std::list<IProcess *> & ProcessList)
 
 	return bRet;
 }
+
+#endif

@@ -2,7 +2,8 @@
 #define _NIER_API
 
 #include "CWin32Shortcut.h"
-#include <shlguid.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 CWin32Shortcut * CWin32Shortcut::Make(wchar_t * pszShortcutPath)
 {
@@ -84,3 +85,5 @@ bool CWin32Shortcut::Delete(void)
 
 	return bRet;
 }
+
+#endif

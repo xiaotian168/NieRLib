@@ -1,6 +1,8 @@
 
 #include "CSimpleWin32Lock.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 CSimpleWin32Lock * CSimpleWin32Lock::Make(void)
 {
 	return new CSimpleWin32Lock();
@@ -31,3 +33,5 @@ bool CSimpleWin32Lock::Unlock(void)
 
 	return true;
 }
+
+#endif

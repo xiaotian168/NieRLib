@@ -1,12 +1,14 @@
 
 #pragma once
 
+#include "../Base/IRefCount.h"
+
 class ITask;
 
 /**
 ** @brief 工作流接口
 */
-class IWorkflow : public IRefCount
+class NIER_API IWorkflow : public IRefCount
 {
 public:
 

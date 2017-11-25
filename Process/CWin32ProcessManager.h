@@ -3,6 +3,8 @@
 
 #include "IProcessManager.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 class CWin32ProcessManager : public IProcessManager
 {
 public:
@@ -19,3 +21,5 @@ public:
 
 	bool QueryProcessList(std::list<IProcess *> & ProcessList) override;
 };
+
+#endif

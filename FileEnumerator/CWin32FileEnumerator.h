@@ -3,6 +3,8 @@
 
 #include "IFileEnumerator.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 class CWin32FileEnumerator : public IFileEnumerator
 {
 public:
@@ -23,3 +25,5 @@ public:
 
 	bool EnumAllDirectoryW(const wchar_t * pszDirectory, const bool bEnumSubDir, std::list<IFileEnumResult *> & ResultList) override;
 };
+
+#endif

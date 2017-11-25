@@ -45,6 +45,12 @@
     <ClInclude Include="FileSystem\FileSystemTool.h" />
     <ClInclude Include="FileSystem\IFile.h" />
     <ClInclude Include="FileSystem\IFileSystem.h" />
+    <ClInclude Include="Library\CWin32Library.h" />
+    <ClInclude Include="Library\CWin32LibraryManager.h" />
+    <ClInclude Include="Library\ILibrary.h" />
+    <ClInclude Include="Library\ILibraryManager.h" />
+    <ClInclude Include="Library\LibraryManagerFactory.h" />
+    <ClInclude Include="Library\LibraryTool.h" />
     <ClInclude Include="Lock\CSimpleWin32Lock.h" />
     <ClInclude Include="Lock\ILock.h" />
     <ClInclude Include="Lock\LockFactory.h" />
@@ -95,6 +101,10 @@
     <ClCompile Include="FileSystem\CWin32FileSystem.cpp" />
     <ClCompile Include="FileSystem\FileSystemFactory.cpp" />
     <ClCompile Include="FileSystem\FileSystemTool.cpp" />
+    <ClCompile Include="Library\CWin32Library.cpp" />
+    <ClCompile Include="Library\CWin32LibraryManager.cpp" />
+    <ClCompile Include="Library\LibraryManagerFactory.cpp" />
+    <ClCompile Include="Library\LibraryTool.cpp" />
     <ClCompile Include="Lock\CSimpleWin32Lock.cpp" />
     <ClCompile Include="Lock\LockFactory.cpp" />
     <ClCompile Include="MemoryAllocator\CDefaultMemoryAllocator.cpp" />
@@ -176,10 +186,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -5,10 +5,6 @@
 
 #if defined NIER_PLATFORM_LINUX
 
-#include <assert.h>
-#include <unistd.h>
-#include <pthread.h>
-
 void * GlobalThread(void * pParam)
 {
 	CThread * pThread = static_cast<CThread *>(pParam);

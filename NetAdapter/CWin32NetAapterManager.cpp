@@ -2,6 +2,8 @@
 #include "CWin32NetAapterManager.h"
 #include "CWin32NetAdapter.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 CWin32NetAapterManager * CWin32NetAapterManager::Make(void)
 {
 	return new CWin32NetAapterManager();
@@ -83,3 +85,5 @@ void CWin32NetAapterManager::Shutdown(void)
 
 	CoUninitialize();
 }
+
+#endif

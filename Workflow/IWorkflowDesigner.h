@@ -6,7 +6,7 @@ class IWorkflow;
 /**
 ** @brief 工作流设计器接口
 */
-class IWorkflowDesigner : public IRefCount
+class NIER_API IWorkflowDesigner : public IRefCount
 {
 public:
 

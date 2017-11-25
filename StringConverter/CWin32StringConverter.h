@@ -3,6 +3,8 @@
 
 #include "IStringConverter.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 class CWin32StringConverter : public IStringConverter
 {
 public:
@@ -36,3 +38,5 @@ private:
 
 	IMemoryAllocator * m_pMemAllocator;
 };
+
+#endif

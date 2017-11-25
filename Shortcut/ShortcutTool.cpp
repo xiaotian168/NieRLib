@@ -6,7 +6,6 @@
 #include "IShortcutManager.h"
 #include "ShortcutManagerFactory.h"
 #include "../StringConverter/StringConverterTool.h"
-#include <Windows.h>
 
 bool DeleteAllShortcutByTargetPathW(const wchar_t * pszSearchDirectory, const wchar_t * pszTargetPath)
 {

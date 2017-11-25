@@ -1,6 +1,8 @@
 
 #include "CWin32File.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 CWin32File * CWin32File::MakeW(const wchar_t * pszFilePath, const wchar_t * pszMode)
 {
 	return new CWin32File(pszFilePath, pszMode);
@@ -133,3 +135,5 @@ bool CWin32File::Write(const void * pBuffer, const unsigned int uBytes)
 
 	return bRet;
 }
+
+#endif

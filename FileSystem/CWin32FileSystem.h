@@ -3,6 +3,8 @@
 
 #include "IFileSystem.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 class CWin32FileSystem : public IFileSystem
 {
 public:
@@ -29,3 +31,5 @@ public:
 
 	IFile * GetFileForReadWriteW(const wchar_t * pszFilePath) override;
 };
+
+#endif

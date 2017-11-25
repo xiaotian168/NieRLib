@@ -2,7 +2,6 @@
 #define _NIER_API
 
 #include "CDefaultMemoryAllocator.h"
-#include <malloc.h>
 
 CDefaultMemoryAllocator * CDefaultMemoryAllocator::Make(void)
 {

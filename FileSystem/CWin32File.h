@@ -2,7 +2,8 @@
 #pragma once
 
 #include "IFile.h"
-#include <stdio.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32File : public IFile
 {
@@ -38,3 +39,5 @@ private:
 
 	FILE * m_pFile{ 0 };
 };
+
+#endif

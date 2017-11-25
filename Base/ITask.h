@@ -6,7 +6,7 @@
 /**
 ** @brief 任务接口
 */
-class ITask : public IRefCount
+class NIER_API ITask : public IRefCount
 {
 public:
 

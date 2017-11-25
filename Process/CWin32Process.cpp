@@ -2,11 +2,8 @@
 #define _NIER_API
 
 #include "CWin32Process.h"
-#include <Psapi.h>
-#include <Shlwapi.h>
 
-#pragma comment(lib, "Psapi.lib")
-#pragma comment(lib, "Shlwapi.lib")
+#if defined NIER_PLATFORM_WIN32
 
 CWin32Process * CWin32Process::Make(const DWORD dwProcessID)
 {
@@ -85,3 +82,5 @@ bool CWin32Process::ShutdownProcess(const unsigned int uExitCode)
 
 	return bRet;
 }
+
+#endif

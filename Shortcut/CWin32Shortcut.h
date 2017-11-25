@@ -2,8 +2,8 @@
 #pragma once
 
 #include "IShortcut.h"
-#include <shobjidl.h>
-#include <string>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32Shortcut : public IShortcut
 {
@@ -30,3 +30,5 @@ private:
 	IShellLinkW * m_pShellLink;
 	std::wstring m_strPath;
 };
+
+#endif

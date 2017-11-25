@@ -2,7 +2,6 @@
 #pragma once
 
 #include "../Base/IRefCount.h"
-#include <list>
 
 class IProcess;
 

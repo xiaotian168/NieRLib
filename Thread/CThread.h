@@ -3,6 +3,9 @@
 
 #include "../NieRLibConfig.h"
 
+/**
+** @brief Ïß³Ì
+*/
 class NIER_API CThread
 {
 public:

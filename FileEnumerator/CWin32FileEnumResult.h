@@ -2,8 +2,8 @@
 #pragma once
 
 #include "IFileEnumResult.h"
-#include <Windows.h>
-#include <string>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32FileEnumResult : public IFileEnumResult
 {
@@ -30,3 +30,5 @@ private:
 	std::wstring m_strResultPath;
 	DWORD m_dwFileAttributes;
 };
+
+#endif

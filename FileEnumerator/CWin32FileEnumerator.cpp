@@ -3,10 +3,8 @@
 
 #include "CWin32FileEnumerator.h"
 #include "CWin32FileEnumResult.h"
-#include <Windows.h>
-#include <shlwapi.h>
 
-#pragma comment(lib, "shlwapi.lib")
+#if defined NIER_PLATFORM_WIN32
 
 CWin32FileEnumerator * CWin32FileEnumerator::Make(void)
 {
@@ -143,3 +141,5 @@ bool CWin32FileEnumerator::EnumAllDirectoryW(const wchar_t * pszDirectory, const
 
 	return bRet;
 }
+
+#endif

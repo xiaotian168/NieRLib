@@ -2,7 +2,6 @@
 #pragma once
 
 #include "../NieRLibConfig.h"
-#include <list>
 
 #if defined UNICODE || defined _UNICODE
 #	define EnumAllFile EnumAllFileW

@@ -88,6 +88,12 @@
     <Filter Include="源文件\FileSystem">
       <UniqueIdentifier>{4e3e8b51-571a-4c24-bf76-6adeb658c342}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Library">
+      <UniqueIdentifier>{6735cf74-e9cd-42c3-9152-9c7c4d219b4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Library">
+      <UniqueIdentifier>{d2c2ddae-b009-41de-86fa-9a7532dbbabc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -195,9 +201,6 @@
     <ClInclude Include="Archiver\IArchiver.h">
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
-    <ClInclude Include="Base\IWorkProgress.h">
-      <Filter>头文件\Base</Filter>
-    </ClInclude>
     <ClInclude Include="Archiver\IArchiverUnpacker.h">
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
@@ -266,6 +269,27 @@
     </ClInclude>
     <ClInclude Include="Base\ITask.h">
       <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\IWorkProgress.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\LibraryManagerFactory.h">
+      <Filter>头文件\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\CWin32Library.h">
+      <Filter>头文件\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\CWin32LibraryManager.h">
+      <Filter>头文件\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\ILibrary.h">
+      <Filter>头文件\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\ILibraryManager.h">
+      <Filter>头文件\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\LibraryTool.h">
+      <Filter>头文件\Library</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -376,6 +400,18 @@
     </ClCompile>
     <ClCompile Include="FileSystem\CWin32File.cpp">
       <Filter>源文件\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\LibraryManagerFactory.cpp">
+      <Filter>源文件\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\CWin32Library.cpp">
+      <Filter>源文件\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\CWin32LibraryManager.cpp">
+      <Filter>源文件\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\LibraryTool.cpp">
+      <Filter>源文件\Library</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

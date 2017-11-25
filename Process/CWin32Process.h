@@ -2,7 +2,8 @@
 #pragma once
 
 #include "IProcess.h"
-#include <Windows.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32Process : public IProcess
 {
@@ -28,3 +29,5 @@ private:
 
 	DWORD m_dwProcessID;
 };
+
+#endif

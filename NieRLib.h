@@ -64,6 +64,22 @@
 #include "Thread/CThread.h"
 
 /**
+** @addgroup ÍøÂçÊÊÅäÆ÷
+*/
+#include "NetAdapter/INetAdapter.h"
+#include "NetAdapter/INetAdapterManager.h"
+#include "NetAdapter/NetAdapterManagerFactory.h"
+#include "NetAdapter/NetAdapterTool.h"
+
+/**
+** @brief ¿â
+*/
+#include "Library/ILibrary.h"
+#include "Library/ILibraryManager.h"
+#include "Library/LibraryManagerFactory.h"
+#include "Library/LibraryTool.h"
+
+/**
 ** @addgroup »¥³âËø
 */
 #include "Lock/ILock.h"

@@ -2,7 +2,8 @@
 #pragma once
 
 #include "INetAdapter.h"
-#include <netcon.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32NetAdapter : public INetAdapter
 {
@@ -40,3 +41,5 @@ private:
 
 	INetConnection * m_pConnection;
 };
+
+#endif

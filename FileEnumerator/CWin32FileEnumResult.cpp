@@ -3,6 +3,8 @@
 
 #include "CWin32FileEnumResult.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 CWin32FileEnumResult * CWin32FileEnumResult::Make(const wchar_t * pszResultPath, const DWORD dwFileAttributes)
 {
 	return new CWin32FileEnumResult(pszResultPath, dwFileAttributes);
@@ -63,3 +65,5 @@ bool CWin32FileEnumResult::GetResultPathW(wchar_t * pszPath, const unsigned int 
 
 	return bRet;
 }
+
+#endif

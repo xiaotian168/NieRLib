@@ -3,11 +3,8 @@
 
 #include "CWin32ShortcutManager.h"
 #include "CWin32Shortcut.h"
-#include <shobjidl.h>
-#include <string>
-#include <shlwapi.h>
 
-#pragma comment(lib, "shlwapi.lib")
+#if defined NIER_PLATFORM_WIN32
 
 CWin32ShortcutManager * CWin32ShortcutManager::Make(void)
 {
@@ -62,3 +59,5 @@ bool CWin32ShortcutManager::SearchShortcutW(const wchar_t * pszSearchDirectory, 
 
 	return bRet;
 }
+
+#endif

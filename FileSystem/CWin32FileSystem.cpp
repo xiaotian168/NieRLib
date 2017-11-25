@@ -1,7 +1,8 @@
 
 #include "CWin32FileSystem.h"
 #include "CWin32File.h"
-#include <Windows.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 CWin32FileSystem * CWin32FileSystem::Make(void)
 {
@@ -100,3 +101,5 @@ IFile * CWin32FileSystem::GetFileForReadWriteW(const wchar_t * pszFilePath)
 
 	return 0;
 }
+
+#endif

@@ -2,7 +2,8 @@
 #pragma once
 
 #include "ILock.h"
-#include <Windows.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CSimpleWin32Lock : public ILock
 {
@@ -26,3 +27,5 @@ private:
 
 	CRITICAL_SECTION m_CriticalSection;
 };
+
+#endif

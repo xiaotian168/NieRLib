@@ -5,8 +5,6 @@
 
 #if defined NIER_PLATFORM_WIN32
 
-#include <Windows.h>
-
 DWORD GlobalThread(LPVOID pParam)
 {
 	CThread * pThread = static_cast<CThread *>(pParam);

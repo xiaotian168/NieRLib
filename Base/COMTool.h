@@ -3,7 +3,7 @@
 
 #include "../NieRLibConfig.h"
 
-#include <Windows.h>
+#if defined NIER_PLATFORM_WIN32
 
 #if defined UNICODE || defined _UNICODE
 #	define GuidToString GuidToStringW
@@ -17,3 +17,5 @@ NIER_CAPI bool GuidToStringA(const GUID & guid, char * pszGUID, const unsigned i
 NIER_CAPI bool GuidToStringW(const GUID & guid, wchar_t * pszGUID, const unsigned int uSize);
 NIER_CAPI const char * FormatCoCreateInstanceReturnCodeStringA(const HRESULT hRet);
 NIER_CAPI const wchar_t * FormatCoCreateInstanceReturnCodeStringW(const HRESULT hRet);
+
+#endif

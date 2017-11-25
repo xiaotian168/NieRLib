@@ -6,7 +6,7 @@
 /**
 ** @brief 进度接口
 */
-class IWorkProgress : public IRefCount
+class NIER_API IWorkProgress : public IRefCount
 {
 public:
 

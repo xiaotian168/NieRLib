@@ -3,6 +3,8 @@
 
 #include "IShortcutManager.h"
 
+#if defined NIER_PLATFORM_WIN32
+
 class CWin32ShortcutManager : public IShortcutManager
 {
 public:
@@ -19,3 +21,5 @@ public:
 
 	bool SearchShortcutW(const wchar_t * pszSearchDirectory, std::list<IShortcut *> & ShortcutList) override;
 };
+
+#endif

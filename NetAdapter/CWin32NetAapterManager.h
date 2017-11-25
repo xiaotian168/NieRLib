@@ -2,7 +2,8 @@
 #pragma once
 
 #include "INetAdapterManager.h"
-#include <netcon.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 class CWin32NetAapterManager : public INetAdapterManager
 {
@@ -32,3 +33,5 @@ private:
 
 	INetConnectionManager * m_pConnectionManager;
 };
+
+#endif

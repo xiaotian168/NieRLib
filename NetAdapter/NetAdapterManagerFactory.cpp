@@ -6,10 +6,14 @@
 
 INetAdapterManager * MakeWin32NetAdapterManager(void)
 {
+#if defined NIER_PLATFORM_WIN32
 	return CWin32NetAapterManager::Make();
+#endif
+
+	return 0;
 }
 
-INetAdapterManager * MakeNetAdapterNanagerByOSPlatform(void)
+INetAdapterManager * MakeNetAdapterManagerByOSPlatform(void)
 {
 #if defined NIER_PLATFORM_WIN32
 	return CWin32NetAapterManager::Make();

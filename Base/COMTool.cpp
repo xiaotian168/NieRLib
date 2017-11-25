@@ -2,7 +2,8 @@
 #define _NIER_API
 
 #include "COMTool.h"
-#include <stdio.h>
+
+#if defined NIER_PLATFORM_WIN32
 
 bool GuidToStringA(const GUID & guid, char * pszGUID, const unsigned int uSize)
 {
@@ -103,3 +104,5 @@ const wchar_t * FormatCoCreateInstanceReturnCodeStringW(const HRESULT hRet)
 
 	return L"Unknown Error";
 }
+
+#endif
