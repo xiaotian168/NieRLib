@@ -30,6 +30,8 @@ CFileLog::CFileLog(const wchar_t * pszLogFilePath)
 
 CFileLog::~CFileLog()
 {
+	if (m_pFile)m_pFile->Close();
+
 	SAFE_RELEASE(m_pFile);
 	SAFE_RELEASE(m_pLockFile);
 }

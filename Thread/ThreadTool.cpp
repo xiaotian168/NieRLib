@@ -28,7 +28,7 @@ public:
 IThreadManager * CThreadHelper::pThreadManager = 0;
 CThreadHelper ThreadHelper;
 
-IThread::IDType GetCurrentThreadID(void)
+IThread::IDType GetCallerThreadID(void)
 {
 	IThread::IDType ID = 0;
 	IThread::IDType IDTemp = 0;
@@ -48,4 +48,14 @@ IThread::IDType GetCurrentThreadID(void)
 	}
 
 	return ID;
+}
+
+IThread * GetCallerThread(void)
+{
+	if (CThreadHelper::pThreadManager)
+	{
+		return CThreadHelper::pThreadManager->GetCurrentThread();
+	}
+
+	return 0;
 }

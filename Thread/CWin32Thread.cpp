@@ -40,6 +40,8 @@ bool CWin32Thread::ShutdownThread(const unsigned int uExitCode)
 	{
 		if (TerminateThread(m_hThread, uExitCode))
 		{
+			m_hThread = 0;
+
 			bRet = true;
 		}
 	}
