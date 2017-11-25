@@ -74,6 +74,7 @@
     <ClInclude Include="Process\IProcessManager.h" />
     <ClInclude Include="Process\ProcessManagerFactory.h" />
     <ClInclude Include="Process\ProcessTool.h" />
+    <ClInclude Include="Profile\Profile.h" />
     <ClInclude Include="Shortcut\CWin32Shortcut.h" />
     <ClInclude Include="Shortcut\CWin32ShortcutManager.h" />
     <ClInclude Include="Shortcut\IShortcut.h" />

@@ -51,6 +51,18 @@ char * Unicode2MultiByte(const wchar_t * pszUnicodeString)
 	return pszMultiByteString;
 }
 
+char * Unicode2UTF8MultiByte(const wchar_t * pszUnicodeString)
+{
+	char * pszMultiByteString = 0;
+
+	if (pszUnicodeString && CStringConverterHelper::pStringConverter)
+	{
+		CStringConverterHelper::pStringConverter->UnicodeToUTF8MultiByte(pszUnicodeString, &pszMultiByteString);
+	}
+
+	return pszMultiByteString;
+}
+
 wchar_t * MultiByte2Unicode(const char * pszMultiByteString)
 {
 	wchar_t * pszUnicodeString = 0;
@@ -58,6 +70,18 @@ wchar_t * MultiByte2Unicode(const char * pszMultiByteString)
 	if (pszMultiByteString && CStringConverterHelper::pStringConverter)
 	{
 		CStringConverterHelper::pStringConverter->MultiByteToUnicode(pszMultiByteString, &pszUnicodeString);
+	}
+
+	return pszUnicodeString;
+}
+
+wchar_t * MultiByte2UTF8Unicode(const char * pszMultiByteString)
+{
+	wchar_t * pszUnicodeString = 0;
+
+	if (pszMultiByteString && CStringConverterHelper::pStringConverter)
+	{
+		CStringConverterHelper::pStringConverter->MultiByteToUTF8Unicode(pszMultiByteString, &pszUnicodeString);
 	}
 
 	return pszUnicodeString;

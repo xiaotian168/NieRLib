@@ -63,6 +63,31 @@ bool CWin32StringConverter::UnicodeToMultiByte(const wchar_t * pszUnicodeString,
 	return bRet;
 }
 
+bool CWin32StringConverter::UnicodeToUTF8MultiByte(const wchar_t * pszUnicodeString, char ** ppszMultiByteString)
+{
+	bool bRet = false;
+
+	if (m_pMemAllocator && pszUnicodeString && ppszMultiByteString)
+	{
+		auto nLenMultiByteString = WideCharToMultiByte(CP_UTF8, 0, pszUnicodeString, -1, 0, 0, 0, 0);
+		if (nLenMultiByteString)
+		{
+			*ppszMultiByteString = static_cast<char *>(m_pMemAllocator->Alloc(MultiByteCharSize * (nLenMultiByteString + 1)));
+			if (*ppszMultiByteString)
+			{
+				if (WideCharToMultiByte(CP_UTF8, 0, pszUnicodeString, -1, *ppszMultiByteString, nLenMultiByteString + 1, 0, 0))
+				{
+					(*ppszMultiByteString)[nLenMultiByteString] = '\0';
+
+					bRet = true;
+				}
+			}
+		}
+	}
+
+	return bRet;
+}
+
 bool CWin32StringConverter::MultiByteToUnicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString)
 {
 	bool bRet = false;
@@ -76,6 +101,31 @@ bool CWin32StringConverter::MultiByteToUnicode(const char * pszMultiByteString, 
 			if (*ppszUnicodeString)
 			{
 				if (MultiByteToWideChar(CP_ACP, 0, pszMultiByteString, -1, *ppszUnicodeString, nLenUnicodeString + 1))
+				{
+					(*ppszUnicodeString)[nLenUnicodeString] = L'\0';
+
+					bRet = true;
+				}
+			}
+		}
+	}
+
+	return bRet;
+}
+
+bool CWin32StringConverter::MultiByteToUTF8Unicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString)
+{
+	bool bRet = false;
+
+	if (m_pMemAllocator && pszMultiByteString && ppszUnicodeString)
+	{
+		auto nLenUnicodeString = MultiByteToWideChar(CP_UTF8, 0, pszMultiByteString, -1, 0, 0);
+		if (nLenUnicodeString)
+		{
+			*ppszUnicodeString = static_cast<wchar_t *>(m_pMemAllocator->Alloc(UnicodeCharSize * (nLenUnicodeString + 1)));
+			if (*ppszUnicodeString)
+			{
+				if (MultiByteToWideChar(CP_UTF8, 0, pszMultiByteString, -1, *ppszUnicodeString, nLenUnicodeString + 1))
 				{
 					(*ppszUnicodeString)[nLenUnicodeString] = L'\0';
 

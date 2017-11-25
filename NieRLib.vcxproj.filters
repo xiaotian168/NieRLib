@@ -100,6 +100,9 @@
     <Filter Include="源文件\Log">
       <UniqueIdentifier>{439b5d47-4810-494f-abb7-b7c3cf3a8338}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Profile">
+      <UniqueIdentifier>{393f2275-c531-4ec8-97d0-58d5bc7edce0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -323,6 +326,9 @@
     </ClInclude>
     <ClInclude Include="Log\LogFactory.h">
       <Filter>头文件\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile\Profile.h">
+      <Filter>头文件\Profile</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

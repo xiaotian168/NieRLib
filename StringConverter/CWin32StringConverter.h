@@ -28,7 +28,11 @@ public:
 
 	bool UnicodeToMultiByte(const wchar_t * pszUnicodeString, char ** ppszMultiByteString) override;
 
+	bool UnicodeToUTF8MultiByte(const wchar_t * pszUnicodeString, char ** ppszMultiByteString) override;
+
 	bool MultiByteToUnicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString) override;
+
+	bool MultiByteToUTF8Unicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString) override;
 
 	void FreeUnicodeString(const wchar_t * pszUnicodeString) override;
 

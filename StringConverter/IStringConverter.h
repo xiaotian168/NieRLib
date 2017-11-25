@@ -31,9 +31,19 @@ public:
 	virtual bool UnicodeToMultiByte(const wchar_t * pszUnicodeString, char ** ppszMultiByteString) = 0;
 
 	/**
+	** @brief ½« Unicode ×Ö·û´®×ª»»Îª UTF-8 MultiByte ×Ö·û´®
+	*/
+	virtual bool UnicodeToUTF8MultiByte(const wchar_t * pszUnicodeString, char ** ppszMultiByteString) = 0;
+
+	/**
 	** @brief ½« MultiByte ×Ö·û´®×ª»»Îª Unicode ×Ö·û´®
 	*/
 	virtual bool MultiByteToUnicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString) = 0;
+
+	/**
+	** @brief ½« MultiByte ×Ö·û´®×ª»»Îª UTF-8 Unicode ×Ö·û´®
+	*/
+	virtual bool MultiByteToUTF8Unicode(const char * pszMultiByteString, wchar_t ** ppszUnicodeString) = 0;
 
 	/**
 	** @brief ÊÍ·Å Unicode ×Ö·û´®
