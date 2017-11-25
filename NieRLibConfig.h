@@ -48,6 +48,8 @@
 
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
+#include <stdarg.h>
 #include <list>
 #include <string>
 #include <assert.h>

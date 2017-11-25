@@ -94,6 +94,12 @@
     <Filter Include="源文件\Library">
       <UniqueIdentifier>{d2c2ddae-b009-41de-86fa-9a7532dbbabc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Log">
+      <UniqueIdentifier>{3b16bd26-54a3-492a-ac44-ebf758cafda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Log">
+      <UniqueIdentifier>{439b5d47-4810-494f-abb7-b7c3cf3a8338}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -291,6 +297,33 @@
     <ClInclude Include="Library\LibraryTool.h">
       <Filter>头文件\Library</Filter>
     </ClInclude>
+    <ClInclude Include="Thread\ThreadTool.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IThread.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IThreadManager.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\ThreadManagerFactory.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\CWin32ThreadManager.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\CWin32Thread.h">
+      <Filter>头文件\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\CFileLog.h">
+      <Filter>头文件\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\ILog.h">
+      <Filter>头文件\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Log\LogFactory.h">
+      <Filter>头文件\Log</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -412,6 +445,24 @@
     </ClCompile>
     <ClCompile Include="Library\LibraryTool.cpp">
       <Filter>源文件\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\ThreadTool.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\ThreadManagerFactory.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\CWin32Thread.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\CWin32ThreadManager.cpp">
+      <Filter>源文件\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\CFileLog.cpp">
+      <Filter>源文件\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Log\LogFactory.cpp">
+      <Filter>源文件\Log</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

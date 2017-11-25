@@ -54,6 +54,9 @@
     <ClInclude Include="Lock\CSimpleWin32Lock.h" />
     <ClInclude Include="Lock\ILock.h" />
     <ClInclude Include="Lock\LockFactory.h" />
+    <ClInclude Include="Log\CFileLog.h" />
+    <ClInclude Include="Log\ILog.h" />
+    <ClInclude Include="Log\LogFactory.h" />
     <ClInclude Include="MemoryAllocator\CDefaultMemoryAllocator.h" />
     <ClInclude Include="MemoryAllocator\IMemoryAllocator.h" />
     <ClInclude Include="MemoryAllocator\MemoryAllocatorFactory.h" />
@@ -82,6 +85,12 @@
     <ClInclude Include="StringConverter\StringConverterFactory.h" />
     <ClInclude Include="StringConverter\StringConverterTool.h" />
     <ClInclude Include="Thread\CThread.h" />
+    <ClInclude Include="Thread\CWin32Thread.h" />
+    <ClInclude Include="Thread\CWin32ThreadManager.h" />
+    <ClInclude Include="Thread\IThread.h" />
+    <ClInclude Include="Thread\IThreadManager.h" />
+    <ClInclude Include="Thread\ThreadManagerFactory.h" />
+    <ClInclude Include="Thread\ThreadTool.h" />
     <ClInclude Include="Workflow\IWorkflow.h" />
     <ClInclude Include="Workflow\IWorkflowDesigner.h" />
   </ItemGroup>
@@ -107,6 +116,8 @@
     <ClCompile Include="Library\LibraryTool.cpp" />
     <ClCompile Include="Lock\CSimpleWin32Lock.cpp" />
     <ClCompile Include="Lock\LockFactory.cpp" />
+    <ClCompile Include="Log\CFileLog.cpp" />
+    <ClCompile Include="Log\LogFactory.cpp" />
     <ClCompile Include="MemoryAllocator\CDefaultMemoryAllocator.cpp" />
     <ClCompile Include="MemoryAllocator\MemoryAllocatorFactory.cpp" />
     <ClCompile Include="NetAdapter\CWin32NetAapterManager.cpp" />
@@ -126,6 +137,10 @@
     <ClCompile Include="StringConverter\StringConverterTool.cpp" />
     <ClCompile Include="Thread\CThread_Linux.cpp" />
     <ClCompile Include="Thread\CThread_Win32.cpp" />
+    <ClCompile Include="Thread\CWin32Thread.cpp" />
+    <ClCompile Include="Thread\CWin32ThreadManager.cpp" />
+    <ClCompile Include="Thread\ThreadManagerFactory.cpp" />
+    <ClCompile Include="Thread\ThreadTool.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C9FEE417-E533-44D6-96EA-7954113EE290}</ProjectGuid>

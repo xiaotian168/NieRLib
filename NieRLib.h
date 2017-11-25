@@ -62,6 +62,10 @@
 ** @addgroup 线程
 */
 #include "Thread/CThread.h"
+#include "Thread/IThread.h"
+#include "Thread/IThreadManager.h"
+#include "Thread/ThreadManagerFactory.h"
+#include "Thread/ThreadTool.h"
 
 /**
 ** @addgroup 网络适配器
@@ -70,6 +74,12 @@
 #include "NetAdapter/INetAdapterManager.h"
 #include "NetAdapter/NetAdapterManagerFactory.h"
 #include "NetAdapter/NetAdapterTool.h"
+
+/**
+** @addgroup 日志
+*/
+#include "Log/ILog.h"
+#include "Log/LogFactory.h"
 
 /**
 ** @brief 库

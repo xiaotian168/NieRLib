@@ -10,7 +10,7 @@ class IProcess : public IRefCount
 {
 public:
 
-	typedef unsigned int IDType;
+	typedef unsigned long IDType;
 
 public:
 
