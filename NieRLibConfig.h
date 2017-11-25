@@ -38,9 +38,11 @@
 #	include <Tlhelp32.h>
 #	include <shobjidl.h>
 #	include <shlguid.h>
+#	include <gdiplus.h>
 #	pragma comment(lib, "Psapi.lib")
 #	pragma comment(lib, "Shlwapi.lib")
 #	pragma comment(lib, "Ole32.lib")
+#	pragma comment(lib, "gdiplus.lib")
 #elif defined NIER_PLATFORM_LINUX
 #	include <pthread.h>
 #	include <unistd.h>

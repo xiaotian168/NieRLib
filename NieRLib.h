@@ -12,6 +12,8 @@
 #include "Base/IRefCount.h"
 #include "Base/IWorkProgress.h"
 #include "Base/ITask.h"
+#include "Base/IIDObject.h"
+#include "Base/INameObject.h"
 
 /**
 ** @addgroup 文件枚举器
@@ -109,3 +111,19 @@
 #include "Archiver/IArchiverItemEnumerator.h"
 #include "Archiver/IArchiverUnpacker.h"
 #include "Archiver/ArchiverFactory.h"
+
+/**
+** @addgroup 图像
+*/
+#include "Image/IImage.h"
+
+/**
+** @addgroup 字体
+*/
+#include "Font/IFont2D.h"
+
+/**
+** @addgroup 渲染设备
+*/
+#include "RenderDevice/IRenderDevice.h"
+#include "RenderDevice/RenderDeviceFactory.h"

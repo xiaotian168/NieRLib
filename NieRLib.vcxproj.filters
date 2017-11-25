@@ -103,6 +103,24 @@
     <Filter Include="头文件\Profile">
       <UniqueIdentifier>{393f2275-c531-4ec8-97d0-58d5bc7edce0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Image">
+      <UniqueIdentifier>{7e11ac9c-9f7e-4c5f-a47f-be3493e15dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Image">
+      <UniqueIdentifier>{ca56b9eb-932e-415e-b702-abbdaecaaba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\RenderDevice">
+      <UniqueIdentifier>{bfdd9f18-7b9f-4e2e-9540-3babed514840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\RenderDevice">
+      <UniqueIdentifier>{e1fa4c83-4943-4853-9b9d-8c044b77dc2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Font">
+      <UniqueIdentifier>{fdc39414-8715-438d-bae5-042756647b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Font">
+      <UniqueIdentifier>{715b5e89-7860-416b-a3f8-d76f39808602}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -330,6 +348,42 @@
     <ClInclude Include="Profile\Profile.h">
       <Filter>头文件\Profile</Filter>
     </ClInclude>
+    <ClInclude Include="Base\IIDObject.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\INameObject.h">
+      <Filter>头文件\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\IRenderDevice.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\CGDIRenderDevice.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\CGDIPRenderDevice.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\RenderDeviceFactory.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\IImage.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\CGDIImage.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\CGDIPImage.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Font\CGDIFont.h">
+      <Filter>头文件\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Font\CGDIPFont.h">
+      <Filter>头文件\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Font\IFont2D.h">
+      <Filter>头文件\Font</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -469,6 +523,27 @@
     </ClCompile>
     <ClCompile Include="Log\LogFactory.cpp">
       <Filter>源文件\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDevice\CGDIRenderDevice.cpp">
+      <Filter>源文件\RenderDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDevice\CGDIPRenderDevice.cpp">
+      <Filter>源文件\RenderDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDevice\RenderDeviceFactory.cpp">
+      <Filter>源文件\RenderDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CGDIImage.cpp">
+      <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CGDIPImage.cpp">
+      <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Font\CGDIPFont.cpp">
+      <Filter>源文件\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Font\CGDIFont.cpp">
+      <Filter>源文件\Font</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

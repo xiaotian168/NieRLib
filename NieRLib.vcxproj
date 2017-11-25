@@ -30,6 +30,8 @@
     <ClInclude Include="Archiver\zip\unzip.h" />
     <ClInclude Include="Archiver\zip\zip.h" />
     <ClInclude Include="Base\COMTool.h" />
+    <ClInclude Include="Base\IIDObject.h" />
+    <ClInclude Include="Base\INameObject.h" />
     <ClInclude Include="Base\IRefCount.h" />
     <ClInclude Include="Base\ITask.h" />
     <ClInclude Include="Base\IWorkProgress.h" />
@@ -45,6 +47,12 @@
     <ClInclude Include="FileSystem\FileSystemTool.h" />
     <ClInclude Include="FileSystem\IFile.h" />
     <ClInclude Include="FileSystem\IFileSystem.h" />
+    <ClInclude Include="Font\CGDIFont.h" />
+    <ClInclude Include="Font\CGDIPFont.h" />
+    <ClInclude Include="Font\IFont2D.h" />
+    <ClInclude Include="Image\CGDIImage.h" />
+    <ClInclude Include="Image\CGDIPImage.h" />
+    <ClInclude Include="Image\IImage.h" />
     <ClInclude Include="Library\CWin32Library.h" />
     <ClInclude Include="Library\CWin32LibraryManager.h" />
     <ClInclude Include="Library\ILibrary.h" />
@@ -75,6 +83,10 @@
     <ClInclude Include="Process\ProcessManagerFactory.h" />
     <ClInclude Include="Process\ProcessTool.h" />
     <ClInclude Include="Profile\Profile.h" />
+    <ClInclude Include="RenderDevice\CGDIPRenderDevice.h" />
+    <ClInclude Include="RenderDevice\CGDIRenderDevice.h" />
+    <ClInclude Include="RenderDevice\IRenderDevice.h" />
+    <ClInclude Include="RenderDevice\RenderDeviceFactory.h" />
     <ClInclude Include="Shortcut\CWin32Shortcut.h" />
     <ClInclude Include="Shortcut\CWin32ShortcutManager.h" />
     <ClInclude Include="Shortcut\IShortcut.h" />
@@ -111,6 +123,10 @@
     <ClCompile Include="FileSystem\CWin32FileSystem.cpp" />
     <ClCompile Include="FileSystem\FileSystemFactory.cpp" />
     <ClCompile Include="FileSystem\FileSystemTool.cpp" />
+    <ClCompile Include="Font\CGDIFont.cpp" />
+    <ClCompile Include="Font\CGDIPFont.cpp" />
+    <ClCompile Include="Image\CGDIImage.cpp" />
+    <ClCompile Include="Image\CGDIPImage.cpp" />
     <ClCompile Include="Library\CWin32Library.cpp" />
     <ClCompile Include="Library\CWin32LibraryManager.cpp" />
     <ClCompile Include="Library\LibraryManagerFactory.cpp" />
@@ -129,6 +145,9 @@
     <ClCompile Include="Process\CWin32ProcessManager.cpp" />
     <ClCompile Include="Process\ProcessManagerFactory.cpp" />
     <ClCompile Include="Process\ProcessTool.cpp" />
+    <ClCompile Include="RenderDevice\CGDIPRenderDevice.cpp" />
+    <ClCompile Include="RenderDevice\CGDIRenderDevice.cpp" />
+    <ClCompile Include="RenderDevice\RenderDeviceFactory.cpp" />
     <ClCompile Include="Shortcut\CWin32Shortcut.cpp" />
     <ClCompile Include="Shortcut\CWin32ShortcutManager.cpp" />
     <ClCompile Include="Shortcut\ShortcutManagerFactory.cpp" />
