@@ -82,6 +82,12 @@
     <Filter Include="源文件\Base">
       <UniqueIdentifier>{e72acae5-83a3-4325-a0f9-aee13e6a74fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\FileSystem">
+      <UniqueIdentifier>{ef19201b-f990-46c2-8729-30f7ccbe012c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\FileSystem">
+      <UniqueIdentifier>{4e3e8b51-571a-4c24-bf76-6adeb658c342}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -243,6 +249,24 @@
     <ClInclude Include="NetAdapter\NetAdapterManagerFactory.h">
       <Filter>头文件\NetAdapter</Filter>
     </ClInclude>
+    <ClInclude Include="FileSystem\FileSystemTool.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\IFile.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\IFileSystem.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileSystemFactory.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CWin32FileSystem.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CWin32File.h">
+      <Filter>头文件\FileSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -340,6 +364,18 @@
     </ClCompile>
     <ClCompile Include="NetAdapter\NetAdapterManagerFactory.cpp">
       <Filter>源文件\NetAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileSystemFactory.cpp">
+      <Filter>源文件\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileSystemTool.cpp">
+      <Filter>源文件\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CWin32FileSystem.cpp">
+      <Filter>源文件\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CWin32File.cpp">
+      <Filter>源文件\FileSystem</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

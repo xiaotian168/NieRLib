@@ -46,6 +46,10 @@
 ** 归档文件元素接口 IArchiverItem，增加工作进度接口 IWorkProgress
 ** 为归档文件接口提供一份 Win32 Zip 实现
 **
+** @history ver0.4 2017-11-25
+**
+** 增加文件系统接口 IFileSystem、文件接口 IFile，并提供一份默认的 Win32 实现
+**
 */
 
 /**
@@ -61,6 +65,14 @@
 #include "FileEnumerator/IFileEnumResult.h"
 #include "FileEnumerator/FileEnumeratorFactory.h"
 #include "FileEnumerator/FileEnumTool.h"
+
+/**
+** @addgroup 文件系统
+*/
+#include "FileSystem/IFile.h"
+#include "FileSystem/IFileSystem.h"
+#include "FileSystem/FileSystemFactory.h"
+#include "FileSystem/FileSystemTool.h"
 
 /**
 ** @addgroup 内存分配器

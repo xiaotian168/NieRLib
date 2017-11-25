@@ -8,12 +8,14 @@ CSimpleWin32Lock * CSimpleWin32Lock::Make(void)
 
 CSimpleWin32Lock::CSimpleWin32Lock()
 {
+	memset(&m_CriticalSection, 0, sizeof(m_CriticalSection));
 	InitializeCriticalSection(&m_CriticalSection);
 }
 
 CSimpleWin32Lock::~CSimpleWin32Lock()
 {
 	DeleteCriticalSection(&m_CriticalSection);
+	memset(&m_CriticalSection, 0, sizeof(m_CriticalSection));
 }
 
 bool CSimpleWin32Lock::Lock(void)

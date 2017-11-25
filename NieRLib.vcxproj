@@ -38,6 +38,12 @@
     <ClInclude Include="FileEnumerator\FileEnumTool.h" />
     <ClInclude Include="FileEnumerator\IFileEnumerator.h" />
     <ClInclude Include="FileEnumerator\IFileEnumResult.h" />
+    <ClInclude Include="FileSystem\CWin32File.h" />
+    <ClInclude Include="FileSystem\CWin32FileSystem.h" />
+    <ClInclude Include="FileSystem\FileSystemFactory.h" />
+    <ClInclude Include="FileSystem\FileSystemTool.h" />
+    <ClInclude Include="FileSystem\IFile.h" />
+    <ClInclude Include="FileSystem\IFileSystem.h" />
     <ClInclude Include="Lock\CSimpleWin32Lock.h" />
     <ClInclude Include="Lock\ILock.h" />
     <ClInclude Include="Lock\LockFactory.h" />
@@ -85,6 +91,10 @@
     <ClCompile Include="FileEnumerator\CWin32FileEnumResult.cpp" />
     <ClCompile Include="FileEnumerator\FileEnumeratorFactory.cpp" />
     <ClCompile Include="FileEnumerator\FileEnumTool.cpp" />
+    <ClCompile Include="FileSystem\CWin32File.cpp" />
+    <ClCompile Include="FileSystem\CWin32FileSystem.cpp" />
+    <ClCompile Include="FileSystem\FileSystemFactory.cpp" />
+    <ClCompile Include="FileSystem\FileSystemTool.cpp" />
     <ClCompile Include="Lock\CSimpleWin32Lock.cpp" />
     <ClCompile Include="Lock\LockFactory.cpp" />
     <ClCompile Include="MemoryAllocator\CDefaultMemoryAllocator.cpp" />
@@ -117,7 +127,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

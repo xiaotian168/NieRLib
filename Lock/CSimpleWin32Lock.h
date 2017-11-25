@@ -24,5 +24,5 @@ public:
 
 private:
 
-	CRITICAL_SECTION m_CriticalSection{ 0 };
+	CRITICAL_SECTION m_CriticalSection;
 };
