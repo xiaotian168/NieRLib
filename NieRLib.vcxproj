@@ -52,7 +52,9 @@
     <ClInclude Include="Font\IFont2D.h" />
     <ClInclude Include="Image\CGDIImage2D.h" />
     <ClInclude Include="Image\CGDIPImage2D.h" />
+    <ClInclude Include="Image\CGDIPMultiFrameImage2D.h" />
     <ClInclude Include="Image\IImage2D.h" />
+    <ClInclude Include="Image\IMultiFrameImage2D.h" />
     <ClInclude Include="Library\CWin32Library.h" />
     <ClInclude Include="Library\CWin32LibraryManager.h" />
     <ClInclude Include="Library\ILibrary.h" />
@@ -127,6 +129,7 @@
     <ClCompile Include="Font\CGDIPFont2D.cpp" />
     <ClCompile Include="Image\CGDIImage2D.cpp" />
     <ClCompile Include="Image\CGDIPImage2D.cpp" />
+    <ClCompile Include="Image\CGDIPMultiFrameImage2D.cpp" />
     <ClCompile Include="Library\CWin32Library.cpp" />
     <ClCompile Include="Library\CWin32LibraryManager.cpp" />
     <ClCompile Include="Library\LibraryManagerFactory.cpp" />

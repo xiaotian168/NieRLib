@@ -116,6 +116,7 @@
 ** @addgroup Í¼Ïñ
 */
 #include "Image/IImage2D.h"
+#include "Image/IMultiFrameImage2D.h"
 
 /**
 ** @addgroup ×ÖÌå

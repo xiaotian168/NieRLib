@@ -178,14 +178,18 @@ int CGDIRenderDevice::ConvertTextFormat(const int nFormat) const
 	int nFmt = 0;
 
 	if (nFormat & eTextFmt_Left) nFmt |= DT_LEFT;
-	if (nFormat & eTextFmt_Right) nFmt |= DT_RIGHT;
+	else if (nFormat & eTextFmt_Right) nFmt |= DT_RIGHT;
+	else if (nFormat & eTextFmt_HCenter) nFmt |= DT_CENTER;
+
 	if (nFormat & eTextFmt_Top) nFmt |= DT_TOP;
-	if (nFormat & eTextFmt_Bottom) nFmt |= DT_BOTTOM;
-	if (nFormat & eTextFmt_HCenter) nFmt |= DT_CENTER;
-	if (nFormat & eTextFmt_VCenter) nFmt |= DT_VCENTER;
+	else if (nFormat & eTextFmt_Bottom) nFmt |= DT_BOTTOM;
+	else if (nFormat & eTextFmt_VCenter) nFmt |= DT_VCENTER;
+
 	if (nFormat & eTextFmt_SingleLine) nFmt |= DT_SINGLELINE;
+
 	if (nFormat & eTextFmt_PathEllipsis) nFmt |= DT_PATH_ELLIPSIS;
-	if (nFormat & eTextFmt_WordEllipsis) nFmt |= DT_WORD_ELLIPSIS;
+	else if (nFormat & eTextFmt_WordEllipsis) nFmt |= DT_WORD_ELLIPSIS;
+
 	if (nFormat & eTextFmt_WordBreak) nFmt |= DT_WORDBREAK;
 
 	return nFmt;

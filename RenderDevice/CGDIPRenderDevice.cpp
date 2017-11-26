@@ -138,11 +138,27 @@ bool CGDIPRenderDevice::RenderLine(const int nX1, const int nY1, const int nX2, 
 
 Gdiplus::StringFormat * CGDIPRenderDevice::ConvertTextFormat(const int nFormat) const
 {
-	Gdiplus::StringFormat * pFmt = 0;
+	if (nFormat)
+	{
+		auto pFmt = new Gdiplus::StringFormat();
+		if (pFmt)
+		{
+			if (nFormat & eTextFmt_Left) pFmt->SetAlignment(Gdiplus::StringAlignmentNear);
+			else if (nFormat & eTextFmt_Right) pFmt->SetAlignment(Gdiplus::StringAlignmentFar);
+			else if (nFormat & eTextFmt_HCenter) pFmt->SetAlignment(Gdiplus::StringAlignmentCenter);
 
-	assert(false);
+			if (nFormat & eTextFmt_Top) pFmt->SetLineAlignment(Gdiplus::StringAlignmentNear);
+			else if (nFormat & eTextFmt_Bottom) pFmt->SetLineAlignment(Gdiplus::StringAlignmentFar);
+			else if (nFormat & eTextFmt_VCenter) pFmt->SetLineAlignment(Gdiplus::StringAlignmentCenter);			
 
-	return pFmt;
+			if (nFormat & eTextFmt_PathEllipsis) pFmt->SetTrimming(Gdiplus::StringTrimmingEllipsisPath);
+			else if (nFormat & eTextFmt_WordEllipsis) pFmt->SetTrimming(Gdiplus::StringTrimmingEllipsisWord);
+
+			return pFmt;
+		}
+	}
+
+	return 0;
 }
 
 #endif

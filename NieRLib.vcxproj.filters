@@ -384,6 +384,12 @@
     <ClInclude Include="Image\CGDIPImage2D.h">
       <Filter>头文件\Image</Filter>
     </ClInclude>
+    <ClInclude Include="Image\IMultiFrameImage2D.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\CGDIPMultiFrameImage2D.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -543,6 +549,9 @@
       <Filter>源文件\Image</Filter>
     </ClCompile>
     <ClCompile Include="Image\CGDIPImage2D.cpp">
+      <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CGDIPMultiFrameImage2D.cpp">
       <Filter>源文件\Image</Filter>
     </ClCompile>
   </ItemGroup>

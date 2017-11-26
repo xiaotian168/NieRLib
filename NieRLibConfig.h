@@ -54,4 +54,5 @@
 #include <stdarg.h>
 #include <list>
 #include <string>
+#include <vector>
 #include <assert.h>
