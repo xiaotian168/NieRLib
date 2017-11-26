@@ -1,7 +1,7 @@
 
 #include "CGDIRenderDevice.h"
-#include "../Image/CGDIImage.h"
-#include "../Font/CGDIFont.h"
+#include "../Image/CGDIImage2D.h"
+#include "../Font/CGDIFont2D.h"
 
 #if defined NIER_PLATFORM_WIN32
 
@@ -43,9 +43,9 @@ CGDIRenderDevice::~CGDIRenderDevice()
 	m_hDC = 0;
 }
 
-IImage * CGDIRenderDevice::CreateImageFromFileW(const wchar_t * pszFilePath)
+IImage2D * CGDIRenderDevice::CreateImageFromFileW(const wchar_t * pszFilePath)
 {
-	return CGDIImage::MakeFromFileW(pszFilePath);
+	return CGDIImage2D::MakeFromFileW(pszFilePath);
 }
 
 IFont2D * CGDIRenderDevice::CreateFontW(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight)
@@ -59,13 +59,13 @@ IFont2D * CGDIRenderDevice::CreateFontW(const wchar_t * pszFaceName, const unsig
 		LogFontW.lfHeight = uHeight;
 		LogFontW.lfWeight = uWeight;
 
-		return CGDIFont::MakeW(LogFontW);
+		return CGDIFont2D::MakeW(LogFontW);
 	}
 
 	return 0;
 }
 
-bool CGDIRenderDevice::RenderImage(IImage * pImage, const int nPosX, const int nPosY)
+bool CGDIRenderDevice::RenderImage(IImage2D * pImage, const int nPosX, const int nPosY)
 {
 	bool bRet = false;
 	unsigned int uImageWidth = 0;
@@ -73,7 +73,7 @@ bool CGDIRenderDevice::RenderImage(IImage * pImage, const int nPosX, const int n
 
 	if (m_hDC && pImage)
 	{
-		auto pBmpImage = dynamic_cast<CGDIImage *>(pImage);
+		auto pBmpImage = dynamic_cast<CGDIImage2D *>(pImage);
 		if (pBmpImage)
 		{
 			const auto hBmp = pBmpImage->GetBitmapHandle();
@@ -111,7 +111,7 @@ bool CGDIRenderDevice::RenderTextW(IFont2D * pFont, const wchar_t * pszText, con
 
 	if (m_hDC && pFont && pszText && uWidth && uHeight)
 	{
-		auto pGDIFont = dynamic_cast<CGDIFont *>(pFont);
+		auto pGDIFont = dynamic_cast<CGDIFont2D *>(pFont);
 		if (pGDIFont)
 		{
 			const auto hFont = pGDIFont->GetGDIFontHandle();
@@ -138,6 +138,35 @@ bool CGDIRenderDevice::RenderTextW(IFont2D * pFont, const wchar_t * pszText, con
 				}
 				SelectObject(m_hDC, hFontOld);
 			}
+		}
+	}
+
+	return bRet;
+}
+
+bool CGDIRenderDevice::RenderLine(const int nX1, const int nY1, const int nX2, const int nY2, const unsigned int uColor)
+{
+	bool bRet = false;
+	POINT PosOld = { 0 };
+
+	if (m_hDC)
+	{
+		if (MoveToEx(m_hDC, nX1, nX2, &PosOld))
+		{
+			auto hPen = CreatePen(PS_SOLID, 1, uColor);
+			if (hPen)
+			{
+				auto hPenOld = SelectObject(m_hDC, hPen);
+				{
+					if (LineTo(m_hDC, nX2, nY2))
+					{
+						bRet = true;
+					}
+				}
+				SelectObject(m_hDC, hPenOld);
+			}
+
+			MoveToEx(m_hDC, PosOld.x, PosOld.y, 0);
 		}
 	}
 

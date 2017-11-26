@@ -3,7 +3,7 @@
 
 #include "../Base/IRefCount.h"
 
-class IImage;
+class IImage2D;
 class IFont2D;
 
 /**
@@ -35,7 +35,7 @@ public:
 	/**
 	** @brief 从文件创建图像
 	*/
-	virtual IImage * CreateImageFromFileW(const wchar_t * pszFilePath) = 0;
+	virtual IImage2D * CreateImageFromFileW(const wchar_t * pszFilePath) = 0;
 
 	/**
 	** @brief 创建字体
@@ -45,10 +45,15 @@ public:
 	/**
 	** @brief 绘制图像
 	*/
-	virtual bool RenderImage(IImage * pImage, const int nPosX, const int nPosY) = 0;
+	virtual bool RenderImage(IImage2D * pImage, const int nPosX, const int nPosY) = 0;
 
 	/**
 	** @brief 绘制字符串
 	*/
 	virtual bool RenderTextW(IFont2D * pFont, const wchar_t * pszText, const int nLen, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uColor, const int nFormat) = 0;
+
+	/**
+	** @brief 绘制线段
+	*/
+	virtual bool RenderLine(const int nX1, const int nY1, const int nX2, const int nY2, const unsigned int uColor) = 0;
 };

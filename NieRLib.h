@@ -115,7 +115,7 @@
 /**
 ** @addgroup Í¼Ïñ
 */
-#include "Image/IImage.h"
+#include "Image/IImage2D.h"
 
 /**
 ** @addgroup ×ÖÌå

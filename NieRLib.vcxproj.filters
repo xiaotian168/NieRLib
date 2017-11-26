@@ -366,23 +366,23 @@
     <ClInclude Include="RenderDevice\RenderDeviceFactory.h">
       <Filter>头文件\RenderDevice</Filter>
     </ClInclude>
-    <ClInclude Include="Image\IImage.h">
-      <Filter>头文件\Image</Filter>
-    </ClInclude>
-    <ClInclude Include="Image\CGDIImage.h">
-      <Filter>头文件\Image</Filter>
-    </ClInclude>
-    <ClInclude Include="Image\CGDIPImage.h">
-      <Filter>头文件\Image</Filter>
-    </ClInclude>
-    <ClInclude Include="Font\CGDIFont.h">
-      <Filter>头文件\Font</Filter>
-    </ClInclude>
-    <ClInclude Include="Font\CGDIPFont.h">
-      <Filter>头文件\Font</Filter>
-    </ClInclude>
     <ClInclude Include="Font\IFont2D.h">
       <Filter>头文件\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Font\CGDIPFont2D.h">
+      <Filter>头文件\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Font\CGDIFont2D.h">
+      <Filter>头文件\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\IImage2D.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\CGDIImage2D.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\CGDIPImage2D.h">
+      <Filter>头文件\Image</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -533,17 +533,17 @@
     <ClCompile Include="RenderDevice\RenderDeviceFactory.cpp">
       <Filter>源文件\RenderDevice</Filter>
     </ClCompile>
-    <ClCompile Include="Image\CGDIImage.cpp">
-      <Filter>源文件\Image</Filter>
-    </ClCompile>
-    <ClCompile Include="Image\CGDIPImage.cpp">
-      <Filter>源文件\Image</Filter>
-    </ClCompile>
-    <ClCompile Include="Font\CGDIPFont.cpp">
+    <ClCompile Include="Font\CGDIPFont2D.cpp">
       <Filter>源文件\Font</Filter>
     </ClCompile>
-    <ClCompile Include="Font\CGDIFont.cpp">
+    <ClCompile Include="Font\CGDIFont2D.cpp">
       <Filter>源文件\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CGDIImage2D.cpp">
+      <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CGDIPImage2D.cpp">
+      <Filter>源文件\Image</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

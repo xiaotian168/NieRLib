@@ -1,14 +1,14 @@
 
-#include "CGDIFont.h"
+#include "CGDIFont2D.h"
 
 #if defined NIER_PLATFORM_WIN32
 
-CGDIFont * CGDIFont::MakeW(const LOGFONTW & LogFont)
+CGDIFont2D * CGDIFont2D::MakeW(const LOGFONTW & LogFont)
 {
-	return new CGDIFont(LogFont);
+	return new CGDIFont2D(LogFont);
 }
 
-CGDIFont::CGDIFont(const LOGFONTW & LogFont)
+CGDIFont2D::CGDIFont2D(const LOGFONTW & LogFont)
 {
 	memset(&m_LogFont, 0, sizeof(m_LogFont));
 
@@ -19,7 +19,7 @@ CGDIFont::CGDIFont(const LOGFONTW & LogFont)
 	}
 }
 
-CGDIFont::~CGDIFont()
+CGDIFont2D::~CGDIFont2D()
 {
 	if (m_hFont)
 	{
@@ -30,7 +30,7 @@ CGDIFont::~CGDIFont()
 	memset(&m_LogFont, 0, sizeof(m_LogFont));
 }
 
-bool CGDIFont::GetFontInfoW(FONTINFOW & FontInfo)
+bool CGDIFont2D::GetFontInfoW(FONTINFOW & FontInfo)
 {
 	bool bRet = false;
 

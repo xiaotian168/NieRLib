@@ -1,23 +1,23 @@
 
 #pragma once
 
-#include "IImage.h"
+#include "IImage2D.h"
 
 #if defined NIER_PLATFORM_WIN32
 
-class CGDIImage : public IImage
+class CGDIImage2D : public IImage2D
 {
 public:
 
 	friend class CGDIRenderDevice;
 
-	static CGDIImage * MakeFromFileW(const wchar_t * pszFilePath);
+	static CGDIImage2D * MakeFromFileW(const wchar_t * pszFilePath);
 
 protected:
 
-	CGDIImage(const wchar_t * pszFilePath);
+	CGDIImage2D(const wchar_t * pszFilePath);
 
-	~CGDIImage();
+	~CGDIImage2D();
 
 public:
 

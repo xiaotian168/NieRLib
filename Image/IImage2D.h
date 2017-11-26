@@ -6,7 +6,7 @@
 /**
 ** @brief Í¼Ïñ½Ó¿Ú
 */
-class IImage : public IRefCount
+class IImage2D : public IRefCount
 {
 public:
 

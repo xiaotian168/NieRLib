@@ -1,14 +1,14 @@
 
-#include "CGDIImage.h"
+#include "CGDIImage2D.h"
 
 #if defined NIER_PLATFORM_WIN32
 
-CGDIImage * CGDIImage::MakeFromFileW(const wchar_t * pszFilePath)
+CGDIImage2D * CGDIImage2D::MakeFromFileW(const wchar_t * pszFilePath)
 {
-	return new CGDIImage(pszFilePath);
+	return new CGDIImage2D(pszFilePath);
 }
 
-CGDIImage::CGDIImage(const wchar_t * pszFilePath)
+CGDIImage2D::CGDIImage2D(const wchar_t * pszFilePath)
 {
 	BITMAP Bmp = { 0 };
 
@@ -26,7 +26,7 @@ CGDIImage::CGDIImage(const wchar_t * pszFilePath)
 	}
 }
 
-CGDIImage::~CGDIImage()
+CGDIImage2D::~CGDIImage2D()
 {
 	if (m_hBmp)
 	{
@@ -38,7 +38,7 @@ CGDIImage::~CGDIImage()
 	m_uHeight = 0;
 }
 
-bool CGDIImage::GetImageSize(unsigned int & uWidth, unsigned int & uHeight)
+bool CGDIImage2D::GetImageSize(unsigned int & uWidth, unsigned int & uHeight)
 {
 	bool bRet = false;
 

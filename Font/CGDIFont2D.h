@@ -5,19 +5,19 @@
 
 #if defined NIER_PLATFORM_WIN32
 
-class CGDIFont : public IFont2D
+class CGDIFont2D : public IFont2D
 {
 public:
 
 	friend class CGDIRenderDevice;
 
-	static CGDIFont * MakeW(const LOGFONTW & LogFont);
+	static CGDIFont2D * MakeW(const LOGFONTW & LogFont);
 
 protected:
 
-	CGDIFont(const LOGFONTW & LogFont);
+	CGDIFont2D(const LOGFONTW & LogFont);
 
-	~CGDIFont();
+	~CGDIFont2D();
 
 public:
 

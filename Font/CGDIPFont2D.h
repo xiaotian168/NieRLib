@@ -5,19 +5,19 @@
 
 #if defined NIER_PLATFORM_WIN32
 
-class CGDIPFont : public IFont2D
+class CGDIPFont2D : public IFont2D
 {
 public:
 
 	friend class CGDIPRenderDevice;
 
-	static CGDIPFont * Make(void);
+	static CGDIPFont2D * MakeW(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight);
 
 protected:
 
-	CGDIPFont();
+	CGDIPFont2D(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight);
 
-	~CGDIPFont();
+	~CGDIPFont2D();
 
 public:
 
