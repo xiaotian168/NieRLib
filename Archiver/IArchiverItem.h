@@ -1,4 +1,6 @@
 
+#pragma once
+
 #include "../Base/IRefCount.h"
 
 /**

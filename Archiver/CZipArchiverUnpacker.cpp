@@ -1,6 +1,7 @@
 
 #include "CZipArchiverUnpacker.h"
 #include "CZipArchiverItemEnumerator.h"
+#include "CZipArchiverItem.h"
 #include "../Base/IWorkProgress.h"
 
 CZipArchiverUnpacker * CZipArchiverUnpacker::Make(void)
@@ -21,7 +22,6 @@ CZipArchiverUnpacker::~CZipArchiverUnpacker()
 bool CZipArchiverUnpacker::OpenArchiverW(const wchar_t * pszArchiverPath, const char * pszPassword)
 {
 	bool bRet = false;
-
 	if (!m_hZip && pszArchiverPath)
 	{
 #if defined UNICODE || defined _UNICODE
@@ -132,6 +132,29 @@ bool CZipArchiverUnpacker::Decompress(IWorkProgress * pWorkProgress)
 			if (nItemIndex == nTotalItemNum)
 			{
 				bRet = true;
+			}
+		}
+	}
+
+	return bRet;
+}
+
+bool CZipArchiverUnpacker::DecompressItem(IArchiverItem * pItem)
+{
+	bool bRet = false;
+	ZIPENTRY ZEntry = { 0 };
+
+	if (m_hZip && pItem)
+	{
+		auto pZipItem = dynamic_cast<CZipArchiverItem *>(pItem);
+		if (pZipItem && m_hZip == pZipItem->GetZipHandle())
+		{
+			if (ZR_OK == GetZipItem(m_hZip, pZipItem->GetItemIndex(), &ZEntry))
+			{
+				if (ZR_OK == UnzipItem(m_hZip, pZipItem->GetItemIndex(), ZEntry.name))
+				{
+					bRet = true;
+				}
 			}
 		}
 	}

@@ -8,6 +8,8 @@ class CZipArchiverItem : public IArchiverItem
 {
 public:
 
+	friend class CZipArchiverUnpacker;
+
 	static CZipArchiverItem * Make(const HZIP hZip, const int nItemIndex);
 
 protected:
@@ -21,6 +23,18 @@ public:
 	bool GetItemNameW(wchar_t * pszName, const unsigned int uSize) override;
 
 	bool IsItemDirectory(void) override;
+
+private:
+
+	inline HZIP GetZipHandle(void) const
+	{
+		return m_hZip;
+	}
+
+	inline int GetItemIndex(void) const
+	{
+		return m_nItemIndex;
+	}
 
 private:
 

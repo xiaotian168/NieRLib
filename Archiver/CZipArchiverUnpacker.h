@@ -27,6 +27,8 @@ public:
 
 	bool Decompress(IWorkProgress * pWorkProgress) override;
 
+	bool DecompressItem(IArchiverItem * pItem) override;
+
 	IArchiverItemEnumerator * GetItemEnumerator(void) override;
 
 private:
