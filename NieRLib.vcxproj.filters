@@ -390,6 +390,9 @@
     <ClInclude Include="Image\CGDIPMultiFrameImage2D.h">
       <Filter>头文件\Image</Filter>
     </ClInclude>
+    <ClInclude Include="Archiver\ArchiverTool.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -553,6 +556,9 @@
     </ClCompile>
     <ClCompile Include="Image\CGDIPMultiFrameImage2D.cpp">
       <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\ArchiverTool.cpp">
+      <Filter>源文件\Archiver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

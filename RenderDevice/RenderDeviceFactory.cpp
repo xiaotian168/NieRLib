@@ -37,26 +37,42 @@ private:
 
 ULONG_PTR CGDIPStartupHelper::uToken = 0;
 
+#endif
+
 IRenderDevice * MakeGDIRenderDeviceFromHDC(const HDC hDC)
 {
+#if defined NIER_PLATFORM_WIN32
 	return CGDIRenderDevice::Make(hDC);
+#endif
+
+	return 0;
 }
 
 IRenderDevice * MakeGDIRenderDeviceFromHWND(const HWND hWnd)
 {
+#if defined NIER_PLATFORM_WIN32
 	return CGDIRenderDevice::Make(hWnd);
+#endif
+
+	return 0;
 }
 
 IRenderDevice * MakeGDIPRenderDeviceFromHDC(const HDC hDC)
 {
+#if defined NIER_PLATFORM_WIN32
 	static CGDIPStartupHelper GDIPStartupHelper;
 	return CGDIPRenderDevice::Make(hDC);
+#endif
+
+	return 0;
 }
 
 IRenderDevice * MakeGDIPRenderDeviceFromHWND(const HWND hWnd)
 {
+#if defined NIER_PLATFORM_WIN32
 	static CGDIPStartupHelper GDIPStartupHelper;
 	return CGDIPRenderDevice::Make(hWnd);
-}
-
 #endif
+
+	return 0;
+}

@@ -27,14 +27,29 @@ public:
 
 public:
 
+	/**
+	** @brief 创建线程
+	*/
 	bool CreateThread(void);
 
+	/**
+	** @brief 终止线程
+	*/
 	bool TerminateThread(void);
 
+	/**
+	** @brief 暂停线程
+	*/
 	bool PauseThread(void);
 
+	/**
+	** @brief 恢复线程
+	*/
 	bool ResumeThread(void);
 
+	/**
+	** @brief 等待线程
+	*/
 	bool Wait(const unsigned int uTimeOut);
 
 public:
