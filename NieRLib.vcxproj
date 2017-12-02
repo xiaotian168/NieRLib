@@ -19,164 +19,164 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Archiver\ArchiverFactory.h" />
-    <ClInclude Include="Archiver\ArchiverTool.h" />
-    <ClInclude Include="Archiver\IArchiver.h" />
-    <ClInclude Include="Archiver\IArchiverItem.h" />
-    <ClInclude Include="Archiver\IArchiverItemEnumerator.h" />
-    <ClInclude Include="Archiver\IArchiverUnpacker.h" />
-    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.h" />
-    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.h" />
-    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.h" />
+    <ClInclude Include="Archiver\NR_ArchiverFactory.h" />
+    <ClInclude Include="Archiver\NR_ArchiverTool.h" />
+    <ClInclude Include="Archiver\NR_IArchiver.h" />
+    <ClInclude Include="Archiver\NR_IArchiverItem.h" />
+    <ClInclude Include="Archiver\NR_IArchiverItemEnumerator.h" />
+    <ClInclude Include="Archiver\NR_IArchiverUnpacker.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverItem.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverItemEnumerator.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverUnpacker.h" />
     <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.h" />
     <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.h" />
-    <ClInclude Include="Base\COMTool.h" />
-    <ClInclude Include="Base\IIDObject.h" />
-    <ClInclude Include="Base\INameObject.h" />
-    <ClInclude Include="Base\IRefCount.h" />
-    <ClInclude Include="Base\ITask.h" />
-    <ClInclude Include="Base\IWorkProgress.h" />
-    <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h" />
-    <ClInclude Include="FileEnumerator\CWin32FileEnumResult.h" />
-    <ClInclude Include="FileEnumerator\FileEnumeratorFactory.h" />
-    <ClInclude Include="FileEnumerator\FileEnumTool.h" />
-    <ClInclude Include="FileEnumerator\IFileEnumerator.h" />
-    <ClInclude Include="FileEnumerator\IFileEnumResult.h" />
-    <ClInclude Include="FilePath\CWin32FilePath.h" />
-    <ClInclude Include="FilePath\FilePathFactory.h" />
-    <ClInclude Include="FilePath\FilePathTool.h" />
-    <ClInclude Include="FilePath\IFilePath.h" />
-    <ClInclude Include="FileSystem\CWin32File.h" />
-    <ClInclude Include="FileSystem\CWin32FileSystem.h" />
-    <ClInclude Include="FileSystem\FileSystemFactory.h" />
-    <ClInclude Include="FileSystem\FileSystemTool.h" />
-    <ClInclude Include="FileSystem\IFile.h" />
-    <ClInclude Include="FileSystem\IFileSystem.h" />
-    <ClInclude Include="Font\CGDIFont2D.h" />
-    <ClInclude Include="Font\CGDIPFont2D.h" />
-    <ClInclude Include="Font\IFont2D.h" />
-    <ClInclude Include="Image\CGDIImage2D.h" />
-    <ClInclude Include="Image\CGDIPImage2D.h" />
-    <ClInclude Include="Image\CGDIPMultiFrameImage2D.h" />
-    <ClInclude Include="Image\GDIPImageTool.h" />
-    <ClInclude Include="Image\IImage2D.h" />
-    <ClInclude Include="Image\IMultiFrameImage2D.h" />
-    <ClInclude Include="Library\CWin32Library.h" />
-    <ClInclude Include="Library\CWin32LibraryManager.h" />
-    <ClInclude Include="Library\ILibrary.h" />
-    <ClInclude Include="Library\ILibraryManager.h" />
-    <ClInclude Include="Library\LibraryManagerFactory.h" />
-    <ClInclude Include="Library\LibraryTool.h" />
-    <ClInclude Include="Lock\CSimpleWin32Lock.h" />
-    <ClInclude Include="Lock\ILock.h" />
-    <ClInclude Include="Lock\LockFactory.h" />
-    <ClInclude Include="Log\CFileLog.h" />
-    <ClInclude Include="Log\ILog.h" />
-    <ClInclude Include="Log\LogFactory.h" />
-    <ClInclude Include="MemoryAllocator\CDefaultMemoryAllocator.h" />
-    <ClInclude Include="MemoryAllocator\IMemoryAllocator.h" />
-    <ClInclude Include="MemoryAllocator\MemoryAllocatorFactory.h" />
-    <ClInclude Include="NetAdapter\CWin32NetAapterManager.h" />
-    <ClInclude Include="NetAdapter\CWin32NetAdapter.h" />
-    <ClInclude Include="NetAdapter\INetAdapter.h" />
-    <ClInclude Include="NetAdapter\INetAdapterManager.h" />
-    <ClInclude Include="NetAdapter\NetAdapterManagerFactory.h" />
-    <ClInclude Include="NetAdapter\NetAdapterTool.h" />
+    <ClInclude Include="Base\NR_COMTool.h" />
+    <ClInclude Include="Base\NR_IIDObject.h" />
+    <ClInclude Include="Base\NR_INameObject.h" />
+    <ClInclude Include="Base\NR_IRefCount.h" />
+    <ClInclude Include="Base\NR_ITask.h" />
+    <ClInclude Include="Base\NR_IWorkProgress.h" />
+    <ClInclude Include="FileEnumerator\NR_CWin32FileEnumerator.h" />
+    <ClInclude Include="FileEnumerator\NR_CWin32FileEnumResult.h" />
+    <ClInclude Include="FileEnumerator\NR_FileEnumeratorFactory.h" />
+    <ClInclude Include="FileEnumerator\NR_FileEnumTool.h" />
+    <ClInclude Include="FileEnumerator\NR_IFileEnumerator.h" />
+    <ClInclude Include="FileEnumerator\NR_IFileEnumResult.h" />
+    <ClInclude Include="FilePath\NR_CWin32FilePath.h" />
+    <ClInclude Include="FilePath\NR_FilePathFactory.h" />
+    <ClInclude Include="FilePath\NR_FilePathTool.h" />
+    <ClInclude Include="FilePath\NR_IFilePath.h" />
+    <ClInclude Include="FileSystem\NR_CWin32File.h" />
+    <ClInclude Include="FileSystem\NR_CWin32FileSystem.h" />
+    <ClInclude Include="FileSystem\NR_FileSystemFactory.h" />
+    <ClInclude Include="FileSystem\NR_FileSystemTool.h" />
+    <ClInclude Include="FileSystem\NR_IFile.h" />
+    <ClInclude Include="FileSystem\NR_IFileSystem.h" />
+    <ClInclude Include="Font\NR_CGDIFont.h" />
+    <ClInclude Include="Font\NR_CGDIPFont.h" />
+    <ClInclude Include="Font\NR_IFont.h" />
+    <ClInclude Include="Image\NR_CGDIImage.h" />
+    <ClInclude Include="Image\NR_CGDIPImage.h" />
+    <ClInclude Include="Image\NR_CGDIPMultiFrameImage2D.h" />
+    <ClInclude Include="Image\NR_GDIPImageTool.h" />
+    <ClInclude Include="Image\NR_IImage.h" />
+    <ClInclude Include="Image\NR_IMultiFrameImage2D.h" />
+    <ClInclude Include="Library\NR_CWin32Library.h" />
+    <ClInclude Include="Library\NR_CWin32LibraryManager.h" />
+    <ClInclude Include="Library\NR_ILibrary.h" />
+    <ClInclude Include="Library\NR_ILibraryManager.h" />
+    <ClInclude Include="Library\NR_LibraryManagerFactory.h" />
+    <ClInclude Include="Library\NR_LibraryTool.h" />
+    <ClInclude Include="Lock\NR_CSimpleWin32Lock.h" />
+    <ClInclude Include="Lock\NR_ILock.h" />
+    <ClInclude Include="Lock\NR_LockFactory.h" />
+    <ClInclude Include="Log\NR_CFileLog.h" />
+    <ClInclude Include="Log\NR_ILog.h" />
+    <ClInclude Include="Log\NR_LogFactory.h" />
+    <ClInclude Include="MemoryAllocator\NR_CDefaultMemoryAllocator.h" />
+    <ClInclude Include="MemoryAllocator\NR_IMemoryAllocator.h" />
+    <ClInclude Include="MemoryAllocator\NR_MemoryAllocatorFactory.h" />
+    <ClInclude Include="NetAdapter\NR_CWin32NetAapterManager.h" />
+    <ClInclude Include="NetAdapter\NR_CWin32NetAdapter.h" />
+    <ClInclude Include="NetAdapter\NR_INetAdapter.h" />
+    <ClInclude Include="NetAdapter\NR_INetAdapterManager.h" />
+    <ClInclude Include="NetAdapter\NR_NetAdapterManagerFactory.h" />
+    <ClInclude Include="NetAdapter\NR_NetAdapterTool.h" />
     <ClInclude Include="NieRLib.h" />
     <ClInclude Include="NieRLibConfig.h" />
-    <ClInclude Include="Process\CWin32Process.h" />
-    <ClInclude Include="Process\CWin32ProcessManager.h" />
-    <ClInclude Include="Process\IProcess.h" />
-    <ClInclude Include="Process\IProcessManager.h" />
-    <ClInclude Include="Process\ProcessManagerFactory.h" />
-    <ClInclude Include="Process\ProcessTool.h" />
-    <ClInclude Include="Profile\Profile.h" />
-    <ClInclude Include="RenderDevice\ARGB.h" />
-    <ClInclude Include="RenderDevice\CGDIPRenderDevice.h" />
-    <ClInclude Include="RenderDevice\CGDIRenderDevice.h" />
-    <ClInclude Include="RenderDevice\IMultiFrameImageRenderDevice.h" />
-    <ClInclude Include="RenderDevice\IRenderDevice.h" />
-    <ClInclude Include="RenderDevice\RenderDeviceFactory.h" />
-    <ClInclude Include="Shortcut\CWin32Shortcut.h" />
-    <ClInclude Include="Shortcut\CWin32ShortcutManager.h" />
-    <ClInclude Include="Shortcut\IShortcut.h" />
-    <ClInclude Include="Shortcut\IShortcutManager.h" />
-    <ClInclude Include="Shortcut\ShortcutManagerFactory.h" />
-    <ClInclude Include="Shortcut\ShortcutTool.h" />
-    <ClInclude Include="StringConverter\CWin32StringConverter.h" />
-    <ClInclude Include="StringConverter\IStringConverter.h" />
-    <ClInclude Include="StringConverter\StringConverterFactory.h" />
-    <ClInclude Include="StringConverter\StringConverterTool.h" />
-    <ClInclude Include="Thread\CThread.h" />
-    <ClInclude Include="Thread\CWin32Thread.h" />
-    <ClInclude Include="Thread\CWin32ThreadManager.h" />
-    <ClInclude Include="Thread\IThread.h" />
-    <ClInclude Include="Thread\IThreadManager.h" />
-    <ClInclude Include="Thread\ThreadManagerFactory.h" />
-    <ClInclude Include="Thread\ThreadTool.h" />
-    <ClInclude Include="Workflow\IWorkflow.h" />
-    <ClInclude Include="Workflow\IWorkflowDesigner.h" />
+    <ClInclude Include="Process\NR_CWin32Process.h" />
+    <ClInclude Include="Process\NR_CWin32ProcessManager.h" />
+    <ClInclude Include="Process\NR_IProcess.h" />
+    <ClInclude Include="Process\NR_IProcessManager.h" />
+    <ClInclude Include="Process\NR_ProcessManagerFactory.h" />
+    <ClInclude Include="Process\NR_ProcessTool.h" />
+    <ClInclude Include="Profile\NR_Profile.h" />
+    <ClInclude Include="RenderDevice\NR_ARGB.h" />
+    <ClInclude Include="RenderDevice\NR_CGDIPRenderDevice.h" />
+    <ClInclude Include="RenderDevice\NR_CGDIRenderDevice.h" />
+    <ClInclude Include="RenderDevice\NR_IMultiFrameImageRenderDevice.h" />
+    <ClInclude Include="RenderDevice\NR_IRenderDevice.h" />
+    <ClInclude Include="RenderDevice\NR_RenderDeviceFactory.h" />
+    <ClInclude Include="Shortcut\NR_CWin32Shortcut.h" />
+    <ClInclude Include="Shortcut\NR_CWin32ShortcutManager.h" />
+    <ClInclude Include="Shortcut\NR_IShortcut.h" />
+    <ClInclude Include="Shortcut\NR_IShortcutManager.h" />
+    <ClInclude Include="Shortcut\NR_ShortcutManagerFactory.h" />
+    <ClInclude Include="Shortcut\NR_ShortcutTool.h" />
+    <ClInclude Include="StringConverter\NR_CWin32StringConverter.h" />
+    <ClInclude Include="StringConverter\NR_IStringConverter.h" />
+    <ClInclude Include="StringConverter\NR_StringConverterFactory.h" />
+    <ClInclude Include="StringConverter\NR_StringConverterTool.h" />
+    <ClInclude Include="Thread\NR_CThread.h" />
+    <ClInclude Include="Thread\NR_CWin32Thread.h" />
+    <ClInclude Include="Thread\NR_CWin32ThreadManager.h" />
+    <ClInclude Include="Thread\NR_IThread.h" />
+    <ClInclude Include="Thread\NR_IThreadManager.h" />
+    <ClInclude Include="Thread\NR_ThreadManagerFactory.h" />
+    <ClInclude Include="Thread\NR_ThreadTool.h" />
+    <ClInclude Include="Workflow\NR_IWorkflow.h" />
+    <ClInclude Include="Workflow\NR_IWorkflowDesigner.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Archiver\ArchiverFactory.cpp" />
-    <ClCompile Include="Archiver\ArchiverTool.cpp" />
-    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.cpp" />
-    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.cpp" />
-    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.cpp" />
+    <ClCompile Include="Archiver\NR_ArchiverFactory.cpp" />
+    <ClCompile Include="Archiver\NR_ArchiverTool.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverItem.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverItemEnumerator.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverUnpacker.cpp" />
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.cpp" />
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp" />
-    <ClCompile Include="Base\COMTool.cpp" />
-    <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp" />
-    <ClCompile Include="FileEnumerator\CWin32FileEnumResult.cpp" />
-    <ClCompile Include="FileEnumerator\FileEnumeratorFactory.cpp" />
-    <ClCompile Include="FileEnumerator\FileEnumTool.cpp" />
-    <ClCompile Include="FilePath\CWin32FilePath.cpp" />
-    <ClCompile Include="FilePath\FilePathFactory.cpp" />
-    <ClCompile Include="FilePath\FilePathTool.cpp" />
-    <ClCompile Include="FileSystem\CWin32File.cpp" />
-    <ClCompile Include="FileSystem\CWin32FileSystem.cpp" />
-    <ClCompile Include="FileSystem\FileSystemFactory.cpp" />
-    <ClCompile Include="FileSystem\FileSystemTool.cpp" />
-    <ClCompile Include="Font\CGDIFont2D.cpp" />
-    <ClCompile Include="Font\CGDIPFont2D.cpp" />
-    <ClCompile Include="Image\CGDIImage2D.cpp" />
-    <ClCompile Include="Image\CGDIPImage2D.cpp" />
-    <ClCompile Include="Image\CGDIPMultiFrameImage2D.cpp" />
-    <ClCompile Include="Image\GDIPImageTool.cpp" />
-    <ClCompile Include="Library\CWin32Library.cpp" />
-    <ClCompile Include="Library\CWin32LibraryManager.cpp" />
-    <ClCompile Include="Library\LibraryManagerFactory.cpp" />
-    <ClCompile Include="Library\LibraryTool.cpp" />
-    <ClCompile Include="Lock\CSimpleWin32Lock.cpp" />
-    <ClCompile Include="Lock\LockFactory.cpp" />
-    <ClCompile Include="Log\CFileLog.cpp" />
-    <ClCompile Include="Log\LogFactory.cpp" />
-    <ClCompile Include="MemoryAllocator\CDefaultMemoryAllocator.cpp" />
-    <ClCompile Include="MemoryAllocator\MemoryAllocatorFactory.cpp" />
-    <ClCompile Include="NetAdapter\CWin32NetAapterManager.cpp" />
-    <ClCompile Include="NetAdapter\CWin32NetAdapter.cpp" />
-    <ClCompile Include="NetAdapter\NetAdapterManagerFactory.cpp" />
-    <ClCompile Include="NetAdapter\NetAdapterTool.cpp" />
-    <ClCompile Include="Process\CWin32Process.cpp" />
-    <ClCompile Include="Process\CWin32ProcessManager.cpp" />
-    <ClCompile Include="Process\ProcessManagerFactory.cpp" />
-    <ClCompile Include="Process\ProcessTool.cpp" />
-    <ClCompile Include="RenderDevice\CGDIPRenderDevice.cpp" />
-    <ClCompile Include="RenderDevice\CGDIRenderDevice.cpp" />
-    <ClCompile Include="RenderDevice\RenderDeviceFactory.cpp" />
-    <ClCompile Include="Shortcut\CWin32Shortcut.cpp" />
-    <ClCompile Include="Shortcut\CWin32ShortcutManager.cpp" />
-    <ClCompile Include="Shortcut\ShortcutManagerFactory.cpp" />
-    <ClCompile Include="Shortcut\ShortcutTool.cpp" />
-    <ClCompile Include="StringConverter\CWin32StringConverter.cpp" />
-    <ClCompile Include="StringConverter\StringConverterFactory.cpp" />
-    <ClCompile Include="StringConverter\StringConverterTool.cpp" />
-    <ClCompile Include="Thread\CThread_Linux.cpp" />
-    <ClCompile Include="Thread\CThread_Win32.cpp" />
-    <ClCompile Include="Thread\CWin32Thread.cpp" />
-    <ClCompile Include="Thread\CWin32ThreadManager.cpp" />
-    <ClCompile Include="Thread\ThreadManagerFactory.cpp" />
-    <ClCompile Include="Thread\ThreadTool.cpp" />
+    <ClCompile Include="Base\NR_COMTool.cpp" />
+    <ClCompile Include="FileEnumerator\NR_CWin32FileEnumerator.cpp" />
+    <ClCompile Include="FileEnumerator\NR_CWin32FileEnumResult.cpp" />
+    <ClCompile Include="FileEnumerator\NR_FileEnumeratorFactory.cpp" />
+    <ClCompile Include="FileEnumerator\NR_FileEnumTool.cpp" />
+    <ClCompile Include="FilePath\NR_CWin32FilePath.cpp" />
+    <ClCompile Include="FilePath\NR_FilePathFactory.cpp" />
+    <ClCompile Include="FilePath\NR_FilePathTool.cpp" />
+    <ClCompile Include="FileSystem\NR_CWin32File.cpp" />
+    <ClCompile Include="FileSystem\NR_CWin32FileSystem.cpp" />
+    <ClCompile Include="FileSystem\NR_FileSystemFactory.cpp" />
+    <ClCompile Include="FileSystem\NR_FileSystemTool.cpp" />
+    <ClCompile Include="Font\NR_CGDIFont.cpp" />
+    <ClCompile Include="Font\NR_CGDIPFont.cpp" />
+    <ClCompile Include="Image\NR_CGDIImage.cpp" />
+    <ClCompile Include="Image\NR_CGDIPImage.cpp" />
+    <ClCompile Include="Image\NR_CGDIPMultiFrameImage2D.cpp" />
+    <ClCompile Include="Image\NR_GDIPImageTool.cpp" />
+    <ClCompile Include="Library\NR_CWin32Library.cpp" />
+    <ClCompile Include="Library\NR_CWin32LibraryManager.cpp" />
+    <ClCompile Include="Library\NR_LibraryManagerFactory.cpp" />
+    <ClCompile Include="Library\NR_LibraryTool.cpp" />
+    <ClCompile Include="Lock\NR_CSimpleWin32Lock.cpp" />
+    <ClCompile Include="Lock\NR_LockFactory.cpp" />
+    <ClCompile Include="Log\NR_CFileLog.cpp" />
+    <ClCompile Include="Log\NR_LogFactory.cpp" />
+    <ClCompile Include="MemoryAllocator\NR_CDefaultMemoryAllocator.cpp" />
+    <ClCompile Include="MemoryAllocator\NR_MemoryAllocatorFactory.cpp" />
+    <ClCompile Include="NetAdapter\NR_CWin32NetAapterManager.cpp" />
+    <ClCompile Include="NetAdapter\NR_CWin32NetAdapter.cpp" />
+    <ClCompile Include="NetAdapter\NR_NetAdapterManagerFactory.cpp" />
+    <ClCompile Include="NetAdapter\NR_NetAdapterTool.cpp" />
+    <ClCompile Include="Process\NR_CWin32Process.cpp" />
+    <ClCompile Include="Process\NR_CWin32ProcessManager.cpp" />
+    <ClCompile Include="Process\NR_ProcessManagerFactory.cpp" />
+    <ClCompile Include="Process\NR_ProcessTool.cpp" />
+    <ClCompile Include="RenderDevice\NR_CGDIPRenderDevice.cpp" />
+    <ClCompile Include="RenderDevice\NR_CGDIRenderDevice.cpp" />
+    <ClCompile Include="RenderDevice\NR_RenderDeviceFactory.cpp" />
+    <ClCompile Include="Shortcut\NR_CWin32Shortcut.cpp" />
+    <ClCompile Include="Shortcut\NR_CWin32ShortcutManager.cpp" />
+    <ClCompile Include="Shortcut\NR_ShortcutManagerFactory.cpp" />
+    <ClCompile Include="Shortcut\NR_ShortcutTool.cpp" />
+    <ClCompile Include="StringConverter\NR_CWin32StringConverter.cpp" />
+    <ClCompile Include="StringConverter\NR_StringConverterFactory.cpp" />
+    <ClCompile Include="StringConverter\NR_StringConverterTool.cpp" />
+    <ClCompile Include="Thread\NR_CThread_Linux.cpp" />
+    <ClCompile Include="Thread\NR_CThread_Win32.cpp" />
+    <ClCompile Include="Thread\NR_CWin32Thread.cpp" />
+    <ClCompile Include="Thread\NR_CWin32ThreadManager.cpp" />
+    <ClCompile Include="Thread\NR_ThreadManagerFactory.cpp" />
+    <ClCompile Include="Thread\NR_ThreadTool.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C9FEE417-E533-44D6-96EA-7954113EE290}</ProjectGuid>
@@ -188,7 +188,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140_xp</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -245,8 +245,14 @@
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)Update
-xcopy /r /y $(OutDir)$(TargetName)$(TargetExt) $(OutDir)Update
-xcopy /r /y $(OutDir)$(TargetName).pdb $(OutDir)Update
+
+if exist $(OutDir)$(TargetName)$(TargetExt) (
+xcopy /r /y /c $(OutDir)$(TargetName)$(TargetExt) $(OutDir)Update
+)
+
+if exist $(OutDir)$(TargetName).pdb (
+xcopy /r /y /c $(OutDir)$(TargetName).pdb $(OutDir)Update
+)
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
