@@ -1,5 +1,5 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_StringConverterTool.h"
 #include "NR_IStringConverter.h"

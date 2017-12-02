@@ -3,7 +3,7 @@
 
 #include "NR_INetAdapter.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 class NR_CWin32NetAdapter : public NR_INetAdapter
 {

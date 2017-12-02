@@ -1,7 +1,7 @@
 
 #include "NR_CGDIPFont.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CGDIPFont * NR_CGDIPFont::MakeW(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight, const bool bItalic)
 {

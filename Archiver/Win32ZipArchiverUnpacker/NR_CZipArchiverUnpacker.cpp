@@ -4,7 +4,7 @@
 #include "NR_CZipArchiverItem.h"
 #include "../../Base/NR_IWorkProgress.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CZipArchiverUnpacker * NR_CZipArchiverUnpacker::Make(void)
 {

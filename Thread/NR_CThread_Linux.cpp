@@ -1,9 +1,9 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_CThread.h"
 
-#if defined NIER_PLATFORM_LINUX
+#if defined NR_PLATFORM_LINUX
 
 void * GlobalThread(void * pParam)
 {

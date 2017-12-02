@@ -6,7 +6,7 @@
 /**
 ** @brief 进度接口
 */
-class NIER_API NR_IWorkProgress : public NR_IRefCount
+class NR_API NR_IWorkProgress : public NR_IRefCount
 {
 public:
 

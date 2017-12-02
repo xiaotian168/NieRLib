@@ -2,7 +2,7 @@
 #include "NR_CGDIPImage.h"
 #include "NR_GDIPImageTool.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CGDIPImage * NR_CGDIPImage::MakeFromFileW(const wchar_t * pszImageFilePath)
 {

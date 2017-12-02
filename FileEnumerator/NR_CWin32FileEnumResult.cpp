@@ -1,9 +1,9 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_CWin32FileEnumResult.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32FileEnumResult * NR_CWin32FileEnumResult::Make(const wchar_t * pszResultPath, const DWORD dwFileAttributes)
 {

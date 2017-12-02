@@ -2,7 +2,7 @@
 
 #include "NR_IRenderDevice.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 class NR_CGDIRenderDevice : public NR_IRenderDevice
 {

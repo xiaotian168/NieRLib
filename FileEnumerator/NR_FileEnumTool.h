@@ -21,8 +21,8 @@ class NR_IFileEnumResult;
 ** @param ResultList 保存枚举结果
 ** @return true 表示成功，false 表示失败
 */
-NIER_CAPI bool NR_EnumAllFileW(const wchar_t * pszDirectory, const wchar_t * pszFileExt, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
-NIER_CAPI bool NR_EnumAllFileA(const char * pszDirectory, const char * pszFileExt, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
+NR_CAPI bool NR_EnumAllFileW(const wchar_t * pszDirectory, const wchar_t * pszFileExt, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
+NR_CAPI bool NR_EnumAllFileA(const char * pszDirectory, const char * pszFileExt, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
 
 /**
 ** @brief 枚举指定目录下的所有文件目录
@@ -31,5 +31,5 @@ NIER_CAPI bool NR_EnumAllFileA(const char * pszDirectory, const char * pszFileEx
 ** @param ResultList 保存枚举结果
 ** @return true 表示成功，false 表示失败
 */
-NIER_CAPI bool NR_EnumAllDirectoryW(const wchar_t * pszDirectory, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
-NIER_CAPI bool NR_EnumAllDirectoryA(const char * pszDirectory, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
+NR_CAPI bool NR_EnumAllDirectoryW(const wchar_t * pszDirectory, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);
+NR_CAPI bool NR_EnumAllDirectoryA(const char * pszDirectory, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList);

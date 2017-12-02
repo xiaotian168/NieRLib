@@ -3,7 +3,7 @@
 
 #include "../NieRLibConfig.h"
 
-#if defined NIER_ENABLE_PROFILE && defined NIER_PLATFORM_WIN32
+#if defined NIER_ENABLE_PROFILE && defined NR_PLATFORM_WIN32
 
 #ifndef NIER_BEGIN_PROFILE_W
 #define NIER_BEGIN_PROFILE_W(_ProfileName) { \

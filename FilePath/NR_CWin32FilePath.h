@@ -3,7 +3,7 @@
 
 #include "NR_IFilePath.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 class NR_CWin32FilePath : public NR_IFilePath
 {
@@ -28,6 +28,8 @@ public:
 	bool SplitFileExtW(const wchar_t * pszPathToSplit, wchar_t * pszFileExt, const unsigned int uSize) override;
 
 	bool AppendBackslashW(wchar_t * pszPath, const unsigned int uSize) override;
+
+	bool RemoveFileSpecW(wchar_t * pszPath) override;
 };
 
 #endif

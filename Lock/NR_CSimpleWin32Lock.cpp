@@ -1,7 +1,7 @@
 
 #include "NR_CSimpleWin32Lock.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CSimpleWin32Lock * NR_CSimpleWin32Lock::Make(void)
 {

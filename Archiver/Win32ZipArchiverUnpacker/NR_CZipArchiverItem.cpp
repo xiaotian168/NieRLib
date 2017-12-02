@@ -1,7 +1,7 @@
 
 #include "NR_CZipArchiverItem.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CZipArchiverItem * NR_CZipArchiverItem::Make(const HZIP hZip, const int nItemIndex)
 {

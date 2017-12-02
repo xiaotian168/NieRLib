@@ -1,5 +1,5 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_FilePathTool.h"
 #include "NR_FilePathFactory.h"
@@ -34,6 +34,36 @@ bool NR_SplitDirectoryW(const wchar_t * pszPathToSplit, wchar_t * pszDirectory, 
 	if (NR_CFilePathToolHelper::pFilePath && pszPathToSplit && pszDirectory && uSize)
 	{
 		if (NR_CFilePathToolHelper::pFilePath->SplitDirectoryW(pszPathToSplit, pszDirectory, uSize))
+		{
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
+bool NR_RemoveFileSpecW(wchar_t * pszPath)
+{
+	bool bRet = false;
+
+	if (NR_CFilePathToolHelper::pFilePath && pszPath)
+	{
+		if (NR_CFilePathToolHelper::pFilePath->RemoveFileSpecW(pszPath))
+		{
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
+bool NR_AppendBackslashW(wchar_t * pszPath, const unsigned int uSize)
+{
+	bool bRet = false;
+
+	if (NR_CFilePathToolHelper::pFilePath && pszPath && uSize)
+	{
+		if (NR_CFilePathToolHelper::pFilePath->AppendBackslashW(pszPath, uSize))
 		{
 			bRet = true;
 		}

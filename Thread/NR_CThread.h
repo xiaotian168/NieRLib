@@ -6,7 +6,7 @@
 /**
 ** @brief Ïß³Ì
 */
-class NIER_API NR_CThread
+class NR_API NR_CThread
 {
 public:
 

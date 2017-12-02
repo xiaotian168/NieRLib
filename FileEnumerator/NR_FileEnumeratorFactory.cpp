@@ -1,10 +1,10 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_FileEnumeratorFactory.h"
 #include "NR_CWin32FileEnumerator.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_IFileEnumerator * NR_MakeWin32FileEnumerator(void)
 {
@@ -15,7 +15,7 @@ NR_IFileEnumerator * NR_MakeWin32FileEnumerator(void)
 
 NR_IFileEnumerator * NR_MakeFileEnumeratorByOSPlatform(void)
 {
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 	return NR_CWin32FileEnumerator::Make();
 #endif
 

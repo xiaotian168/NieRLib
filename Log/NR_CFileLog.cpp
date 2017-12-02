@@ -107,7 +107,7 @@ bool NR_CFileLog::LogFormatMsgW(const NR_LogLevel Level, const wchar_t * pszFmt,
 				auto pszMsg = new wchar_t[MsgLen + 1];
 				if (pszMsg)
 				{
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 					if (vswprintf_s(pszMsg, MsgLen + 1, pszFmt, vl))
 #else
 					if (vswprintf(pszMsg, pszFmt, vl))
@@ -149,7 +149,7 @@ bool NR_CFileLog::LogFormatMsgA(const NR_LogLevel Level, const char * pszFmt, ..
 					auto pszMsg = new char[MsgLen + 1];
 					if (pszMsg)
 					{
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 						if (vsprintf_s(pszMsg, MsgLen + 1, pszFmt, vl))
 #else
 						if (vsprintf(pszMsg, pszFmt, vl))

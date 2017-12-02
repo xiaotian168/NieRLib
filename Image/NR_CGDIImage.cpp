@@ -1,7 +1,7 @@
 
 #include "NR_CGDIImage.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CGDIImage * NR_CGDIImage::MakeFromFileW(const wchar_t * pszFilePath)
 {

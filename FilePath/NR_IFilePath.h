@@ -34,4 +34,9 @@ public:
 	** @brief 自动在路径末尾添加斜杠字符
 	*/
 	virtual bool AppendBackslashW(wchar_t * pszPath, const unsigned int uSize) = 0;
+
+	/**
+	** @brief 从路径中移除文件名部分
+	*/
+	virtual bool RemoveFileSpecW(wchar_t * pszPath) = 0;
 };

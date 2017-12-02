@@ -1,5 +1,5 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_FileSystemTool.h"
 #include "NR_IFileSystem.h"

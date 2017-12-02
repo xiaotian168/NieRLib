@@ -3,7 +3,7 @@
 #include "NR_CWin32Library.h"
 #include "../StringConverter/NR_StringConverterTool.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32LibraryManager * NR_CWin32LibraryManager::Make(void)
 {

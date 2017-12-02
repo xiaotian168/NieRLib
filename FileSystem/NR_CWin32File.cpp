@@ -1,7 +1,7 @@
 
 #include "NR_CWin32File.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32File * NR_CWin32File::MakeW(const wchar_t * pszFilePath, const wchar_t * pszMode)
 {

@@ -8,7 +8,7 @@ class NR_ITask;
 /**
 ** @brief 工作流接口
 */
-class NIER_API NR_IWorkflow : public NR_IRefCount
+class NR_API NR_IWorkflow : public NR_IRefCount
 {
 public:
 

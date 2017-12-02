@@ -1,9 +1,9 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_CWin32Shortcut.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32Shortcut * NR_CWin32Shortcut::Make(wchar_t * pszShortcutPath)
 {

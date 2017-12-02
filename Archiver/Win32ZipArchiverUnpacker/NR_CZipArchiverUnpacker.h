@@ -4,7 +4,7 @@
 #include "../NR_IArchiver.h"
 #include "../NR_IArchiverUnpacker.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 #include "zip/unzip.h"
 

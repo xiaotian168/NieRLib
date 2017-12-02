@@ -5,7 +5,7 @@
 #include "../Image/NR_CGDIPMultiFrameImage2D.h"
 #include "../Font/NR_CGDIPFont.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CGDIPRenderDevice * NR_CGDIPRenderDevice::Make(const HDC hDC)
 {

@@ -1,10 +1,10 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_LockFactory.h"
 #include "NR_CSimpleWin32Lock.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_ILock * NR_MakeSimpleWin32Lock(void)
 {
@@ -15,7 +15,7 @@ NR_ILock * NR_MakeSimpleWin32Lock(void)
 
 NR_ILock * NR_MakeLockByOSPlatform(void)
 {
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 	return NR_CSimpleWin32Lock::Make();
 #endif
 

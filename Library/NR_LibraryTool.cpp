@@ -1,5 +1,5 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_LibraryTool.h"
 #include "NR_CWin32LibraryManager.h"

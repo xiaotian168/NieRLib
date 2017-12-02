@@ -1,9 +1,9 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_CThread.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 DWORD GlobalThread(LPVOID pParam)
 {

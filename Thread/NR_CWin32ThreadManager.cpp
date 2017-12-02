@@ -2,7 +2,7 @@
 #include "NR_CWin32ThreadManager.h"
 #include "NR_CWin32Thread.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32ThreadManager * NR_CWin32ThreadManager::Make(void)
 {

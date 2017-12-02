@@ -10,4 +10,4 @@ class NR_ILibrary;
 ** @param pszLibraryPath ¿âÎÄ¼þÂ·¾¶
 ** @return ¿â
 */
-NIER_CAPI NR_ILibrary * NR_GetLibraryW(const wchar_t * pszLibraryPath);
+NR_CAPI NR_ILibrary * NR_GetLibraryW(const wchar_t * pszLibraryPath);

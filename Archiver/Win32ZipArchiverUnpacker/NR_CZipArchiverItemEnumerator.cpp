@@ -2,7 +2,7 @@
 #include "NR_CZipArchiverItemEnumerator.h"
 #include "NR_CZipArchiverItem.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CZipArchiverItemEnumerator * NR_CZipArchiverItemEnumerator::Make(const HZIP hZip)
 {

@@ -5,13 +5,13 @@
 
 class NR_IFileEnumerator;
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 /**
 ** @brief 创建 Win32 文件枚举器
 ** @return Win32 文件枚举器
 */
-NIER_CAPI NR_IFileEnumerator * NR_MakeWin32FileEnumerator(void);
+NR_CAPI NR_IFileEnumerator * NR_MakeWin32FileEnumerator(void);
 
 #endif
 
@@ -19,4 +19,4 @@ NIER_CAPI NR_IFileEnumerator * NR_MakeWin32FileEnumerator(void);
 ** @brief 自动根据调用者所在平台，创建文件枚举器
 ** @return 文件枚举器
 */
-NIER_CAPI NR_IFileEnumerator * NR_MakeFileEnumeratorByOSPlatform(void);
+NR_CAPI NR_IFileEnumerator * NR_MakeFileEnumeratorByOSPlatform(void);

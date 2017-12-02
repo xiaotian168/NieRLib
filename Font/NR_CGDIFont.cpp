@@ -1,7 +1,7 @@
 
 #include "NR_CGDIFont.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CGDIFont * NR_CGDIFont::MakeW(const LOGFONTW & LogFont)
 {

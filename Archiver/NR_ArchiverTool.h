@@ -5,4 +5,4 @@
 
 class NR_IArchiver;
 
-NIER_API bool NR_UnpackAllArchiverItemW(NR_IArchiver * pArchiver, std::list<std::wstring> & ItemPathList);
+NR_API bool NR_UnpackAllArchiverItemW(NR_IArchiver * pArchiver, std::list<std::wstring> & ItemPathList);

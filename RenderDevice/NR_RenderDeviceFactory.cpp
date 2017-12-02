@@ -1,11 +1,11 @@
 
-#define _NIER_API
+#define _NR_API
 
 #include "NR_RenderDeviceFactory.h"
 #include "NR_CGDIRenderDevice.h"
 #include "NR_CGDIPRenderDevice.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 class NR_CGDIPStartupHelper
 {

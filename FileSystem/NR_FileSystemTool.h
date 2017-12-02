@@ -8,7 +8,7 @@
 ** @param pszFilePath 要判断的文件路径
 ** @return true 表示存在，false 表示不存在
 */
-NIER_CAPI bool NR_IsFileExistW(const wchar_t * pszFilePath);
+NR_CAPI bool NR_IsFileExistW(const wchar_t * pszFilePath);
 
 /**
 ** @brief 读取指定文件的所有内容 
@@ -17,14 +17,14 @@ NIER_CAPI bool NR_IsFileExistW(const wchar_t * pszFilePath);
 ** @param uFileSize 保存文件内容大小（单位：字节）
 ** @return true 成功，false 表示失败
 */
-NIER_CAPI bool NR_ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned int & uFileSize);
+NR_CAPI bool NR_ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned int & uFileSize);
 
 /**
 ** @brief 释放通过 ReadFileData 系列函数分配的内存
 ** @param pFileData 要释放的内存指针
 ** @return true 成功，false 表示失败
 */
-NIER_CAPI bool NR_FreeFileData(void * pFileData);
+NR_CAPI bool NR_FreeFileData(void * pFileData);
 
 /**
 ** @brief 将数据写入到指定文件
@@ -33,4 +33,4 @@ NIER_CAPI bool NR_FreeFileData(void * pFileData);
 ** @param uDataSize 要写入的数据大小（单位：字节）
 ** @return true 成功，false 表示失败
 */
-NIER_CAPI bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const unsigned int uDataSize);
+NR_CAPI bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const unsigned int uDataSize);

@@ -6,7 +6,7 @@
 /**
 ** @brief 任务接口
 */
-class NIER_API NR_ITask : public NR_IRefCount
+class NR_API NR_ITask : public NR_IRefCount
 {
 public:
 

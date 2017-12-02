@@ -16,7 +16,7 @@
 	} \
 }
 
-class NIER_API NR_IRefCount
+class NR_API NR_IRefCount
 {
 public:
 

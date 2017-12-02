@@ -3,7 +3,7 @@
 
 #include "NR_ILock.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 class NR_CSimpleWin32Lock : public NR_ILock
 {

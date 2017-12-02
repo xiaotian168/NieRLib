@@ -1,7 +1,7 @@
 
 #include "NR_CWin32FilePath.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32FilePath * NR_CWin32FilePath::Make(void)
 {
@@ -113,6 +113,20 @@ bool NR_CWin32FilePath::AppendBackslashW(wchar_t * pszPath, const unsigned int u
 	if (pszPath && uSize)
 	{
 		PathAddBackslashW(pszPath);
+
+		bRet = true;
+	}
+
+	return bRet;
+}
+
+bool NR_CWin32FilePath::RemoveFileSpecW(wchar_t * pszPath)
+{
+	bool bRet = false;
+
+	if (pszPath)
+	{
+		::PathRemoveFileSpecW(pszPath);
 
 		bRet = true;
 	}

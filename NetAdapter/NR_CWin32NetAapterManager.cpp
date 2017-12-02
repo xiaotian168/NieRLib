@@ -2,7 +2,7 @@
 #include "NR_CWin32NetAapterManager.h"
 #include "NR_CWin32NetAdapter.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32NetAapterManager * NR_CWin32NetAapterManager::Make(void)
 {

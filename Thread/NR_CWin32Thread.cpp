@@ -1,7 +1,7 @@
 
 #include "NR_CWin32Thread.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32Thread * NR_CWin32Thread::Make(const HANDLE hThread)
 {

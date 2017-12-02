@@ -2,7 +2,7 @@
 #include "NR_CWin32FileSystem.h"
 #include "NR_CWin32File.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32FileSystem * NR_CWin32FileSystem::Make(void)
 {

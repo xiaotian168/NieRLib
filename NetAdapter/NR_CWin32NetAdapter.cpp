@@ -2,7 +2,7 @@
 #include "NR_CWin32NetAdapter.h"
 #include "../Base/NR_COMTool.h"
 
-#if defined NIER_PLATFORM_WIN32
+#if defined NR_PLATFORM_WIN32
 
 NR_CWin32NetAdapter * NR_CWin32NetAdapter::Make(INetConnection * pNetConnection)
 {
