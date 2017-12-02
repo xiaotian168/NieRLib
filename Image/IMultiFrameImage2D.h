@@ -3,8 +3,6 @@
 
 #include "../Base/IRefCount.h"
 
-class IImage2D;
-
 /**
 ** @brief 多帧图像接口
 */
@@ -18,12 +16,7 @@ public:
 	virtual unsigned int GetFrameNum(void) = 0;
 
 	/**
-	** @brief 获取指定帧图像
-	*/
-	virtual IImage2D * GetFrameImage(const unsigned int uFrameIndex) = 0;
-
-	/**
 	** @brief 获取指定帧时间间隔（单位：毫秒）
 	*/
-	virtual unsigned int GetFrameElapse(const unsigned int uFrameIndex) = 0;
+	virtual bool GetFrameElapse(const unsigned int uFrameIndex, unsigned int & uElapse) = 0;
 };

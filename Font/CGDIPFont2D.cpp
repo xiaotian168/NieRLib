@@ -3,12 +3,12 @@
 
 #if defined NIER_PLATFORM_WIN32
 
-CGDIPFont2D * CGDIPFont2D::MakeW(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight)
+CGDIPFont2D * CGDIPFont2D::MakeW(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight, const bool bItalic)
 {
-	return new CGDIPFont2D(pszFaceName, uWidth, uHeight, uWeight);
+	return new CGDIPFont2D(pszFaceName, uWidth, uHeight, uWeight, bItalic);
 }
 
-CGDIPFont2D::CGDIPFont2D(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight)
+CGDIPFont2D::CGDIPFont2D(const wchar_t * pszFaceName, const unsigned int uWidth, const unsigned int uHeight, const unsigned int uWeight, const bool bItalic)
 {
 	INT nFontStyle = 0;
 
@@ -20,6 +20,7 @@ CGDIPFont2D::CGDIPFont2D(const wchar_t * pszFaceName, const unsigned int uWidth,
 		if (pFontFamily)
 		{
 			nFontStyle = (400 == uWeight ? Gdiplus::FontStyleRegular : Gdiplus::FontStyleBold);
+			if (bItalic) nFontStyle |= Gdiplus::FontStyleItalic;
 
 			m_pFont = new Gdiplus::Font(pFontFamily, (Gdiplus::REAL)uHeight, nFontStyle, Gdiplus::UnitPoint);
 			if (m_pFont)

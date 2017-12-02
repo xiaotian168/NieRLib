@@ -2,8 +2,6 @@
 #pragma once
 
 #include "../NieRLib.h"
-#include <list>
-#include <string>
 
 class IArchiver;
 

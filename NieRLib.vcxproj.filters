@@ -64,14 +64,8 @@
     <Filter Include="头文件\Archiver">
       <UniqueIdentifier>{eff34ae3-108d-4928-9c35-83c1f6df289e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\Archiver\zip">
-      <UniqueIdentifier>{9e1aa676-984e-4e70-9e86-9ad3298d7d59}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Archiver">
       <UniqueIdentifier>{5b170fe2-d57d-4887-9bfc-b40c602d0545}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Archiver\zip">
-      <UniqueIdentifier>{2e048191-07a3-40f2-a5c0-3e0784f3ae4f}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\NetAdapter">
       <UniqueIdentifier>{7b14140d-3c52-4916-908c-d0e7322bb7f8}</UniqueIdentifier>
@@ -120,6 +114,18 @@
     </Filter>
     <Filter Include="源文件\Font">
       <UniqueIdentifier>{715b5e89-7860-416b-a3f8-d76f39808602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Archiver\Win32ZipArchiverUnpacker">
+      <UniqueIdentifier>{b1808803-9f43-46a6-b144-bd47edd2e3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Archiver\Win32ZipArchiverUnpacker">
+      <UniqueIdentifier>{e223becb-87a2-4d6a-b573-faf193930f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Archiver\Win32ZipArchiverUnpacker\zip">
+      <UniqueIdentifier>{e74aba5e-7053-4a49-b678-e67fa07012a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Archiver\Win32ZipArchiverUnpacker\zip">
+      <UniqueIdentifier>{67ce3239-fe52-4b3d-bc12-03b5616d5394}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -235,24 +241,6 @@
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
     <ClInclude Include="Archiver\IArchiverItem.h">
-      <Filter>头文件\Archiver</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\zip\unzip.h">
-      <Filter>头文件\Archiver\zip</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\zip\zip.h">
-      <Filter>头文件\Archiver\zip</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\CZipArchiverUnpacker.h">
-      <Filter>头文件\Archiver</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\ArchiverFactory.h">
-      <Filter>头文件\Archiver</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\CZipArchiverItem.h">
-      <Filter>头文件\Archiver</Filter>
-    </ClInclude>
-    <ClInclude Include="Archiver\CZipArchiverItemEnumerator.h">
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
     <ClInclude Include="Base\COMTool.h">
@@ -390,7 +378,34 @@
     <ClInclude Include="Image\CGDIPMultiFrameImage2D.h">
       <Filter>头文件\Image</Filter>
     </ClInclude>
+    <ClInclude Include="RenderDevice\ARGB.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\IMultiFrameImageRenderDevice.h">
+      <Filter>头文件\RenderDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="Image\GDIPImageTool.h">
+      <Filter>头文件\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.h">
+      <Filter>头文件\Archiver\Win32ZipArchiverUnpacker\zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.h">
+      <Filter>头文件\Archiver\Win32ZipArchiverUnpacker\zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.h">
+      <Filter>头文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.h">
+      <Filter>头文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.h">
+      <Filter>头文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClInclude>
     <ClInclude Include="Archiver\ArchiverTool.h">
+      <Filter>头文件\Archiver</Filter>
+    </ClInclude>
+    <ClInclude Include="Archiver\ArchiverFactory.h">
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
   </ItemGroup>
@@ -458,22 +473,7 @@
     <ClCompile Include="Lock\LockFactory.cpp">
       <Filter>源文件\Lock</Filter>
     </ClCompile>
-    <ClCompile Include="Archiver\zip\zip.cpp">
-      <Filter>源文件\Archiver\zip</Filter>
-    </ClCompile>
-    <ClCompile Include="Archiver\zip\unzip.cpp">
-      <Filter>源文件\Archiver\zip</Filter>
-    </ClCompile>
-    <ClCompile Include="Archiver\CZipArchiverUnpacker.cpp">
-      <Filter>源文件\Archiver</Filter>
-    </ClCompile>
     <ClCompile Include="Archiver\ArchiverFactory.cpp">
-      <Filter>源文件\Archiver</Filter>
-    </ClCompile>
-    <ClCompile Include="Archiver\CZipArchiverItem.cpp">
-      <Filter>源文件\Archiver</Filter>
-    </ClCompile>
-    <ClCompile Include="Archiver\CZipArchiverItemEnumerator.cpp">
       <Filter>源文件\Archiver</Filter>
     </ClCompile>
     <ClCompile Include="Base\COMTool.cpp">
@@ -559,6 +559,24 @@
     </ClCompile>
     <ClCompile Include="Archiver\ArchiverTool.cpp">
       <Filter>源文件\Archiver</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\GDIPImageTool.cpp">
+      <Filter>源文件\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
+      <Filter>源文件\Archiver\Win32ZipArchiverUnpacker\zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.cpp">
+      <Filter>源文件\Archiver\Win32ZipArchiverUnpacker\zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.cpp">
+      <Filter>源文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.cpp">
+      <Filter>源文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.cpp">
+      <Filter>源文件\Archiver\Win32ZipArchiverUnpacker</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

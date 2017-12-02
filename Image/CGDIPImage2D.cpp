@@ -1,5 +1,6 @@
 
 #include "CGDIPImage2D.h"
+#include "GDIPImageTool.h"
 
 #if defined NIER_PLATFORM_WIN32
 
@@ -8,12 +9,22 @@ CGDIPImage2D * CGDIPImage2D::MakeFromFileW(const wchar_t * pszImageFilePath)
 	return new CGDIPImage2D(pszImageFilePath);
 }
 
+CGDIPImage2D * CGDIPImage2D::MakeFromMemory(const void * pBuffer, const unsigned int uSize)
+{
+	return new CGDIPImage2D(pBuffer, uSize);
+}
+
 CGDIPImage2D::CGDIPImage2D(const wchar_t * pszImageFilePath)
 {
 	if(pszImageFilePath)
 	{
-		m_pImg = new Gdiplus::Bitmap(pszImageFilePath);
+		m_pImg = Gdiplus::Bitmap::FromFile(pszImageFilePath);
 	}
+}
+
+CGDIPImage2D::CGDIPImage2D(const void * pBuffer, const unsigned int uSize)
+{
+	m_pImg = LoadGDIPImageFromBuffer(pBuffer, uSize);
 }
 
 CGDIPImage2D::~CGDIPImage2D()

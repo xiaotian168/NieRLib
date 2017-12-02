@@ -13,9 +13,13 @@ public:
 
 	static CGDIImage2D * MakeFromFileW(const wchar_t * pszFilePath);
 
+	static CGDIImage2D * MakeFromMemory(const void * pBuffer, const unsigned int uSize);
+
 protected:
 
 	CGDIImage2D(const wchar_t * pszFilePath);
+
+	CGDIImage2D(const void * pBuffer, const unsigned int uSize);
 
 	~CGDIImage2D();
 

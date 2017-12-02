@@ -21,15 +21,15 @@
   <ItemGroup>
     <ClInclude Include="Archiver\ArchiverFactory.h" />
     <ClInclude Include="Archiver\ArchiverTool.h" />
-    <ClInclude Include="Archiver\CZipArchiverItem.h" />
-    <ClInclude Include="Archiver\CZipArchiverItemEnumerator.h" />
-    <ClInclude Include="Archiver\CZipArchiverUnpacker.h" />
     <ClInclude Include="Archiver\IArchiver.h" />
     <ClInclude Include="Archiver\IArchiverItem.h" />
     <ClInclude Include="Archiver\IArchiverItemEnumerator.h" />
     <ClInclude Include="Archiver\IArchiverUnpacker.h" />
-    <ClInclude Include="Archiver\zip\unzip.h" />
-    <ClInclude Include="Archiver\zip\zip.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.h" />
+    <ClInclude Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.h" />
     <ClInclude Include="Base\COMTool.h" />
     <ClInclude Include="Base\IIDObject.h" />
     <ClInclude Include="Base\INameObject.h" />
@@ -54,6 +54,7 @@
     <ClInclude Include="Image\CGDIImage2D.h" />
     <ClInclude Include="Image\CGDIPImage2D.h" />
     <ClInclude Include="Image\CGDIPMultiFrameImage2D.h" />
+    <ClInclude Include="Image\GDIPImageTool.h" />
     <ClInclude Include="Image\IImage2D.h" />
     <ClInclude Include="Image\IMultiFrameImage2D.h" />
     <ClInclude Include="Library\CWin32Library.h" />
@@ -86,8 +87,10 @@
     <ClInclude Include="Process\ProcessManagerFactory.h" />
     <ClInclude Include="Process\ProcessTool.h" />
     <ClInclude Include="Profile\Profile.h" />
+    <ClInclude Include="RenderDevice\ARGB.h" />
     <ClInclude Include="RenderDevice\CGDIPRenderDevice.h" />
     <ClInclude Include="RenderDevice\CGDIRenderDevice.h" />
+    <ClInclude Include="RenderDevice\IMultiFrameImageRenderDevice.h" />
     <ClInclude Include="RenderDevice\IRenderDevice.h" />
     <ClInclude Include="RenderDevice\RenderDeviceFactory.h" />
     <ClInclude Include="Shortcut\CWin32Shortcut.h" />
@@ -113,11 +116,11 @@
   <ItemGroup>
     <ClCompile Include="Archiver\ArchiverFactory.cpp" />
     <ClCompile Include="Archiver\ArchiverTool.cpp" />
-    <ClCompile Include="Archiver\CZipArchiverItem.cpp" />
-    <ClCompile Include="Archiver\CZipArchiverItemEnumerator.cpp" />
-    <ClCompile Include="Archiver\CZipArchiverUnpacker.cpp" />
-    <ClCompile Include="Archiver\zip\unzip.cpp" />
-    <ClCompile Include="Archiver\zip\zip.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItem.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverUnpacker.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\unzip.cpp" />
+    <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp" />
     <ClCompile Include="Base\COMTool.cpp" />
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp" />
     <ClCompile Include="FileEnumerator\CWin32FileEnumResult.cpp" />
@@ -132,6 +135,7 @@
     <ClCompile Include="Image\CGDIImage2D.cpp" />
     <ClCompile Include="Image\CGDIPImage2D.cpp" />
     <ClCompile Include="Image\CGDIPMultiFrameImage2D.cpp" />
+    <ClCompile Include="Image\GDIPImageTool.cpp" />
     <ClCompile Include="Library\CWin32Library.cpp" />
     <ClCompile Include="Library\CWin32LibraryManager.cpp" />
     <ClCompile Include="Library\LibraryManagerFactory.cpp" />

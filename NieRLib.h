@@ -126,5 +126,8 @@
 /**
 ** @addgroup ‰÷»æ…Ë±∏
 */
+#include "RenderDevice/ARGB.h"
 #include "RenderDevice/IRenderDevice.h"
+#include "RenderDevice/IMultiFrameImageRenderDevice.h"
 #include "RenderDevice/RenderDeviceFactory.h"
+ 

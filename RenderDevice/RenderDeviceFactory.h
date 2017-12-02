@@ -5,6 +5,8 @@
 
 class IRenderDevice;
 
+#if defined NIER_PLATFORM_WIN32
+
 /**
 ** @brief 通过窗口 DC 句柄创建 Win32 GDI 渲染设备
 ** @return Win32 GDI 渲染设备
@@ -28,3 +30,5 @@ NIER_CAPI IRenderDevice * MakeGDIPRenderDeviceFromHDC(const HDC hDC);
 ** @return Win32 GDI+ 渲染设备
 */
 NIER_CAPI IRenderDevice * MakeGDIPRenderDeviceFromHWND(const HWND hWnd);
+
+#endif

@@ -8,6 +8,11 @@ CGDIImage2D * CGDIImage2D::MakeFromFileW(const wchar_t * pszFilePath)
 	return new CGDIImage2D(pszFilePath);
 }
 
+CGDIImage2D * CGDIImage2D::MakeFromMemory(const void * pBuffer, const unsigned int uSize)
+{
+	return new CGDIImage2D(pBuffer, uSize);
+}
+
 CGDIImage2D::CGDIImage2D(const wchar_t * pszFilePath)
 {
 	BITMAP Bmp = { 0 };
@@ -23,6 +28,14 @@ CGDIImage2D::CGDIImage2D(const wchar_t * pszFilePath)
 				m_uHeight = Bmp.bmHeight < 0 ? -Bmp.bmHeight : Bmp.bmHeight;
 			}
 		}
+	}
+}
+
+CGDIImage2D::CGDIImage2D(const void * pBuffer, const unsigned int uSize)
+{
+	if (pBuffer && uSize)
+	{
+
 	}
 }
 
