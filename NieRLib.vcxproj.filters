@@ -127,6 +127,12 @@
     <Filter Include="源文件\Archiver\Win32ZipArchiverUnpacker\zip">
       <UniqueIdentifier>{67ce3239-fe52-4b3d-bc12-03b5616d5394}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\FilePath">
+      <UniqueIdentifier>{266465d2-dc00-47b7-86dc-e08b2d9087cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\FilePath">
+      <UniqueIdentifier>{1248ce8a-b59b-4b39-8748-a2c83eead3a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileEnumerator\CWin32FileEnumerator.h">
@@ -408,6 +414,18 @@
     <ClInclude Include="Archiver\ArchiverFactory.h">
       <Filter>头文件\Archiver</Filter>
     </ClInclude>
+    <ClInclude Include="FilePath\CWin32FilePath.h">
+      <Filter>头文件\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="FilePath\FilePathFactory.h">
+      <Filter>头文件\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="FilePath\FilePathTool.h">
+      <Filter>头文件\FilePath</Filter>
+    </ClInclude>
+    <ClInclude Include="FilePath\IFilePath.h">
+      <Filter>头文件\FilePath</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileEnumerator\CWin32FileEnumerator.cpp">
@@ -577,6 +595,15 @@
     </ClCompile>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\CZipArchiverItemEnumerator.cpp">
       <Filter>源文件\Archiver\Win32ZipArchiverUnpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="FilePath\CWin32FilePath.cpp">
+      <Filter>源文件\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="FilePath\FilePathFactory.cpp">
+      <Filter>源文件\FilePath</Filter>
+    </ClCompile>
+    <ClCompile Include="FilePath\FilePathTool.cpp">
+      <Filter>源文件\FilePath</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

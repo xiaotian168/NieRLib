@@ -33,6 +33,16 @@ public:
 public:
 
 	/**
+	** @brief 设置裁剪矩形区域
+	*/
+	virtual bool SetClipRect(const int nX, const int nY, const int nWidth, const int nHeight) = 0;
+
+	/**
+	** @brief 获取裁剪矩形区域
+	*/
+	virtual bool GetClipRect(int & nX, int & nY, int & nWidth, int & nHeight) = 0;
+
+	/**
 	** @brief 从文件创建图像
 	*/
 	virtual IImage2D * CreateImageFromFileW(const wchar_t * pszFilePath) = 0;

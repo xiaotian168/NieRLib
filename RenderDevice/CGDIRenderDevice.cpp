@@ -47,6 +47,49 @@ CGDIRenderDevice::~CGDIRenderDevice()
 	m_hDC = 0;
 }
 
+bool CGDIRenderDevice::SetClipRect(const int nX, const int nY, const int nWidth, const int nHeight)
+{
+	bool bRet = false;
+
+	if (m_hDC)
+	{
+		auto hRgnClip = CreateRectRgn(nX, nY, nX + nWidth, nY + nHeight);
+		if (hRgnClip)
+		{
+			if (ERROR != SelectClipRgn(m_hDC, hRgnClip))
+			{
+				bRet = true;
+			}
+		}
+	}
+
+	return bRet;
+}
+
+bool CGDIRenderDevice::GetClipRect(int & nX, int & nY, int & nWidth, int & nHeight)
+{
+	bool bRet = false;
+	HRGN hRgnClip = 0;
+	RECT rcRgn = { 0 };
+
+	if (m_hDC)
+	{
+		if (0 == GetClipRgn(m_hDC, hRgnClip))
+		{
+			GetRgnBox(hRgnClip, &rcRgn);
+
+			nX = rcRgn.left;
+			nY = rcRgn.top;
+			nWidth = rcRgn.right - rcRgn.left;
+			nHeight = rcRgn.bottom - rcRgn.top;
+
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
 IImage2D * CGDIRenderDevice::CreateImageFromFileW(const wchar_t * pszFilePath)
 {
 	return CGDIImage2D::MakeFromFileW(pszFilePath);

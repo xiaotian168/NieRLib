@@ -46,7 +46,7 @@ CGDIPFont2D::~CGDIPFont2D()
 	memset(&m_FontInfo, 0, sizeof(m_FontInfo));
 }
 
-bool CGDIPFont2D::GetFontInfoW(FONTINFOW & FontInfo)
+bool CGDIPFont2D::GetFontCreateParamW(FONTCREATEPARAMW & FontInfo)
 {
 	bool bRet = false;
 

@@ -39,6 +39,43 @@ CGDIPRenderDevice::~CGDIPRenderDevice()
 	}
 }
 
+bool CGDIPRenderDevice::SetClipRect(const int nX, const int nY, const int nWidth, const int nHeight)
+{
+	bool bRet = false;
+	const Gdiplus::Rect rcClip(nX, nY, nX + nWidth, nY + nHeight);
+
+	if(m_pGraph)
+	{
+		if (Gdiplus::Ok == m_pGraph->SetClip(rcClip))
+		{
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
+bool CGDIPRenderDevice::GetClipRect(int & nX, int & nY, int & nWidth, int & nHeight)
+{
+	bool bRet = false;
+	Gdiplus::Rect rcClip;
+
+	if (m_pGraph)
+	{
+		if (Gdiplus::Ok == m_pGraph->GetClipBounds(&rcClip))
+		{
+			nX = rcClip.X;
+			nY = rcClip.Y;
+			nWidth = rcClip.Width;
+			nHeight = rcClip.Height;
+
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
 IImage2D * CGDIPRenderDevice::CreateImageFromFileW(const wchar_t * pszFilePath)
 {
 	if (pszFilePath)

@@ -34,7 +34,7 @@ bool CWin32Process::GetProcessID(IDType & ID)
 	return bRet;
 }
 
-bool CWin32Process::GetProcessNameW(wchar_t * pszName, const unsigned int uSize)
+bool CWin32Process::GetProcessFileNameW(wchar_t * pszName, const unsigned int uSize)
 {
 	bool bRet = false;
 

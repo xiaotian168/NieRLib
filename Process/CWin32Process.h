@@ -21,7 +21,7 @@ public:
 
 	bool GetProcessID(IDType & ID) override;
 
-	bool GetProcessNameW(wchar_t * pszName, const unsigned int uSize) override;
+	bool GetProcessFileNameW(wchar_t * pszName, const unsigned int uSize) override;
 
 	bool ShutdownProcess(const unsigned int uExitCode) override;
 

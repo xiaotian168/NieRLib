@@ -16,4 +16,9 @@ public:
 	** @brief 获取当前进程列表
 	*/
 	virtual bool QueryProcessList(std::list<IProcess *> & ProcessList) = 0;
+
+	/**
+	** @brief 获取当前进程
+	*/
+	virtual IProcess * GetCurrentProcess(void) = 0;
 };

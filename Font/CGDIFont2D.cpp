@@ -30,7 +30,7 @@ CGDIFont2D::~CGDIFont2D()
 	memset(&m_LogFont, 0, sizeof(m_LogFont));
 }
 
-bool CGDIFont2D::GetFontInfoW(FONTINFOW & FontInfo)
+bool CGDIFont2D::GetFontCreateParamW(FONTCREATEPARAMW & FontInfo)
 {
 	bool bRet = false;
 
@@ -40,6 +40,7 @@ bool CGDIFont2D::GetFontInfoW(FONTINFOW & FontInfo)
 		FontInfo.uWidth = m_LogFont.lfWidth;
 		FontInfo.uHeight = m_LogFont.lfHeight;
 		FontInfo.uWeight = m_LogFont.lfWeight;
+		FontInfo.bItalic = m_LogFont.lfItalic ? true : false;
 
 		bRet = true;
 	}

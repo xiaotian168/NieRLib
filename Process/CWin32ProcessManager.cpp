@@ -52,4 +52,9 @@ bool CWin32ProcessManager::QueryProcessList(std::list<IProcess *> & ProcessList)
 	return bRet;
 }
 
+IProcess * CWin32ProcessManager::GetCurrentProcess(void)
+{
+	return CWin32Process::Make(GetCurrentProcessId());
+}
+
 #endif

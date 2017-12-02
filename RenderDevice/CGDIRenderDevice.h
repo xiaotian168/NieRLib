@@ -22,6 +22,10 @@ protected:
 
 public:
 
+	bool SetClipRect(const int nX, const int nY, const int nWidth, const int nHeight) override;
+
+	bool GetClipRect(int & nX, int & nY, int & nWidth, int & nHeight) override;
+
 	IImage2D * CreateImageFromFileW(const wchar_t * pszFilePath) override;
 
 	IImage2D * CreateImageFromMemory(const void * pBuffer, const unsigned int uSize) override;

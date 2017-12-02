@@ -21,7 +21,7 @@ protected:
 
 public:
 
-	bool GetFontInfoW(FONTINFOW & FontInfo) override;
+	bool GetFontCreateParamW(FONTCREATEPARAMW & FontInfo) override;
 
 private:
 

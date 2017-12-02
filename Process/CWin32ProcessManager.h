@@ -20,6 +20,8 @@ protected:
 public:
 
 	bool QueryProcessList(std::list<IProcess *> & ProcessList) override;
+
+	IProcess * GetCurrentProcess(void) override;
 };
 
 #endif

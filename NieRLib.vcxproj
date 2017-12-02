@@ -42,6 +42,10 @@
     <ClInclude Include="FileEnumerator\FileEnumTool.h" />
     <ClInclude Include="FileEnumerator\IFileEnumerator.h" />
     <ClInclude Include="FileEnumerator\IFileEnumResult.h" />
+    <ClInclude Include="FilePath\CWin32FilePath.h" />
+    <ClInclude Include="FilePath\FilePathFactory.h" />
+    <ClInclude Include="FilePath\FilePathTool.h" />
+    <ClInclude Include="FilePath\IFilePath.h" />
     <ClInclude Include="FileSystem\CWin32File.h" />
     <ClInclude Include="FileSystem\CWin32FileSystem.h" />
     <ClInclude Include="FileSystem\FileSystemFactory.h" />
@@ -126,6 +130,9 @@
     <ClCompile Include="FileEnumerator\CWin32FileEnumResult.cpp" />
     <ClCompile Include="FileEnumerator\FileEnumeratorFactory.cpp" />
     <ClCompile Include="FileEnumerator\FileEnumTool.cpp" />
+    <ClCompile Include="FilePath\CWin32FilePath.cpp" />
+    <ClCompile Include="FilePath\FilePathFactory.cpp" />
+    <ClCompile Include="FilePath\FilePathTool.cpp" />
     <ClCompile Include="FileSystem\CWin32File.cpp" />
     <ClCompile Include="FileSystem\CWin32FileSystem.cpp" />
     <ClCompile Include="FileSystem\FileSystemFactory.cpp" />

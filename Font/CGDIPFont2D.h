@@ -21,7 +21,7 @@ protected:
 
 public:
 
-	bool GetFontInfoW(FONTINFOW & FontInfo) override;
+	bool GetFontCreateParamW(FONTCREATEPARAMW & FontInfo) override;
 
 private:
 
@@ -33,7 +33,7 @@ private:
 private:
 
 	Gdiplus::Font * m_pFont{ 0 };
-	FONTINFOW m_FontInfo;
+	FONTCREATEPARAMW m_FontInfo;
 };
 
 #endif

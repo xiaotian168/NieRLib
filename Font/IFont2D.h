@@ -4,15 +4,15 @@
 #include "../Base/IRefCount.h"
 
 /**
-** @brief 字体信息
+** @brief 字体创建参数结构体
 */
-struct FONTINFOW
+struct FONTCREATEPARAMW
 {
 public:
 
 	static const unsigned int MaxFaceNameSize = 64;
 
-	inline FONTINFOW()
+	inline FONTCREATEPARAMW()
 	{
 		memset(szFaceName, 0, sizeof(szFaceName));
 	}
@@ -22,9 +22,8 @@ public:
 	unsigned int uWidth{ 0 };
 	unsigned int uHeight{ 0 };
 	unsigned int uWeight{ 0 };
-	unsigned int uAscent{ 0 };
-	unsigned int uDescent{ 0 };
 	wchar_t szFaceName[MaxFaceNameSize];
+	bool bItalic{ false };
 };
 
 /**
@@ -35,7 +34,7 @@ class IFont2D : public IRefCount
 public:
 
 	/**
-	** @brief 获取字体信息
+	** @brief 获取字体创建参数信息
 	*/
-	virtual bool GetFontInfoW(FONTINFOW & FontInfo) = 0;
+	virtual bool GetFontCreateParamW(FONTCREATEPARAMW & FontInfo) = 0;
 };
