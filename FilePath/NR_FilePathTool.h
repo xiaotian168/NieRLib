@@ -9,6 +9,11 @@
 NR_CAPI bool NR_SplitDirectoryW(const wchar_t * pszPathToSplit, wchar_t * pszDirectory, const unsigned int uSize);
 
 /**
+** @brief 从路径中分割出文件名成分
+*/
+NR_CAPI bool NR_SplitFileTitleW(const wchar_t * pszPathToSplit, wchar_t * pszFileTitle, const unsigned int uSize);
+
+/**
 ** @brief 从路径中移除文件名部分
 */
 NR_CAPI bool NR_RemoveFileSpecW(wchar_t * pszPath);

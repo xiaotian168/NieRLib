@@ -2,11 +2,14 @@
 #pragma once
 
 #include "../NieRLibConfig.h"
+#include "NR_IProcess.h"
 
 #if defined UNICODE || defined _UNICODE
 #	define NR_ShutdownProcessByName NR_ShutdownProcessByNameW
+#	define NR_GetCurrentModuleFileName NR_GetCurrentModuleFileNameW
 #else
 #	define NR_ShutdownProcessByName NR_ShutdownProcessByNameA
+#	define NR_GetCurrentModuleFileName NR_GetCurrentModuleFileNameA
 #endif
 
 /**
@@ -23,3 +26,8 @@ NR_CAPI bool NR_ShutdownProcessByNameA(const char * pszProcessName, const unsign
 */
 NR_CAPI bool NR_GetCurrentModuleFileNameW(wchar_t * pszName, const unsigned int uSize);
 NR_CAPI bool NR_GetCurrentModuleFileNameA(char * pszName, const unsigned int uSize);
+
+/**
+** @brief 通过进程名称，获取进程 ID
+*/
+NR_CAPI bool NR_GetProcessIDByProcessNameW(const wchar_t * pszProcessName, std::list<NR_IProcess::IDType> & IDList);

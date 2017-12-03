@@ -42,6 +42,21 @@ bool NR_SplitDirectoryW(const wchar_t * pszPathToSplit, wchar_t * pszDirectory, 
 	return bRet;
 }
 
+bool NR_SplitFileTitleW(const wchar_t * pszPathToSplit, wchar_t * pszFileTitle, const unsigned int uSize)
+{
+	bool bRet = false;
+
+	if (NR_CFilePathToolHelper::pFilePath && pszPathToSplit && pszFileTitle && uSize)
+	{
+		if (NR_CFilePathToolHelper::pFilePath->SplitFileTitleW(pszPathToSplit, pszFileTitle, uSize))
+		{
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}
+
 bool NR_RemoveFileSpecW(wchar_t * pszPath)
 {
 	bool bRet = false;

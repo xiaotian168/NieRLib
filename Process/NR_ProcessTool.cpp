@@ -4,8 +4,8 @@
 #include "NR_ProcessTool.h"
 #include "NR_ProcessManagerFactory.h"
 #include "NR_IProcessManager.h"
-#include "NR_IProcess.h"
 #include "../StringConverter/NR_StringConverterTool.h"
+#include "../FilePath/NR_FilePathTool.h"
 
 class CProcessToolHelper
 {
@@ -33,6 +33,7 @@ bool NR_ShutdownProcessByNameW(const wchar_t * pszProcessName, const unsigned in
 {
 	bool bRet = false;
 	std::list<NR_IProcess *> ProcessList;
+	wchar_t szProcessFileName[260] = { 0 };
 	wchar_t szProcessNameTemp[260] = { 0 };
 	unsigned int uMatchProcessNum = 0;
 	unsigned int uSucceededShutdownProcessNum = 0;
@@ -45,18 +46,19 @@ bool NR_ShutdownProcessByNameW(const wchar_t * pszProcessName, const unsigned in
 			{
 				if (pProcess)
 				{
-					if (pProcess->GetProcessFileNameW(szProcessNameTemp, _countof(szProcessNameTemp)))
+					if (pProcess->GetProcessFileNameW(szProcessFileName, _countof(szProcessFileName)))
 					{
-						PathStripPathW(szProcessNameTemp);
-						
-						if (0 == _wcsicmp(szProcessNameTemp, pszProcessName))
+						if (NR_SplitFileTitleW(szProcessFileName, szProcessNameTemp, _countof(szProcessNameTemp)))
 						{
-							if (pProcess->ShutdownProcess(uExitCode))
+							if (0 == _wcsicmp(pszProcessName, szProcessNameTemp))
 							{
-								++uSucceededShutdownProcessNum;
-							}
+								if (pProcess->ShutdownProcess(uExitCode))
+								{
+									++uSucceededShutdownProcessNum;
+								}
 
-							++uMatchProcessNum;
+								++uMatchProcessNum;
+							}
 						}
 					}
 
@@ -141,6 +143,47 @@ bool NR_GetCurrentModuleFileNameA(char * pszName, const unsigned int uSize)
 
 			delete[] pszNameW;
 			pszNameW = 0;
+		}
+	}
+
+	return bRet;
+}
+
+bool NR_GetProcessIDByProcessNameW(const wchar_t * pszProcessName, std::list<NR_IProcess::IDType> & IDList)
+{
+	bool bRet = false;
+	std::list<NR_IProcess *> ProcessList;
+	wchar_t szProcessFileName[260] = { 0 };
+	wchar_t szProcessNameTemp[260] = { 0 };
+	NR_IProcess::IDType ProcessID = 0;
+
+	if (CProcessToolHelper::pProcessManager && pszProcessName)
+	{
+		if (CProcessToolHelper::pProcessManager->QueryProcessList(ProcessList))
+		{
+			for (auto pProcess : ProcessList)
+			{
+				if (pProcess)
+				{
+					if (pProcess->GetProcessFileNameW(szProcessFileName, _countof(szProcessFileName)))
+					{
+						if (NR_SplitFileTitleW(szProcessFileName, szProcessNameTemp, _countof(szProcessNameTemp)))
+						{
+							if (0 == _wcsicmp(pszProcessName, szProcessNameTemp))
+							{
+								if (pProcess->GetProcessID(ProcessID))
+								{
+									IDList.push_back(ProcessID);
+
+									bRet = true;
+								}
+							}
+						}
+					}
+
+					SAFE_RELEASE(pProcess);
+				}
+			}
 		}
 	}
 
