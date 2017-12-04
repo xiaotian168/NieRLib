@@ -114,8 +114,10 @@
     <ClInclude Include="Thread\NR_IThreadManager.h" />
     <ClInclude Include="Thread\NR_ThreadManagerFactory.h" />
     <ClInclude Include="Thread\NR_ThreadTool.h" />
+    <ClInclude Include="Workflow\NR_CAsyncQueueWorkflow.h" />
     <ClInclude Include="Workflow\NR_IWorkflow.h" />
     <ClInclude Include="Workflow\NR_IWorkflowDesigner.h" />
+    <ClInclude Include="Workflow\NR_WorkflowFactory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\NR_ArchiverFactory.cpp" />
@@ -177,6 +179,8 @@
     <ClCompile Include="Thread\NR_CWin32ThreadManager.cpp" />
     <ClCompile Include="Thread\NR_ThreadManagerFactory.cpp" />
     <ClCompile Include="Thread\NR_ThreadTool.cpp" />
+    <ClCompile Include="Workflow\NR_CAsyncQueueWorkflow.cpp" />
+    <ClCompile Include="Workflow\NR_WorkflowFactory.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C9FEE417-E533-44D6-96EA-7954113EE290}</ProjectGuid>
@@ -188,7 +192,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

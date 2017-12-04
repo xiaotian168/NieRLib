@@ -109,6 +109,7 @@
 */
 #include "Workflow/NR_IWorkflow.h"
 #include "Workflow/NR_IWorkflowDesigner.h"
+#include "Workflow/NR_WorkflowFactory.h"
 
 /**
 ** @addgroup ¹éµµÎÄ¼þ

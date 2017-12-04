@@ -133,6 +133,9 @@
     <Filter Include="源文件\FilePath">
       <UniqueIdentifier>{1248ce8a-b59b-4b39-8748-a2c83eead3a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Workflow">
+      <UniqueIdentifier>{34b79805-7dcb-4951-bb1a-c79570020a8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NieRLib.h">
@@ -426,6 +429,12 @@
     <ClInclude Include="Font\NR_CGDIFont.h">
       <Filter>头文件\Font</Filter>
     </ClInclude>
+    <ClInclude Include="Workflow\NR_WorkflowFactory.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
+    <ClInclude Include="Workflow\NR_CAsyncQueueWorkflow.h">
+      <Filter>头文件\Workflow</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
@@ -604,6 +613,12 @@
     </ClCompile>
     <ClCompile Include="Font\NR_CGDIFont.cpp">
       <Filter>源文件\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Workflow\NR_WorkflowFactory.cpp">
+      <Filter>源文件\Workflow</Filter>
+    </ClCompile>
+    <ClCompile Include="Workflow\NR_CAsyncQueueWorkflow.cpp">
+      <Filter>源文件\Workflow</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
