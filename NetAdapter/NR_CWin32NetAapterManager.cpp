@@ -54,7 +54,7 @@ bool NR_CWin32NetAapterManager::QueryAdapterList(std::list<NR_INetAdapter *> & A
 				bRet = true;
 			}
 
-			SAFE_RELEASE(pEnumNetConnection);
+			NR_SAFE_RELEASE(pEnumNetConnection);
 		}
 	}
 
@@ -81,7 +81,7 @@ bool NR_CWin32NetAapterManager::Startup(void)
 
 void NR_CWin32NetAapterManager::Shutdown(void)
 {
-	SAFE_RELEASE(m_pConnectionManager);
+	NR_SAFE_RELEASE(m_pConnectionManager);
 
 	CoUninitialize();
 }

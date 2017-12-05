@@ -27,7 +27,7 @@ NR_CWin32Shortcut::NR_CWin32Shortcut(wchar_t * pszShortcutPath)
 					m_strPath = pszShortcutPath;
 				}
 
-				SAFE_RELEASE(pPersistFile);
+				NR_SAFE_RELEASE(pPersistFile);
 			}
 		}
 	}
@@ -35,7 +35,7 @@ NR_CWin32Shortcut::NR_CWin32Shortcut(wchar_t * pszShortcutPath)
 
 NR_CWin32Shortcut::~NR_CWin32Shortcut()
 {
-	SAFE_RELEASE(m_pShellLink);
+	NR_SAFE_RELEASE(m_pShellLink);
 	m_strPath.clear();
 }
 
@@ -77,7 +77,7 @@ bool NR_CWin32Shortcut::Delete(void)
 		if (DeleteFileW(m_strPath.c_str()))
 		{
 			m_strPath.clear();
-			SAFE_RELEASE(m_pShellLink);
+			NR_SAFE_RELEASE(m_pShellLink);
 
 			bRet = true;
 		}

@@ -12,3 +12,12 @@ NR_IArchiverUnpacker * NR_MakeWin32ZipArchiverUnpacker(void)
 }
 
 #endif
+
+NR_IArchiverUnpacker * NR_MakeZipArchiverUnpackerByOSPlatform(void)
+{
+#if defined NR_PLATFORM_WIN32
+	return NR_CZipArchiverUnpacker::Make();
+#endif
+
+	return 0;
+}

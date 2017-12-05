@@ -3,14 +3,14 @@
 
 #include "../NieRLibConfig.h"
 
-#define SAFE_RELEASE(_Ref) { \
+#define NR_SAFE_RELEASE(_Ref) { \
 	if(_Ref) { \
 		_Ref->Release(); \
 		_Ref = 0; \
 	} \
 }
 
-#define SAFE_ADDREF(_Ref) { \
+#define NR_SAFE_ADDREF(_Ref) { \
 	if(_Ref) { \
 		_Ref->AddRef(); \
 	} \

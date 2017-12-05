@@ -18,7 +18,7 @@ public:
 
 	inline ~CProcessToolHelper()
 	{
-		SAFE_RELEASE(pProcessManager);
+		NR_SAFE_RELEASE(pProcessManager);
 	}
 
 public:
@@ -62,7 +62,7 @@ bool NR_ShutdownProcessByNameW(const wchar_t * pszProcessName, const unsigned in
 						}
 					}
 
-					SAFE_RELEASE(pProcess);
+					NR_SAFE_RELEASE(pProcess);
 				}
 			}
 
@@ -112,7 +112,7 @@ bool NR_GetCurrentModuleFileNameW(wchar_t * pszName, const unsigned int uSize)
 				bRet = true;
 			}
 
-			SAFE_RELEASE(pProcess);
+			NR_SAFE_RELEASE(pProcess);
 		}
 	}
 
@@ -181,7 +181,7 @@ bool NR_GetProcessIDByProcessNameW(const wchar_t * pszProcessName, std::list<NR_
 						}
 					}
 
-					SAFE_RELEASE(pProcess);
+					NR_SAFE_RELEASE(pProcess);
 				}
 			}
 		}

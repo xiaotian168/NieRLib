@@ -16,7 +16,7 @@ NR_CWin32NetAdapter::NR_CWin32NetAdapter(INetConnection * pNetConnection)
 
 NR_CWin32NetAdapter::~NR_CWin32NetAdapter()
 {
-	SAFE_RELEASE(m_pConnection);
+	NR_SAFE_RELEASE(m_pConnection);
 }
 
 bool NR_CWin32NetAdapter::GetAdapterNameW(wchar_t * pszName, const unsigned int uSize)

@@ -17,7 +17,7 @@ NR_CAsyncQueueWorkflow::~NR_CAsyncQueueWorkflow()
 {
 	StopWorkflow();
 
-	SAFE_RELEASE(m_pLockTaskList);
+	NR_SAFE_RELEASE(m_pLockTaskList);
 }
 
 bool NR_CAsyncQueueWorkflow::AddTask(NR_ITask * pTask)
@@ -48,7 +48,7 @@ bool NR_CAsyncQueueWorkflow::RemoveAllTask(void)
 	{
 		for (auto pTask : m_TaskList)
 		{
-			SAFE_RELEASE(pTask);
+			NR_SAFE_RELEASE(pTask);
 		}
 
 		m_TaskList.clear();

@@ -34,12 +34,12 @@ bool NR_DeleteAllShortcutByTargetPathW(const wchar_t * pszSearchDirectory, const
 							}
 						}
 
-						SAFE_RELEASE(pShortcut);
+						NR_SAFE_RELEASE(pShortcut);
 					}
 				}
 			}
 
-			SAFE_RELEASE(pShortcutMgr);
+			NR_SAFE_RELEASE(pShortcutMgr);
 		}
 	}
 

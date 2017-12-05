@@ -22,13 +22,13 @@ public:
 				pStringConverter->SetMemoryAllocator(pMemAllocator);
 			}
 
-			SAFE_RELEASE(pMemAllocator);
+			NR_SAFE_RELEASE(pMemAllocator);
 		}
 	}
 
 	inline ~CStringConverterHelper()
 	{
-		SAFE_RELEASE(pStringConverter);
+		NR_SAFE_RELEASE(pStringConverter);
 	}
 
 public:

@@ -17,7 +17,7 @@ public:
 
 	inline ~CThreadHelper()
 	{
-		SAFE_RELEASE(pThreadManager);
+		NR_SAFE_RELEASE(pThreadManager);
 	}
 
 public:
@@ -43,7 +43,7 @@ NR_IThread::IDType NR_GetCallerThreadID(void)
 				ID = IDTemp;
 			}
 
-			SAFE_RELEASE(pThread);
+			NR_SAFE_RELEASE(pThread);
 		}
 	}
 

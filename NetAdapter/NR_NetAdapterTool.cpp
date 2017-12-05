@@ -26,7 +26,7 @@ bool NR_DisconnectAllNetAdapter(void)
 						++uSucceededDisconnectNetAdapterNum;
 					}
 
-					SAFE_RELEASE(pNetAdapter);
+					NR_SAFE_RELEASE(pNetAdapter);
 				}
 			}
 
@@ -36,7 +36,7 @@ bool NR_DisconnectAllNetAdapter(void)
 			}
 		}
 
-		SAFE_RELEASE(pNetAdapterMgr);
+		NR_SAFE_RELEASE(pNetAdapterMgr);
 	}
 
 	return bRet;
@@ -62,7 +62,7 @@ bool NR_ConnectAllNetAdapter(void)
 						++uSucceededConnectNetAdapterNum;
 					}
 
-					SAFE_RELEASE(pNetAdapter);
+					NR_SAFE_RELEASE(pNetAdapter);
 				}
 			}
 
@@ -72,7 +72,7 @@ bool NR_ConnectAllNetAdapter(void)
 			}
 		}
 
-		SAFE_RELEASE(pNetAdapterMgr);
+		NR_SAFE_RELEASE(pNetAdapterMgr);
 	}
 
 	return bRet;

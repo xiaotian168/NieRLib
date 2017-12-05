@@ -16,7 +16,7 @@ public:
 
 	inline ~NR_CFilePathToolHelper()
 	{
-		SAFE_RELEASE(pFilePath);
+		NR_SAFE_RELEASE(pFilePath);
 	}
 
 public:

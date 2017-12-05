@@ -21,7 +21,7 @@ NR_CFileLog::NR_CFileLog(const wchar_t * pszLogFilePath)
 		{
 			m_pFile = pFileSystem->GetFileForWriteW(pszLogFilePath);
 
-			SAFE_RELEASE(pFileSystem);
+			NR_SAFE_RELEASE(pFileSystem);
 		}
 	}
 
@@ -32,8 +32,8 @@ NR_CFileLog::~NR_CFileLog()
 {
 	if (m_pFile)m_pFile->Close();
 
-	SAFE_RELEASE(m_pFile);
-	SAFE_RELEASE(m_pLockFile);
+	NR_SAFE_RELEASE(m_pFile);
+	NR_SAFE_RELEASE(m_pLockFile);
 }
 
 bool NR_CFileLog::SetFilterLogLevel(const NR_LogLevel Level)

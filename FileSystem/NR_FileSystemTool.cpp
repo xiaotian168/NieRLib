@@ -20,8 +20,8 @@ public:
 
 	inline ~CFileSystemHelper()
 	{
-		SAFE_RELEASE(pFileSystem);
-		SAFE_RELEASE(pMemAllocator);
+		NR_SAFE_RELEASE(pFileSystem);
+		NR_SAFE_RELEASE(pMemAllocator);
 	}
 
 public:
@@ -78,7 +78,7 @@ bool NR_ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned 
 			}
 
 			pFile->Close();
-			SAFE_RELEASE(pFile);
+			NR_SAFE_RELEASE(pFile);
 		}
 	}
 
@@ -117,7 +117,7 @@ bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const un
 			}
 
 			pFile->Close();
-			SAFE_RELEASE(pFile);
+			NR_SAFE_RELEASE(pFile);
 		}
 	}
 

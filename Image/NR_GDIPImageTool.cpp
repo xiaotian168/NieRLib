@@ -23,7 +23,7 @@ Gdiplus::Bitmap * NR_LoadGDIPImageFromBuffer(const void * pBuffer, const unsigne
 				{
 					pImg = Gdiplus::Bitmap::FromStream(pIStream);
 
-					SAFE_RELEASE(pIStream);
+					NR_SAFE_RELEASE(pIStream);
 				}
 
 				GlobalUnlock(hGlobal);

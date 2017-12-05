@@ -18,7 +18,7 @@ public:
 
 	inline ~CLibraryHelper()
 	{
-		SAFE_RELEASE(pLibraryManager);
+		NR_SAFE_RELEASE(pLibraryManager);
 	}
 
 public:

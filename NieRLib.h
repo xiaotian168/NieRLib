@@ -119,6 +119,7 @@
 #include "Archiver/NR_IArchiverItemEnumerator.h"
 #include "Archiver/NR_IArchiverUnpacker.h"
 #include "Archiver/NR_ArchiverFactory.h"
+#include "Archiver/NR_ArchiverTool.h"
 
 /**
 ** @addgroup Í¼Ïñ

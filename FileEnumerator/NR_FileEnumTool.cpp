@@ -21,7 +21,7 @@ bool NR_EnumAllFileW(const wchar_t * pszDirectory, const wchar_t * pszFileExt, c
 				bRet = true;
 			}
 
-			SAFE_RELEASE(pFileEnumerator);
+			NR_SAFE_RELEASE(pFileEnumerator);
 		}
 	}
 
@@ -71,7 +71,7 @@ bool NR_EnumAllDirectoryW(const wchar_t * pszDirectory, const bool bEnumSubDir, 
 				bRet = true;
 			}
 
-			SAFE_RELEASE(pFileEnumerator);
+			NR_SAFE_RELEASE(pFileEnumerator);
 		}
 	}
 

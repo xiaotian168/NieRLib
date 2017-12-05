@@ -18,22 +18,22 @@ NR_CWin32StringConverter::NR_CWin32StringConverter()
 
 NR_CWin32StringConverter::~NR_CWin32StringConverter()
 {
-	SAFE_RELEASE(m_pMemAllocator);
+	NR_SAFE_RELEASE(m_pMemAllocator);
 }
 
 void NR_CWin32StringConverter::SetMemoryAllocator(NR_IMemoryAllocator * pAllocator)
 {
 	if (m_pMemAllocator != pAllocator)
 	{
-		SAFE_RELEASE(m_pMemAllocator);
+		NR_SAFE_RELEASE(m_pMemAllocator);
 		m_pMemAllocator = pAllocator;
-		SAFE_ADDREF(m_pMemAllocator);
+		NR_SAFE_ADDREF(m_pMemAllocator);
 	}
 }
 
 NR_IMemoryAllocator * NR_CWin32StringConverter::GetMemoryAllocator(void) const
 {
-	SAFE_ADDREF(m_pMemAllocator);
+	NR_SAFE_ADDREF(m_pMemAllocator);
 
 	return m_pMemAllocator;
 }
