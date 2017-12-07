@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application\NR_CWin32Application.h" />
+    <ClInclude Include="Application\NR_CWin32ApplicationStartupParam.h" />
+    <ClInclude Include="Application\NR_IApplication.h" />
+    <ClInclude Include="Application\NR_IApplicationStartupParam.h" />
     <ClInclude Include="Archiver\NR_ArchiverFactory.h" />
     <ClInclude Include="Archiver\NR_ArchiverTool.h" />
     <ClInclude Include="Archiver\NR_IArchiver.h" />
@@ -114,12 +118,16 @@
     <ClInclude Include="Thread\NR_IThreadManager.h" />
     <ClInclude Include="Thread\NR_ThreadManagerFactory.h" />
     <ClInclude Include="Thread\NR_ThreadTool.h" />
+    <ClInclude Include="Window\NR_CWin32Window.h" />
+    <ClInclude Include="Window\NR_IWindow.h" />
     <ClInclude Include="Workflow\NR_CAsyncQueueWorkflow.h" />
     <ClInclude Include="Workflow\NR_IWorkflow.h" />
     <ClInclude Include="Workflow\NR_IWorkflowDesigner.h" />
     <ClInclude Include="Workflow\NR_WorkflowFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Application\NR_CWin32Application.cpp" />
+    <ClCompile Include="Application\NR_CWin32ApplicationStartupParam.cpp" />
     <ClCompile Include="Archiver\NR_ArchiverFactory.cpp" />
     <ClCompile Include="Archiver\NR_ArchiverTool.cpp" />
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\NR_CZipArchiverItem.cpp" />
@@ -179,6 +187,7 @@
     <ClCompile Include="Thread\NR_CWin32ThreadManager.cpp" />
     <ClCompile Include="Thread\NR_ThreadManagerFactory.cpp" />
     <ClCompile Include="Thread\NR_ThreadTool.cpp" />
+    <ClCompile Include="Window\NR_CWin32Window.cpp" />
     <ClCompile Include="Workflow\NR_CAsyncQueueWorkflow.cpp" />
     <ClCompile Include="Workflow\NR_WorkflowFactory.cpp" />
   </ItemGroup>

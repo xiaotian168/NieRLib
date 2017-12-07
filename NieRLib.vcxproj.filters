@@ -136,6 +136,18 @@
     <Filter Include="源文件\Workflow">
       <UniqueIdentifier>{34b79805-7dcb-4951-bb1a-c79570020a8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Application">
+      <UniqueIdentifier>{f81d1daf-5605-44a3-83bf-8cc408c1e64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Application">
+      <UniqueIdentifier>{1977bae1-6bbd-48f5-805a-287c529357f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Window">
+      <UniqueIdentifier>{254b1795-1ef8-4ee9-b1df-97f29abb6094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Window">
+      <UniqueIdentifier>{51bc1c2b-5562-4454-8537-d82a1af3a7bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NieRLib.h">
@@ -435,6 +447,24 @@
     <ClInclude Include="Workflow\NR_CAsyncQueueWorkflow.h">
       <Filter>头文件\Workflow</Filter>
     </ClInclude>
+    <ClInclude Include="Application\NR_IApplication.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\NR_CWin32Application.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\NR_CWin32Window.h">
+      <Filter>头文件\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\NR_IWindow.h">
+      <Filter>头文件\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\NR_CWin32ApplicationStartupParam.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\NR_IApplicationStartupParam.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
@@ -619,6 +649,15 @@
     </ClCompile>
     <ClCompile Include="Workflow\NR_CAsyncQueueWorkflow.cpp">
       <Filter>源文件\Workflow</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\NR_CWin32Application.cpp">
+      <Filter>源文件\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\NR_CWin32Window.cpp">
+      <Filter>源文件\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\NR_CWin32ApplicationStartupParam.cpp">
+      <Filter>源文件\Application</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
