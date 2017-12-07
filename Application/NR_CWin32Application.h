@@ -19,9 +19,11 @@ protected:
 
 public:
 
-	bool InitApplication(NR_IApplicationStartupParam * pStartupParam) override;
+	bool Init(NR_IApplicationStartupParam * pStartupParam) override;
 
-	void UninitApplication(void) override;
+	void Uninit(void) override;
+
+	bool Run(void) override;
 
 	NR_IWindow * MakeWindowW(const wchar_t * pszTitle, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight) override;
 

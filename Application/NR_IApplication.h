@@ -16,12 +16,17 @@ public:
 	/**
 	** @brief 初始化应用程序
 	*/
-	virtual bool InitApplication(NR_IApplicationStartupParam * pStartupParam) = 0;
+	virtual bool Init(NR_IApplicationStartupParam * pStartupParam) = 0;
 
 	/**
 	** @brief 反始化应用程序
 	*/
-	virtual void UninitApplication(void) = 0;
+	virtual void Uninit(void) = 0;
+
+	/**
+	** @brief 运行应用程序
+	*/
+	virtual bool Run(void) = 0;
 
 	/**
 	** @brief 创建窗口

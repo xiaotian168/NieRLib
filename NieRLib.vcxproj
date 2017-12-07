@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application\NR_ApplicationFactory.h" />
+    <ClInclude Include="Application\NR_ApplicationStartupParamFactory.h" />
     <ClInclude Include="Application\NR_CWin32Application.h" />
     <ClInclude Include="Application\NR_CWin32ApplicationStartupParam.h" />
     <ClInclude Include="Application\NR_IApplication.h" />
@@ -126,6 +128,8 @@
     <ClInclude Include="Workflow\NR_WorkflowFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Application\NR_ApplicationFactory.cpp" />
+    <ClCompile Include="Application\NR_ApplicationStartupParamFactory.cpp" />
     <ClCompile Include="Application\NR_CWin32Application.cpp" />
     <ClCompile Include="Application\NR_CWin32ApplicationStartupParam.cpp" />
     <ClCompile Include="Archiver\NR_ArchiverFactory.cpp" />

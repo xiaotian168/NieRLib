@@ -85,6 +85,19 @@
 #include "NetAdapter/NR_NetAdapterTool.h"
 
 /**
+** @brief 应用程序接口
+*/
+#include "Application/NR_IApplication.h"
+#include "Application/NR_IApplicationStartupParam.h"
+#include "Application/NR_ApplicationFactory.h"
+#include "Application/NR_ApplicationStartupParamFactory.h"
+
+/**
+** @brief 窗口接口
+*/
+#include "Window/NR_IWindow.h"
+
+/**
 ** @addgroup 日志
 */
 #include "Log/NR_ILog.h"

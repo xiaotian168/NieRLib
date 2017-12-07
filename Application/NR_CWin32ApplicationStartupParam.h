@@ -9,13 +9,23 @@ class NR_CWin32ApplicationStartupParam : public NR_IApplicationStartupParam
 {
 public:
 
+	static NR_CWin32ApplicationStartupParam * Make(const HINSTANCE hInst, const HINSTANCE hInstPrev, const wchar_t * pszCmdLine, const int nShowCmd);
+
+protected:
+
+	NR_CWin32ApplicationStartupParam(const HINSTANCE hInst, const HINSTANCE hInstPrev, const wchar_t * pszCmdLine, const int nShowCmd);
+
+	~NR_CWin32ApplicationStartupParam();
+
+public:
+
 	void dump(void) override;
 
 public:
 
 	inline HINSTANCE GetApplicationHandle(void) const
 	{
-		return m_hInstApp;
+		return m_hInst;
 	}
 
 	inline const wchar_t * GetCmdLineW(void) const
@@ -25,15 +35,15 @@ public:
 
 	inline int GetCmdShow(void) const
 	{
-		return m_nCmdShow;
+		return m_nShowCmd;
 	}
 
 private:
 
-	HINSTANCE m_hInstApp{ 0 };
+	HINSTANCE m_hInst{ 0 };
 	HINSTANCE m_hInstPrev{ 0 };
 	std::wstring m_strCmdLine;
-	int m_nCmdShow{ 0 };
+	int m_nShowCmd{ 0 };
 };
 
 #endif

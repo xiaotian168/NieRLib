@@ -465,6 +465,12 @@
     <ClInclude Include="Application\NR_IApplicationStartupParam.h">
       <Filter>头文件\Application</Filter>
     </ClInclude>
+    <ClInclude Include="Application\NR_ApplicationFactory.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\NR_ApplicationStartupParamFactory.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
@@ -657,6 +663,12 @@
       <Filter>源文件\Window</Filter>
     </ClCompile>
     <ClCompile Include="Application\NR_CWin32ApplicationStartupParam.cpp">
+      <Filter>源文件\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\NR_ApplicationFactory.cpp">
+      <Filter>源文件\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\NR_ApplicationStartupParamFactory.cpp">
       <Filter>源文件\Application</Filter>
     </ClCompile>
   </ItemGroup>

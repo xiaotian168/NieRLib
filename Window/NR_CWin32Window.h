@@ -3,6 +3,8 @@
 
 #include "NR_IWindow.h"
 
+class NR_IApplicationStartupParam;
+
 #if defined NR_PLATFORM_WIN32
 
 class NR_CWin32Window : public NR_IWindow
@@ -29,11 +31,20 @@ public:
 
 private:
 
-	bool MakeWindowW(const wchar_t * pszClassName, const unsigned int uWndStyle, const unsigned int uWndStyleEx, const wchar_t * pszTitle, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight, void * pCreateParam);
+	bool MakeWindowW(const wchar_t * pszClassName, const unsigned int uWndStyle, const unsigned int uWndStyleEx, const wchar_t * pszTitle, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight, void * pCreateParam, NR_IApplicationStartupParam * pStartupParam);
+
+	LRESULT OnWndMsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam);
+
+	inline HWND GetWndHandle(void) const
+	{
+		return m_hWnd;
+	}
 
 private:
 
 	HWND m_hWnd{ 0 };
+	NR_IApplicationStartupParam * m_pStartupParam{ 0 };
+	bool m_bFirstTimeShow{ false };
 };
 
 #endif
