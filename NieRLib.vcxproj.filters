@@ -471,6 +471,12 @@
     <ClInclude Include="Application\NR_ApplicationStartupParamFactory.h">
       <Filter>头文件\Application</Filter>
     </ClInclude>
+    <ClInclude Include="Application\NR_IApplicationEventReceiver.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\NR_ApplicationEvent.h">
+      <Filter>头文件\Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">

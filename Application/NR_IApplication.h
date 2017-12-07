@@ -5,6 +5,7 @@
 
 class NR_IWindow;
 class NR_IApplicationStartupParam;
+class NR_IApplicationEventReceiver;
 
 /**
 ** @brief 应用程序接口
@@ -16,7 +17,7 @@ public:
 	/**
 	** @brief 初始化应用程序
 	*/
-	virtual bool Init(NR_IApplicationStartupParam * pStartupParam) = 0;
+	virtual bool Init(NR_IApplicationStartupParam * pStartupParam, NR_IApplicationEventReceiver * pEventReceiver) = 0;
 
 	/**
 	** @brief 反始化应用程序

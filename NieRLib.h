@@ -89,6 +89,8 @@
 */
 #include "Application/NR_IApplication.h"
 #include "Application/NR_IApplicationStartupParam.h"
+#include "Application/NR_IApplicationEventReceiver.h"
+#include "Application/NR_ApplicationEvent.h"
 #include "Application/NR_ApplicationFactory.h"
 #include "Application/NR_ApplicationStartupParamFactory.h"
 

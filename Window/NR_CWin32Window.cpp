@@ -1,6 +1,8 @@
 
 #include "NR_CWin32Window.h"
 #include "../Application/NR_CWin32ApplicationStartupParam.h"
+#include "../Application/NR_IApplicationEventReceiver.h"
+#include "../Application/NR_ApplicationEvent.h"
 
 #if defined NR_PLATFORM_WIN32
 
@@ -17,6 +19,7 @@ NR_CWin32Window::NR_CWin32Window()
 NR_CWin32Window::~NR_CWin32Window()
 {
 	NR_SAFE_RELEASE(m_pStartupParam);
+	NR_SAFE_RELEASE(m_pEventReceiver);
 }
 
 bool NR_CWin32Window::Hide(void)
@@ -73,7 +76,7 @@ bool NR_CWin32Window::SetTitleW(const wchar_t * pszTitle)
 	return false;
 }
 
-bool NR_CWin32Window::MakeWindowW(const wchar_t * pszClassName, const unsigned int uWndStyle, const unsigned int uWndStyleEx, const wchar_t * pszTitle, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight, void * pCreateParam, NR_IApplicationStartupParam * pStartupParam)
+bool NR_CWin32Window::MakeWindowW(const wchar_t * pszClassName, const unsigned int uWndStyle, const unsigned int uWndStyleEx, const wchar_t * pszTitle, const int nPosX, const int nPosY, const unsigned int uWidth, const unsigned int uHeight, void * pCreateParam, NR_IApplicationStartupParam * pStartupParam, NR_IApplicationEventReceiver * pEventReceiver)
 {
 	bool bRet = false;
 
@@ -98,6 +101,9 @@ bool NR_CWin32Window::MakeWindowW(const wchar_t * pszClassName, const unsigned i
 			m_pStartupParam = pStartupParam;
 			NR_SAFE_ADDREF(m_pStartupParam);
 
+			m_pEventReceiver = pEventReceiver;
+			NR_SAFE_ADDREF(m_pEventReceiver);
+
 			bRet = true;
 		}
 	}
@@ -107,6 +113,37 @@ bool NR_CWin32Window::MakeWindowW(const wchar_t * pszClassName, const unsigned i
 
 LRESULT NR_CWin32Window::OnWndMsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+	NR_CWindowEvent Event;
+
+	if (m_pEventReceiver)
+	{
+		if (WM_MOUSEMOVE == uMsg)
+		{
+			Event.EventType = eEvent_MouseMove;
+			Event.nCursorX = LOWORD(lParam);
+			Event.nCursorY = HIWORD(lParam);
+
+			m_pEventReceiver->OnWindowEvent(this, &Event);
+		}
+		else if (WM_MOUSEWHEEL == uMsg)
+		{
+			Event.EventType = eEvent_MouseWheel;
+			Event.nCursorX = LOWORD(lParam);
+			Event.nCursorY = HIWORD(lParam);
+			Event.bWheelForward = (short)HIWORD(wParam) > 0 ? true : false;
+
+			m_pEventReceiver->OnWindowEvent(this, &Event);
+		}
+		else if (WM_KEYUP == uMsg)
+		{
+
+		}
+		else if (WM_KEYDOWN == uMsg)
+		{
+
+		}
+	}
+
 	return 0;
 }
 

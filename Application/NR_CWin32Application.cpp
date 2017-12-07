@@ -1,6 +1,7 @@
 
 #include "NR_CWin32Application.h"
 #include "NR_CWin32ApplicationStartupParam.h"
+#include "NR_IApplicationEventReceiver.h"
 #include "../Window/NR_CWin32Window.h"
 
 #if defined NR_PLATFORM_WIN32
@@ -42,7 +43,7 @@ NR_CWin32Application::~NR_CWin32Application()
 
 }
 
-bool NR_CWin32Application::Init(NR_IApplicationStartupParam * pStartupParam)
+bool NR_CWin32Application::Init(NR_IApplicationStartupParam * pStartupParam, NR_IApplicationEventReceiver * pEventReceiver)
 {
 	bool bRet = false;
 
@@ -50,6 +51,9 @@ bool NR_CWin32Application::Init(NR_IApplicationStartupParam * pStartupParam)
 	{
 		m_pStartupParam = pStartupParam;
 		NR_SAFE_ADDREF(m_pStartupParam);
+
+		m_pEventReceiver = pEventReceiver;
+		NR_SAFE_ADDREF(m_pEventReceiver);
 
 		if (RegisterWindowClassW())
 		{
@@ -69,6 +73,7 @@ void NR_CWin32Application::Uninit(void)
 	m_WindowList.clear();
 
 	NR_SAFE_RELEASE(m_pStartupParam);
+	NR_SAFE_RELEASE(m_pEventReceiver);
 }
 
 bool NR_CWin32Application::Run(void)
@@ -95,7 +100,7 @@ NR_IWindow * NR_CWin32Application::MakeWindowW(const wchar_t * pszTitle, const i
 	auto pWnd = NR_CWin32Window::Make();
 	if (pWnd)
 	{
-		if (pWnd->MakeWindowW(g_pszWndClassName, WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX | WS_MAXIMIZEBOX, 0, pszTitle, nPosX, nPosY, uWidth, uHeight, this, m_pStartupParam))
+		if (pWnd->MakeWindowW(g_pszWndClassName, WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX | WS_MAXIMIZEBOX, 0, pszTitle, nPosX, nPosY, uWidth, uHeight, this, m_pStartupParam, m_pEventReceiver))
 		{
 			m_WindowList.push_back(pWnd);
 			NR_SAFE_ADDREF(pWnd);

@@ -19,7 +19,7 @@ protected:
 
 public:
 
-	bool Init(NR_IApplicationStartupParam * pStartupParam) override;
+	bool Init(NR_IApplicationStartupParam * pStartupParam, NR_IApplicationEventReceiver * pEventReceiver) override;
 
 	void Uninit(void) override;
 
@@ -38,6 +38,7 @@ private:
 private:
 
 	NR_IApplicationStartupParam * m_pStartupParam{ 0 };
+	NR_IApplicationEventReceiver * m_pEventReceiver{ 0 };
 	std::list<NR_IWindow *> m_WindowList;
 };
 
