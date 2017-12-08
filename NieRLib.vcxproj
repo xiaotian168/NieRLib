@@ -115,6 +115,10 @@
     <ClInclude Include="StringConverter\NR_IStringConverter.h" />
     <ClInclude Include="StringConverter\NR_StringConverterFactory.h" />
     <ClInclude Include="StringConverter\NR_StringConverterTool.h" />
+    <ClInclude Include="TaskBar\NR_CWin32TaskBarInfo.h" />
+    <ClInclude Include="TaskBar\NR_ITaskBarInfo.h" />
+    <ClInclude Include="TaskBar\NR_TaskBarFactory.h" />
+    <ClInclude Include="TaskBar\NR_TaskBarTool.h" />
     <ClInclude Include="Thread\NR_CThread.h" />
     <ClInclude Include="Thread\NR_CWin32Thread.h" />
     <ClInclude Include="Thread\NR_CWin32ThreadManager.h" />
@@ -187,6 +191,9 @@
     <ClCompile Include="StringConverter\NR_CWin32StringConverter.cpp" />
     <ClCompile Include="StringConverter\NR_StringConverterFactory.cpp" />
     <ClCompile Include="StringConverter\NR_StringConverterTool.cpp" />
+    <ClCompile Include="TaskBar\NR_CWin32TaskBarInfo.cpp" />
+    <ClCompile Include="TaskBar\NR_TaskBarFactory.cpp" />
+    <ClCompile Include="TaskBar\NR_TaskBarTool.cpp" />
     <ClCompile Include="Thread\NR_CThread_Linux.cpp" />
     <ClCompile Include="Thread\NR_CThread_Win32.cpp" />
     <ClCompile Include="Thread\NR_CWin32Thread.cpp" />
@@ -207,7 +214,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

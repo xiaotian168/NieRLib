@@ -7,16 +7,16 @@
 #include "../StringConverter/NR_StringConverterTool.h"
 #include "../FilePath/NR_FilePathTool.h"
 
-class CProcessToolHelper
+class NR_CProcessToolHelper
 {
 public:
 
-	inline CProcessToolHelper()
+	inline NR_CProcessToolHelper()
 	{
 		pProcessManager = MakeProcessManagerByOSPlatform();
 	}
 
-	inline ~CProcessToolHelper()
+	inline ~NR_CProcessToolHelper()
 	{
 		NR_SAFE_RELEASE(pProcessManager);
 	}
@@ -26,8 +26,8 @@ public:
 	static NR_IProcessManager * pProcessManager;
 };
 
-NR_IProcessManager * CProcessToolHelper::pProcessManager = 0;
-CProcessToolHelper g_ProcessToolHelper;
+NR_IProcessManager * NR_CProcessToolHelper::pProcessManager = 0;
+NR_CProcessToolHelper g_ProcessToolHelper;
 
 bool NR_ShutdownProcessByNameW(const wchar_t * pszProcessName, const unsigned int uExitCode)
 {
@@ -38,9 +38,9 @@ bool NR_ShutdownProcessByNameW(const wchar_t * pszProcessName, const unsigned in
 	unsigned int uMatchProcessNum = 0;
 	unsigned int uSucceededShutdownProcessNum = 0;
 
-	if (CProcessToolHelper::pProcessManager && pszProcessName && wcslen(pszProcessName))
+	if (NR_CProcessToolHelper::pProcessManager && pszProcessName && wcslen(pszProcessName))
 	{
-		if (CProcessToolHelper::pProcessManager->QueryProcessList(ProcessList))
+		if (NR_CProcessToolHelper::pProcessManager->QueryProcessList(ProcessList))
 		{
 			for (auto pProcess : ProcessList)
 			{
@@ -102,9 +102,9 @@ bool NR_GetCurrentModuleFileNameW(wchar_t * pszName, const unsigned int uSize)
 {
 	bool bRet = false;
 
-	if (CProcessToolHelper::pProcessManager && pszName && uSize)
+	if (NR_CProcessToolHelper::pProcessManager && pszName && uSize)
 	{
-		auto pProcess = CProcessToolHelper::pProcessManager->GetCurrentProcess();
+		auto pProcess = NR_CProcessToolHelper::pProcessManager->GetCurrentProcess();
 		if (pProcess)
 		{
 			if (pProcess->GetProcessFileNameW(pszName, uSize))
@@ -157,9 +157,9 @@ bool NR_GetProcessIDByProcessNameW(const wchar_t * pszProcessName, std::list<NR_
 	wchar_t szProcessNameTemp[260] = { 0 };
 	NR_IProcess::IDType ProcessID = 0;
 
-	if (CProcessToolHelper::pProcessManager && pszProcessName)
+	if (NR_CProcessToolHelper::pProcessManager && pszProcessName)
 	{
-		if (CProcessToolHelper::pProcessManager->QueryProcessList(ProcessList))
+		if (NR_CProcessToolHelper::pProcessManager->QueryProcessList(ProcessList))
 		{
 			for (auto pProcess : ProcessList)
 			{

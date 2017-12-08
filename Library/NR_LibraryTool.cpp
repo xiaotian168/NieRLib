@@ -7,16 +7,16 @@
 #include "NR_ILibraryManager.h"
 #include "NR_ILibrary.h"
 
-class CLibraryHelper
+class NR_CLibraryHelper
 {
 public:
 
-	inline CLibraryHelper()
+	inline NR_CLibraryHelper()
 	{
 		pLibraryManager = NR_MakeLibraryManagerByOSPlatform();
 	}
 
-	inline ~CLibraryHelper()
+	inline ~NR_CLibraryHelper()
 	{
 		NR_SAFE_RELEASE(pLibraryManager);
 	}
@@ -26,14 +26,14 @@ public:
 	static NR_ILibraryManager * pLibraryManager;
 };
 
-NR_ILibraryManager * CLibraryHelper::pLibraryManager = 0;
-CLibraryHelper LibraryHelper;
+NR_ILibraryManager * NR_CLibraryHelper::pLibraryManager = 0;
+NR_CLibraryHelper LibraryHelper;
 
 NR_ILibrary * NR_GetLibraryW(const wchar_t * pszLibraryPath)
 {
-	if (CLibraryHelper::pLibraryManager && pszLibraryPath)
+	if (NR_CLibraryHelper::pLibraryManager && pszLibraryPath)
 	{
-		return CLibraryHelper::pLibraryManager->GetLibraryW(pszLibraryPath);
+		return NR_CLibraryHelper::pLibraryManager->GetLibraryW(pszLibraryPath);
 	}
 
 	return 0;

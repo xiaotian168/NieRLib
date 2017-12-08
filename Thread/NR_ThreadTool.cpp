@@ -6,16 +6,16 @@
 #include "NR_IThreadManager.h"
 #include "NR_IThread.h"
 
-class CThreadHelper
+class NR_CThreadHelper
 {
 public:
 
-	inline CThreadHelper()
+	inline NR_CThreadHelper()
 	{
 		pThreadManager = NR_MakeThreadManagerByOSPlatform();
 	}
 
-	inline ~CThreadHelper()
+	inline ~NR_CThreadHelper()
 	{
 		NR_SAFE_RELEASE(pThreadManager);
 	}
@@ -25,17 +25,17 @@ public:
 	static NR_IThreadManager * pThreadManager;
 };
 
-NR_IThreadManager * CThreadHelper::pThreadManager = 0;
-CThreadHelper ThreadHelper;
+NR_IThreadManager * NR_CThreadHelper::pThreadManager = 0;
+NR_CThreadHelper ThreadHelper;
 
 NR_IThread::IDType NR_GetCallerThreadID(void)
 {
 	NR_IThread::IDType ID = 0;
 	NR_IThread::IDType IDTemp = 0;
 
-	if (CThreadHelper::pThreadManager)
+	if (NR_CThreadHelper::pThreadManager)
 	{
-		auto pThread = CThreadHelper::pThreadManager->GetCurrentThread();
+		auto pThread = NR_CThreadHelper::pThreadManager->GetCurrentThread();
 		if (pThread)
 		{
 			if (pThread->GetThreadID(IDTemp))
@@ -52,9 +52,9 @@ NR_IThread::IDType NR_GetCallerThreadID(void)
 
 NR_IThread * NR_GetCallerThread(void)
 {
-	if (CThreadHelper::pThreadManager)
+	if (NR_CThreadHelper::pThreadManager)
 	{
-		return CThreadHelper::pThreadManager->GetCurrentThread();
+		return NR_CThreadHelper::pThreadManager->GetCurrentThread();
 	}
 
 	return 0;

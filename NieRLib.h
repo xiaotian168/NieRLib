@@ -85,6 +85,13 @@
 #include "NetAdapter/NR_NetAdapterTool.h"
 
 /**
+** @brief 任务栏
+*/
+#include "TaskBar/NR_ITaskBarInfo.h"
+#include "TaskBar/NR_TaskBarFactory.h"
+#include "TaskBar/NR_TaskBarTool.h"
+
+/**
 ** @brief 应用程序接口
 */
 #include "Application/NR_IApplication.h"

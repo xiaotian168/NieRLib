@@ -8,17 +8,17 @@
 #include "../MemoryAllocator/NR_IMemoryAllocator.h"
 #include "../MemoryAllocator/NR_MemoryAllocatorFactory.h"
 
-class CFileSystemHelper
+class NR_CFileSystemHelper
 {
 public:
 
-	inline CFileSystemHelper()
+	inline NR_CFileSystemHelper()
 	{
 		pFileSystem = NR_MakeFileSystemByOSPlatform();
 		pMemAllocator = NR_MakeMemoryAllocatorByOSPlatform();
 	}
 
-	inline ~CFileSystemHelper()
+	inline ~NR_CFileSystemHelper()
 	{
 		NR_SAFE_RELEASE(pFileSystem);
 		NR_SAFE_RELEASE(pMemAllocator);
@@ -30,17 +30,17 @@ public:
 	static NR_IMemoryAllocator * pMemAllocator;
 };
 
-NR_IFileSystem * CFileSystemHelper::pFileSystem = 0;
-NR_IMemoryAllocator * CFileSystemHelper::pMemAllocator = 0;
-CFileSystemHelper FileSystemHelper;
+NR_IFileSystem * NR_CFileSystemHelper::pFileSystem = 0;
+NR_IMemoryAllocator * NR_CFileSystemHelper::pMemAllocator = 0;
+NR_CFileSystemHelper FileSystemHelper;
 
 bool IsFileExistW(const wchar_t * pszFilePath)
 {
 	bool bRet = false;
 	
-	if (CFileSystemHelper::pFileSystem && pszFilePath)
+	if (NR_CFileSystemHelper::pFileSystem && pszFilePath)
 	{
-		if (CFileSystemHelper::pFileSystem->IsFileExistW(pszFilePath))
+		if (NR_CFileSystemHelper::pFileSystem->IsFileExistW(pszFilePath))
 		{
 			bRet = true;
 		}
@@ -53,9 +53,9 @@ bool NR_ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned 
 {
 	bool bRet = false;
 
-	if (CFileSystemHelper::pFileSystem && CFileSystemHelper::pMemAllocator && pszFilePath && ppFileData)
+	if (NR_CFileSystemHelper::pFileSystem && NR_CFileSystemHelper::pMemAllocator && pszFilePath && ppFileData)
 	{
-		auto pFile = CFileSystemHelper::pFileSystem->GetFileForReadW(pszFilePath);
+		auto pFile = NR_CFileSystemHelper::pFileSystem->GetFileForReadW(pszFilePath);
 		if (pFile)
 		{
 			if (pFile->SeekToEnd())
@@ -65,7 +65,7 @@ bool NR_ReadFileDataW(const wchar_t * pszFilePath, void ** ppFileData, unsigned 
 				{
 					if (pFile->SeekToBegin())
 					{
-						*ppFileData = CFileSystemHelper::pMemAllocator->Alloc(uFileSize);
+						*ppFileData = NR_CFileSystemHelper::pMemAllocator->Alloc(uFileSize);
 						if (*ppFileData)
 						{
 							if (pFile->Read(*ppFileData, uFileSize))
@@ -89,9 +89,9 @@ bool NR_FreeFileData(void * pFileData)
 {
 	bool bRet = false;
 
-	if (CFileSystemHelper::pMemAllocator && pFileData)
+	if (NR_CFileSystemHelper::pMemAllocator && pFileData)
 	{
-		CFileSystemHelper::pMemAllocator->Free(pFileData);
+		NR_CFileSystemHelper::pMemAllocator->Free(pFileData);
 
 		bRet = true;
 	}
@@ -103,9 +103,9 @@ bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const un
 {
 	bool bRet = false;
 
-	if (CFileSystemHelper::pFileSystem && pszFilePath && pData && uDataSize)
+	if (NR_CFileSystemHelper::pFileSystem && pszFilePath && pData && uDataSize)
 	{
-		auto pFile = CFileSystemHelper::pFileSystem->GetFileForWriteW(pszFilePath);
+		auto pFile = NR_CFileSystemHelper::pFileSystem->GetFileForWriteW(pszFilePath);
 		if (pFile)
 		{
 			if (pFile->SeekToBegin())

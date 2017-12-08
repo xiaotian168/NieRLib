@@ -91,9 +91,6 @@
     <Filter Include="头文件\Log">
       <UniqueIdentifier>{3b16bd26-54a3-492a-ac44-ebf758cafda8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Log">
-      <UniqueIdentifier>{439b5d47-4810-494f-abb7-b7c3cf3a8338}</UniqueIdentifier>
-    </Filter>
     <Filter Include="头文件\Profile">
       <UniqueIdentifier>{393f2275-c531-4ec8-97d0-58d5bc7edce0}</UniqueIdentifier>
     </Filter>
@@ -147,6 +144,15 @@
     </Filter>
     <Filter Include="源文件\Window">
       <UniqueIdentifier>{51bc1c2b-5562-4454-8537-d82a1af3a7bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\TaskBar">
+      <UniqueIdentifier>{ea5c3e92-2b28-4c45-a0dc-b3f9644a08ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TaskBar">
+      <UniqueIdentifier>{3b74d47f-4169-4373-a6bb-501c23c4271e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Log">
+      <UniqueIdentifier>{439b5d47-4810-494f-abb7-b7c3cf3a8338}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -477,6 +483,18 @@
     <ClInclude Include="Application\NR_ApplicationEvent.h">
       <Filter>头文件\Application</Filter>
     </ClInclude>
+    <ClInclude Include="TaskBar\NR_CWin32TaskBarInfo.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_ITaskBarInfo.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_TaskBarFactory.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_TaskBarTool.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
@@ -676,6 +694,15 @@
     </ClCompile>
     <ClCompile Include="Application\NR_ApplicationStartupParamFactory.cpp">
       <Filter>源文件\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskBar\NR_TaskBarTool.cpp">
+      <Filter>源文件\TaskBar</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskBar\NR_CWin32TaskBarInfo.cpp">
+      <Filter>源文件\TaskBar</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskBar\NR_TaskBarFactory.cpp">
+      <Filter>源文件\TaskBar</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
