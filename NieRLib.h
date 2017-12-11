@@ -87,7 +87,9 @@
 /**
 ** @brief »ŒŒÒ¿∏
 */
-#include "TaskBar/NR_ITaskBarInfo.h"
+#include "TaskBar/NR_IHideableTaskBarInfo.h"
+#include "TaskBar/NR_IIconSizeableTaskBarInfo.h"
+#include "TaskBar/NR_IDockableTaskBarInfo.h"
 #include "TaskBar/NR_TaskBarFactory.h"
 #include "TaskBar/NR_TaskBarTool.h"
 

@@ -23,10 +23,10 @@ public:
 
 public:
 
-	static NR_ITaskBarInfo * pTaskBarInfo;
+	static NR_IDockableTaskBarInfo * pTaskBarInfo;
 };
 
-NR_ITaskBarInfo * NR_CTaskBarInfoHelper::pTaskBarInfo = 0;
+NR_IDockableTaskBarInfo * NR_CTaskBarInfoHelper::pTaskBarInfo = 0;
 NR_CTaskBarInfoHelper TaskBarInfoHelper;
 
 bool NR_GetTaskBarRectInDesktop(int & nPosX, int & nPosY, int & nWidth, int & nHeight)
@@ -44,7 +44,7 @@ bool NR_GetTaskBarRectInDesktop(int & nPosX, int & nPosY, int & nWidth, int & nH
 	return bRet;
 }
 
-bool NR_GetTaskBarEdge(NR_ITaskBarInfo::NR_TaskBarEdge & Edge)
+bool NR_GetTaskBarEdge(NR_IDockableTaskBarInfo::NR_TaskBarEdge & Edge)
 {
 	bool bRet = false;
 

@@ -116,7 +116,9 @@
     <ClInclude Include="StringConverter\NR_StringConverterFactory.h" />
     <ClInclude Include="StringConverter\NR_StringConverterTool.h" />
     <ClInclude Include="TaskBar\NR_CWin32TaskBarInfo.h" />
-    <ClInclude Include="TaskBar\NR_ITaskBarInfo.h" />
+    <ClInclude Include="TaskBar\NR_IHideableTaskBarInfo.h" />
+    <ClInclude Include="TaskBar\NR_IIconSizeableTaskBarInfo.h" />
+    <ClInclude Include="TaskBar\NR_IDockableTaskBarInfo.h" />
     <ClInclude Include="TaskBar\NR_TaskBarFactory.h" />
     <ClInclude Include="TaskBar\NR_TaskBarTool.h" />
     <ClInclude Include="Thread\NR_CThread.h" />
@@ -214,7 +216,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

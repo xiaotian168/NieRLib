@@ -119,7 +119,7 @@ LRESULT NR_CWin32Window::OnWndMsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		if (WM_MOUSEMOVE == uMsg)
 		{
-			Event.EventType = eEvent_MouseMove;
+			Event.EventType = eWindowEvent_MouseMove;
 			Event.nCursorX = LOWORD(lParam);
 			Event.nCursorY = HIWORD(lParam);
 
@@ -127,7 +127,7 @@ LRESULT NR_CWin32Window::OnWndMsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 		}
 		else if (WM_MOUSEWHEEL == uMsg)
 		{
-			Event.EventType = eEvent_MouseWheel;
+			Event.EventType = eWindowEvent_MouseWheel;
 			Event.nCursorX = LOWORD(lParam);
 			Event.nCursorY = HIWORD(lParam);
 			Event.bWheelForward = (short)HIWORD(wParam) > 0 ? true : false;

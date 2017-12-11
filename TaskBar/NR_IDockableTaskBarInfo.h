@@ -4,9 +4,9 @@
 #include "../Base/NR_IRefCount.h"
 
 /**
-** @brief 任务栏信息接口
+** @brief 可停靠任务栏信息接口
 */
-class NR_ITaskBarInfo : public NR_IRefCount
+class NR_IDockableTaskBarInfo : public NR_IRefCount
 {
 public:
 

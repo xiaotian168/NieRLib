@@ -6,14 +6,14 @@
 
 #if defined NR_PLATFORM_WIN32
 
-NR_ITaskBarInfo * NR_MakeWin32TaskBarInfo(void)
+NR_IDockableTaskBarInfo * NR_MakeWin32TaskBarInfo(void)
 {
 	return NR_CWin32TaskBarInfo::Make();
 }
 
 #endif
 
-NR_ITaskBarInfo * NR_MakeTaskBarInfoByOSPlatform(void)
+NR_IDockableTaskBarInfo * NR_MakeTaskBarInfoByOSPlatform(void)
 {
 #if defined NR_PLATFORM_WIN32
 	return NR_MakeWin32TaskBarInfo();

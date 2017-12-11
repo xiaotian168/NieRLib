@@ -486,13 +486,19 @@
     <ClInclude Include="TaskBar\NR_CWin32TaskBarInfo.h">
       <Filter>头文件\TaskBar</Filter>
     </ClInclude>
-    <ClInclude Include="TaskBar\NR_ITaskBarInfo.h">
-      <Filter>头文件\TaskBar</Filter>
-    </ClInclude>
     <ClInclude Include="TaskBar\NR_TaskBarFactory.h">
       <Filter>头文件\TaskBar</Filter>
     </ClInclude>
     <ClInclude Include="TaskBar\NR_TaskBarTool.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_IHideableTaskBarInfo.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_IIconSizeableTaskBarInfo.h">
+      <Filter>头文件\TaskBar</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskBar\NR_IDockableTaskBarInfo.h">
       <Filter>头文件\TaskBar</Filter>
     </ClInclude>
   </ItemGroup>

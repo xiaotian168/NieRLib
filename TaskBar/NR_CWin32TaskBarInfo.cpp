@@ -76,4 +76,22 @@ bool NR_CWin32TaskBarInfo::GetEdge(NR_TaskBarEdge & Edge)
 	return bRet;
 }
 
+bool NR_CWin32TaskBarInfo::IsAutoHide(bool & bAutoHide)
+{
+	bool bRet = false;
+
+	assert(false);
+
+	return bRet;
+}
+
+bool NR_CWin32TaskBarInfo::IsLargeIcon(bool & bIsLargeIcon)
+{
+	bool bRet = false;
+
+	assert(false);
+
+	return bRet;
+}
+
 #endif

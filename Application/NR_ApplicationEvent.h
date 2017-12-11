@@ -3,18 +3,23 @@
 
 enum NR_WindowEventType
 {
-	eEvent_Unknown = 0,
-	eEvent_MouseMove,
-	eEvent_MouseWheel,
-	eEvent_KeyDown,
-	eEvent_KeyUp,
+	eWindowEvent_Unknown = 0,
+	eWindowEvent_MouseMove,
+	eWindowEvent_MouseWheel,
+	eWindowEvent_KeyDown,
+	eWindowEvent_KeyUp,
+};
+
+enum NR_SystemEventType
+{
+	eSystemEvent_Unknown,
 };
 
 class NR_CWindowEvent
 {
 public:
 
-	NR_WindowEventType EventType{ eEvent_Unknown };
+	NR_WindowEventType EventType{ eWindowEvent_Unknown };
 	long nCursorX{ 0 };
 	long nCursorY{ 0 };
 	bool bWheelForward{ false };
@@ -22,5 +27,7 @@ public:
 
 class NR_CSystemEvent
 {
+public:
 
+	NR_SystemEventType EventType{ eSystemEvent_Unknown };
 };
