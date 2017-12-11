@@ -7,21 +7,40 @@
 #include "NR_IFileEnumResult.h"
 #include "../StringConverter/NR_StringConverterTool.h"
 
+class NR_CFileEnumToolHelper
+{
+public:
+
+	inline NR_CFileEnumToolHelper()
+	{
+		if (!pFileEnumerator)
+		{
+			pFileEnumerator = NR_MakeFileEnumeratorByOSPlatform();
+		}
+	}
+
+	inline ~NR_CFileEnumToolHelper()
+	{
+		NR_SAFE_RELEASE(pFileEnumerator);
+	}
+
+public:
+
+	static NR_IFileEnumerator * pFileEnumerator;
+};
+
+NR_IFileEnumerator * NR_CFileEnumToolHelper::pFileEnumerator = 0;
+NR_CFileEnumToolHelper FileEnumToolHelper;
+
 bool NR_EnumAllFileW(const wchar_t * pszDirectory, const wchar_t * pszFileExt, const bool bEnumSubDir, std::list<NR_IFileEnumResult *> & ResultList)
 {
 	bool bRet = false;
 
-	if (pszDirectory && pszFileExt)
+	if (NR_CFileEnumToolHelper::pFileEnumerator && pszDirectory && pszFileExt)
 	{
-		auto pFileEnumerator = NR_MakeFileEnumeratorByOSPlatform();
-		if (pFileEnumerator)
+		if (NR_CFileEnumToolHelper::pFileEnumerator->EnumAllFileW(pszDirectory, pszFileExt, bEnumSubDir, ResultList))
 		{
-			if (pFileEnumerator->EnumAllFileW(pszDirectory, pszFileExt, bEnumSubDir, ResultList))
-			{
-				bRet = true;
-			}
-
-			NR_SAFE_RELEASE(pFileEnumerator);
+			bRet = true;
 		}
 	}
 
@@ -61,17 +80,11 @@ bool NR_EnumAllDirectoryW(const wchar_t * pszDirectory, const bool bEnumSubDir, 
 {
 	bool bRet = false;
 
-	if (pszDirectory)
+	if (NR_CFileEnumToolHelper::pFileEnumerator && pszDirectory)
 	{
-		auto pFileEnumerator = NR_MakeFileEnumeratorByOSPlatform();
-		if (pFileEnumerator)
+		if (NR_CFileEnumToolHelper::pFileEnumerator->EnumAllDirectoryW(pszDirectory, bEnumSubDir, ResultList))
 		{
-			if (pFileEnumerator->EnumAllDirectoryW(pszDirectory, bEnumSubDir, ResultList))
-			{
-				bRet = true;
-			}
-
-			NR_SAFE_RELEASE(pFileEnumerator);
+			bRet = true;
 		}
 	}
 

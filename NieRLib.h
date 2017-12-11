@@ -85,6 +85,13 @@
 #include "NetAdapter/NR_NetAdapterTool.h"
 
 /**
+** @addgroup 系统信息
+*/
+#include "SystemInfo/NR_ISystemDirectoryInfo.h"
+#include "SystemInfo/NR_SystemDirectoryInfoFactory.h"
+#include "SystemInfo/NR_SystemDirectoryInfoTool.h"
+
+/**
 ** @brief 任务栏
 */
 #include "TaskBar/NR_IHideableTaskBarInfo.h"

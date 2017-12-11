@@ -154,6 +154,12 @@
     <Filter Include="源文件\Log">
       <UniqueIdentifier>{439b5d47-4810-494f-abb7-b7c3cf3a8338}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\SystemInfo">
+      <UniqueIdentifier>{8442aac6-5b09-4b39-b897-70e3c7090db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SystemInfo">
+      <UniqueIdentifier>{43ca9084-e58d-4432-bccc-26fff98cb7b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NieRLib.h">
@@ -501,6 +507,18 @@
     <ClInclude Include="TaskBar\NR_IDockableTaskBarInfo.h">
       <Filter>头文件\TaskBar</Filter>
     </ClInclude>
+    <ClInclude Include="SystemInfo\NR_ISystemDirectoryInfo.h">
+      <Filter>头文件\SystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemInfo\NR_CWin32SystemDirectoryInfo.h">
+      <Filter>头文件\SystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemInfo\NR_SystemDirectoryInfoTool.h">
+      <Filter>头文件\SystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemInfo\NR_SystemDirectoryInfoFactory.h">
+      <Filter>头文件\SystemInfo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archiver\Win32ZipArchiverUnpacker\zip\zip.cpp">
@@ -709,6 +727,15 @@
     </ClCompile>
     <ClCompile Include="TaskBar\NR_TaskBarFactory.cpp">
       <Filter>源文件\TaskBar</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInfo\NR_CWin32SystemDirectoryInfo.cpp">
+      <Filter>源文件\SystemInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInfo\NR_SystemDirectoryInfoTool.cpp">
+      <Filter>源文件\SystemInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemInfo\NR_SystemDirectoryInfoFactory.cpp">
+      <Filter>源文件\SystemInfo</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -34,7 +34,7 @@ NR_IFileSystem * NR_CFileSystemHelper::pFileSystem = 0;
 NR_IMemoryAllocator * NR_CFileSystemHelper::pMemAllocator = 0;
 NR_CFileSystemHelper FileSystemHelper;
 
-bool IsFileExistW(const wchar_t * pszFilePath)
+bool NR_IsFileExistW(const wchar_t * pszFilePath)
 {
 	bool bRet = false;
 	

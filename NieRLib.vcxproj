@@ -115,6 +115,10 @@
     <ClInclude Include="StringConverter\NR_IStringConverter.h" />
     <ClInclude Include="StringConverter\NR_StringConverterFactory.h" />
     <ClInclude Include="StringConverter\NR_StringConverterTool.h" />
+    <ClInclude Include="SystemInfo\NR_CWin32SystemDirectoryInfo.h" />
+    <ClInclude Include="SystemInfo\NR_ISystemDirectoryInfo.h" />
+    <ClInclude Include="SystemInfo\NR_SystemDirectoryInfoFactory.h" />
+    <ClInclude Include="SystemInfo\NR_SystemDirectoryInfoTool.h" />
     <ClInclude Include="TaskBar\NR_CWin32TaskBarInfo.h" />
     <ClInclude Include="TaskBar\NR_IHideableTaskBarInfo.h" />
     <ClInclude Include="TaskBar\NR_IIconSizeableTaskBarInfo.h" />
@@ -193,6 +197,9 @@
     <ClCompile Include="StringConverter\NR_CWin32StringConverter.cpp" />
     <ClCompile Include="StringConverter\NR_StringConverterFactory.cpp" />
     <ClCompile Include="StringConverter\NR_StringConverterTool.cpp" />
+    <ClCompile Include="SystemInfo\NR_CWin32SystemDirectoryInfo.cpp" />
+    <ClCompile Include="SystemInfo\NR_SystemDirectoryInfoFactory.cpp" />
+    <ClCompile Include="SystemInfo\NR_SystemDirectoryInfoTool.cpp" />
     <ClCompile Include="TaskBar\NR_CWin32TaskBarInfo.cpp" />
     <ClCompile Include="TaskBar\NR_TaskBarFactory.cpp" />
     <ClCompile Include="TaskBar\NR_TaskBarTool.cpp" />
