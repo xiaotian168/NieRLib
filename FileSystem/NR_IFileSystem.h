@@ -41,4 +41,14 @@ public:
 	** @brief 获取读写文件接口
 	*/
 	virtual NR_IFile * GetFileForReadWriteW(const wchar_t * pszFilePath) = 0;
+
+	/**
+	** @brief 创建目录
+	*/
+	virtual bool CreateDirectoryW(const wchar_t * pszDirectory) = 0;
+
+	/**
+	** @brief 创建目录链
+	*/
+	virtual bool CreateDirectoryPathW(const wchar_t * pszDirectory) = 0;
 };

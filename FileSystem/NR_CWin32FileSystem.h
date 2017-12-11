@@ -30,6 +30,10 @@ public:
 	NR_IFile * GetFileForWriteW(const wchar_t * pszFilePath) override;
 
 	NR_IFile * GetFileForReadWriteW(const wchar_t * pszFilePath) override;
+
+	bool CreateDirectoryW(const wchar_t * pszDirectory) override;
+
+	bool CreateDirectoryPathW(const wchar_t * pszDirectory) override;
 };
 
 #endif

@@ -34,3 +34,8 @@ NR_CAPI bool NR_FreeFileData(void * pFileData);
 ** @return true 成功，false 表示失败
 */
 NR_CAPI bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const unsigned int uDataSize);
+
+/**
+** @brief 创建目录链
+*/
+NR_CAPI bool NR_CreateDirectoryPathW(const wchar_t * pszDirectory);

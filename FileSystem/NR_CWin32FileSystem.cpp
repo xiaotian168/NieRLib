@@ -102,4 +102,50 @@ NR_IFile * NR_CWin32FileSystem::GetFileForReadWriteW(const wchar_t * pszFilePath
 	return 0;
 }
 
+bool NR_CWin32FileSystem::CreateDirectoryW(const wchar_t * pszDirectory)
+{
+	bool bRet = false;
+
+	if (pszDirectory)
+	{
+		if (::CreateDirectoryW(pszDirectory, 0))
+		{
+			bRet = true;
+		}
+		else
+		{
+			if (ERROR_ALREADY_EXISTS == GetLastError())
+			{
+				bRet = true;
+			}
+		}
+	}
+
+	return bRet;
+}
+
+bool NR_CWin32FileSystem::CreateDirectoryPathW(const wchar_t * pszDirectory)
+{
+	bool bRet = false;
+	std::wstring strDirecotry;
+	wchar_t cTemp = 0;
+
+	if (pszDirectory)
+	{
+		strDirecotry.resize(wcslen(pszDirectory));
+
+		for (size_t i = 0; i < strDirecotry.size(); ++ i)
+		{
+			strDirecotry[i] = pszDirectory[i];
+
+			if (L'\\' == pszDirectory[i] || L'/' == pszDirectory[i])
+			{
+				bRet = CreateDirectoryW(strDirecotry.c_str());
+			}
+		}
+	}
+
+	return bRet;
+}
+
 #endif

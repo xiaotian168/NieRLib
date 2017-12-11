@@ -123,3 +123,18 @@ bool NR_WriteFileDataW(const wchar_t * pszFilePath, const void * pData, const un
 
 	return bRet;
 }
+
+bool NR_CreateDirectoryPathW(const wchar_t * pszDirectory)
+{
+	bool bRet = false;
+
+	if (NR_CFileSystemHelper::pFileSystem && pszDirectory)
+	{
+		if (NR_CFileSystemHelper::pFileSystem->CreateDirectoryPathW(pszDirectory))
+		{
+			bRet = true;
+		}
+	}
+
+	return bRet;
+}

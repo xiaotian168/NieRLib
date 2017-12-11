@@ -79,7 +79,7 @@ bool NR_MakeTempFilePathW(wchar_t * pszFilePath, const unsigned int uSize)
 				swprintf_s(pszFilePath, uSize, L"%s%d.tmp", szTempDir, uMagic);
 				++uMagic;
 
-				if (NR_IsFileExistW(pszFilePath))
+				if (!NR_IsFileExistW(pszFilePath))
 				{
 					bRet = true;
 					break;
