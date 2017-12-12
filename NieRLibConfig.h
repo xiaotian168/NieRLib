@@ -2,7 +2,7 @@
 #pragma once
 
 #define NR_STATIC_BUILD
-#define NR_DYNAMIC_BUILD
+//#define NR_DYNAMIC_BUILD
 
 #if defined NR_STATIC_BUILD
 #	define NR_API
@@ -30,7 +30,9 @@
 #endif
 
 #if defined NR_PLATFORM_WIN32
+#	define INITGUID
 #	include <Windows.h>
+#	include <mmsystem.h>
 #	include <shlwapi.h>
 #	include <netcon.h>
 #	include <ObjBase.h>
@@ -43,6 +45,7 @@
 #	pragma comment(lib, "Shlwapi.lib")
 #	pragma comment(lib, "Ole32.lib")
 #	pragma comment(lib, "gdiplus.lib")
+#	pragma comment(lib, "Winmm.lib")
 #elif defined NR_PLATFORM_LINUX
 #	include <pthread.h>
 #	include <unistd.h>
