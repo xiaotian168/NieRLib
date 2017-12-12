@@ -9,6 +9,7 @@
 /**
 ** @addgroup »ù´¡½Ó¿Ú
 */
+#include "Base/NR_COMTool.h"
 #include "Base/NR_IRefCount.h"
 #include "Base/NR_IWorkProgress.h"
 #include "Base/NR_ITask.h"
